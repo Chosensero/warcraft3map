@@ -1,0 +1,14 @@
+Wc3 Beta Icon - Hero Ranger
+
+By Blizzard Entertainment
+
+Description:
+Made by Blizzard Entertainment.
+
+This is the icon of the pre-beta Hero Ranger unit that didn't managed
+to get included in the final version of Warcraft III.
+
+Paths:
+ReplaceableTextures\CommandButtons\BTNHeroRanger.blp
+ReplaceableTextures\CommandButtonsDisabled\DISBTNHeroRanger.blp
+UI\Glues\ScoreScreen\scorescreen-hero-ranger.blp
