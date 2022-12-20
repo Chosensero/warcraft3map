@@ -1,10 +1,11 @@
-[Misc]
-FoodCeiling=150
-MaxHeroLevel=15
-
 [TALT]
 DependencyOr=h009,o002,u00C,e000,halt,oalt,eate,uaod
 
 [HERO]
-DependencyOr=H00A,H00B,H00C,H00D,H00E,H003,H00I,O003,O004,O005,O006,U00D,U00E,E001,E002,E003,Hamg,Hblm,Hmkg,Hpal,Obla,Ofar,Oshd,Otch,Edem,Ekee,Emoo,Ewar,Ucrl,Udea,Udre,Ulic,Npbm,Nbrn,Nngs,Nplh,Nbst
+DependencyOr=H00L,H00A,H00B,H00C,H00D,H00E,H003,H00I,O003,O004,O005,O006,U00D,U00E,E001,E002,E003,Hamg,Hblm,Hmkg,Hpal,Obla,Ofar,Oshd,Otch,Edem,Ekee,Emoo,Ewar,Ucrl,Udea,Udre,Ulic,Npbm,Nbrn,Nngs,Nplh,Nbst,Nalc,Ntin,Nfir
+
+[Misc]
+FoodCeiling=150
+MaxHeroLevel=15
+HeroFactorXP=100,100,90,80,70,70,70,60,50,0
 

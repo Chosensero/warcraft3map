@@ -498,8 +498,25 @@ integer udg_FalsePromise_TempInt= 0
 real udg_FalsePromise_TempReal= 0
 unit udg_FalsePromise_Unit= null
 integer udg_FalsePromise_Unit_ID= 0
+quest udg_LumberQuest= null
+questitem udg_LumberQuestRequirement= null
+leaderboard array udg_LeaderboardLumber
+player array udg_OrcQuestPlayer
+unit udg_UDQuestunit= null
+quest udg_UDQuest= null
+questitem udg_UDQuestRequirement= null
+leaderboard array udg_UDQuestLeaderboard
+player array udg_UDQuestPlayer
+integer array udg_UDQuestCorpseCount
+force udg_UDQuestGroup= null
+unit udg_Itemposition= null
+group udg_InfernalCurse= null
+integer array udg_QuestUndead1
+force udg_AIplayers= null
 
     // Generated
+sound gg_snd_QuestCompleted= null
+sound gg_snd_QuestFailed= null
 sound gg_snd_Arthasrecruited= null
 sound gg_snd_Cairnerecruited= null
 sound gg_snd_Doom= null
@@ -508,11 +525,80 @@ sound gg_snd_GromRecruited= null
 sound gg_snd_Jainarecruited= null
 sound gg_snd_KelThuzadrecruited= null
 sound gg_snd_Muradinrecruited= null
+sound gg_snd_Orc1= null
 sound gg_snd_Sylvanasrecruited= null
 sound gg_snd_ThrallRecruited= null
 sound gg_snd_TyrandeRecruited= null
+sound gg_snd_t_voice5445299931759779715= null
 sound gg_snd_Utherrecruited= null
-sound gg_snd_NecromancerNoGold1= null
+sound gg_snd_NecromancerNoLumber1= null
+sound gg_snd_KelthuzadRecruited= null
+sound gg_snd_Doom01= null
+sound gg_snd_N07Archimonde28= null
+trigger gg_trg_____________________________________003= null
+trigger gg_trg_UDQuestItem= null
+trigger gg_trg_UDQuestItemCondition_____________________u= null
+trigger gg_trg_UDQuestItemCondition= null
+trigger gg_trg_UDQuestitem= null
+trigger gg_trg_Tip= null
+trigger gg_trg_UDQuestLeaderboardUpdate= null
+trigger gg_trg_UDQuestLeaderboard_Player_1= null
+trigger gg_trg_UDQuestLeaderboard_Player_2= null
+trigger gg_trg_UDQuestLeaderboard_Player_3= null
+trigger gg_trg_UDQuestLeaderboard_Player_4= null
+trigger gg_trg_UDQuestLeaderboard_Player_5= null
+trigger gg_trg_UDQuestLeaderboard_Player_6= null
+trigger gg_trg_UDQuestStart= null
+trigger gg_trg_UDQuest= null
+trigger gg_trg_UDCircle= null
+trigger gg_trg_UDCircle_Player_2= null
+trigger gg_trg_UDCircle_Player_3= null
+trigger gg_trg_UDCircle_Player_4= null
+trigger gg_trg_UDCircle_Player_5= null
+trigger gg_trg_UDCircle_Player_6= null
+trigger gg_trg_UDQuestAchievement= null
+trigger gg_trg_OrcQuestItem= null
+trigger gg_trg_OrcQuest= null
+trigger gg_trg_OrcQuestStart= null
+trigger gg_trg_OrcQuestLeaderboard_Player_1= null
+trigger gg_trg_OrcQuestLeaderboard_Player_2= null
+trigger gg_trg_OrcQuestLeaderboard_Player_3= null
+trigger gg_trg_OrcQuestLeaderboard_Player_4= null
+trigger gg_trg_OrcQuestLeaderboard_Player_5= null
+trigger gg_trg_OrcQuestLeaderboard_Player_6= null
+trigger gg_trg_OrcQuestLeaderboardUpdate= null
+trigger gg_trg_Penatly= null
+trigger gg_trg_Bonus= null
+trigger gg_trg_Penalty_2= null
+trigger gg_trg_Bonus_2= null
+trigger gg_trg_Penatly_3= null
+trigger gg_trg_Bonus_3= null
+trigger gg_trg_Penatly_4= null
+trigger gg_trg_Bonus_4= null
+trigger gg_trg_OrcQuestDone_Player_1= null
+trigger gg_trg_Quest_5k_player_1= null
+trigger gg_trg_Quest15000_player_1= null
+trigger gg_trg_QuestComplete_Player_1= null
+trigger gg_trg_OrcQuestDone_Player_2= null
+trigger gg_trg_Quest_5k_player_2= null
+trigger gg_trg_Quest15000_player_2= null
+trigger gg_trg_QuestComplete_Player_2= null
+trigger gg_trg_OrcQuestDone_Player_2_____________________u= null
+trigger gg_trg_Quest_5k_player_2_____________________u= null
+trigger gg_trg_Quest15000_player_2_____________________u= null
+trigger gg_trg_QuestComplete_Player_2_____________________u= null
+trigger gg_trg_OrcQuestDone_Player_2__________________________________________u= null
+trigger gg_trg_Quest_5k_player_2__________________________________________u= null
+trigger gg_trg_Quest15000_player_2__________________________________________u= null
+trigger gg_trg_QuestComplete_Player_2__________________________________________u= null
+trigger gg_trg_OrcQuestDone_Player_2_______________________________________________________________u= null
+trigger gg_trg_Quest_5k_player_2_______________________________________________________________u= null
+trigger gg_trg_Quest15000_player_2_______________________________________________________________u= null
+trigger gg_trg_QuestComplete_Player_2_______________________________________________________________u= null
+trigger gg_trg_OrcQuestDone_Player_2_____________________________________________________________________u= null
+trigger gg_trg_Quest_5k_player_2_________________________________________________________________________u= null
+trigger gg_trg_Quest15000_player_2_______________________________________________________________________u= null
+trigger gg_trg_QuestComplete_Player_2____________________________________________________________________u= null
 trigger gg_trg_Settings= null
 trigger gg_trg_Random_Weather= null
 trigger gg_trg_____________________________________002_____________________u= null
@@ -633,6 +719,7 @@ trigger gg_trg_Maelstrom_Cast= null
 trigger gg_trg_Maelstrom_Loop= null
 trigger gg_trg_____________________________________004= null
 trigger gg_trg_____________________________________005= null
+trigger gg_trg_AIBuff= null
 
 
 //JASSHelper struct globals:
@@ -642,11 +729,11 @@ endglobals
 
 //===========================================================================
 // 
-// Мель Пучины
+// Город Test
 // 
 //   Warcraft III map script
 //   Generated by the Warcraft III World Editor
-//   Date: Sun Nov 27 19:32:06 2022
+//   Date: Tue Dec 20 11:59:44 2022
 //   Map Author: Blizzard Entertainment
 // 
 //===========================================================================
@@ -1816,6 +1903,23 @@ function InitGlobals takes nothing returns nothing
     set udg_FalsePromise_TempInt=0
     set udg_FalsePromise_TempReal=0
     set udg_FalsePromise_Unit_ID=0
+    set i=0
+    loop
+        exitwhen ( i > 1 )
+        set udg_UDQuestCorpseCount[i]=0
+        set i=i + 1
+    endloop
+
+    set udg_UDQuestGroup=CreateForce()
+    set udg_InfernalCurse=CreateGroup()
+    set i=0
+    loop
+        exitwhen ( i > 1 )
+        set udg_QuestUndead1[i]=0
+        set i=i + 1
+    endloop
+
+    set udg_AIplayers=CreateForce()
 endfunction
 
 //***************************************************************************
@@ -1824,7 +1928,7 @@ endfunction
 //*
 //***************************************************************************
 
-function Unit000015_DropItems takes nothing returns nothing
+function Unit000006_DropItems takes nothing returns nothing
     local widget trigWidget= null
     local unit trigUnit= null
     local integer itemID= 0
@@ -1844,61 +1948,6 @@ function Unit000015_DropItems takes nothing returns nothing
 
     if ( canDrop ) then
         // Item set 0
-        call RandomDistReset()
-        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_PERMANENT, 3), 100)
-        set itemID=RandomDistChoose()
-        if ( trigUnit != null ) then
-            call UnitDropItem(trigUnit, itemID)
-        else
-            call WidgetDropItem(trigWidget, itemID)
-        endif
-
-        // Item set 1
-        call RandomDistReset()
-        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_PERMANENT, 1), 100)
-        set itemID=RandomDistChoose()
-        if ( trigUnit != null ) then
-            call UnitDropItem(trigUnit, itemID)
-        else
-            call WidgetDropItem(trigWidget, itemID)
-        endif
-
-    endif
-
-    set bj_lastDyingWidget=null
-    call DestroyTrigger(GetTriggeringTrigger())
-endfunction
-
-function Unit000021_DropItems takes nothing returns nothing
-    local widget trigWidget= null
-    local unit trigUnit= null
-    local integer itemID= 0
-    local boolean canDrop= true
-
-    set trigWidget=bj_lastDyingWidget
-    if ( trigWidget == null ) then
-        set trigUnit=GetTriggerUnit()
-    endif
-
-    if ( trigUnit != null ) then
-        set canDrop=not IsUnitHidden(trigUnit)
-        if ( canDrop and GetChangingUnit() != null ) then
-            set canDrop=( GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE) )
-        endif
-    endif
-
-    if ( canDrop ) then
-        // Item set 0
-        call RandomDistReset()
-        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_PERMANENT, 3), 100)
-        set itemID=RandomDistChoose()
-        if ( trigUnit != null ) then
-            call UnitDropItem(trigUnit, itemID)
-        else
-            call WidgetDropItem(trigWidget, itemID)
-        endif
-
-        // Item set 1
         call RandomDistReset()
         call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_POWERUP, 1), 100)
         set itemID=RandomDistChoose()
@@ -1914,7 +1963,7 @@ function Unit000021_DropItems takes nothing returns nothing
     call DestroyTrigger(GetTriggeringTrigger())
 endfunction
 
-function Unit000024_DropItems takes nothing returns nothing
+function Unit000032_DropItems takes nothing returns nothing
     local widget trigWidget= null
     local unit trigUnit= null
     local integer itemID= 0
@@ -1934,51 +1983,6 @@ function Unit000024_DropItems takes nothing returns nothing
 
     if ( canDrop ) then
         // Item set 0
-        call RandomDistReset()
-        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_PERMANENT, 2), 100)
-        set itemID=RandomDistChoose()
-        if ( trigUnit != null ) then
-            call UnitDropItem(trigUnit, itemID)
-        else
-            call WidgetDropItem(trigWidget, itemID)
-        endif
-
-    endif
-
-    set bj_lastDyingWidget=null
-    call DestroyTrigger(GetTriggeringTrigger())
-endfunction
-
-function Unit000025_DropItems takes nothing returns nothing
-    local widget trigWidget= null
-    local unit trigUnit= null
-    local integer itemID= 0
-    local boolean canDrop= true
-
-    set trigWidget=bj_lastDyingWidget
-    if ( trigWidget == null ) then
-        set trigUnit=GetTriggerUnit()
-    endif
-
-    if ( trigUnit != null ) then
-        set canDrop=not IsUnitHidden(trigUnit)
-        if ( canDrop and GetChangingUnit() != null ) then
-            set canDrop=( GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE) )
-        endif
-    endif
-
-    if ( canDrop ) then
-        // Item set 0
-        call RandomDistReset()
-        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_PERMANENT, 3), 100)
-        set itemID=RandomDistChoose()
-        if ( trigUnit != null ) then
-            call UnitDropItem(trigUnit, itemID)
-        else
-            call WidgetDropItem(trigWidget, itemID)
-        endif
-
-        // Item set 1
         call RandomDistReset()
         call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_POWERUP, 1), 100)
         set itemID=RandomDistChoose()
@@ -2015,6 +2019,41 @@ function Unit000033_DropItems takes nothing returns nothing
     if ( canDrop ) then
         // Item set 0
         call RandomDistReset()
+        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_POWERUP, 1), 100)
+        set itemID=RandomDistChoose()
+        if ( trigUnit != null ) then
+            call UnitDropItem(trigUnit, itemID)
+        else
+            call WidgetDropItem(trigWidget, itemID)
+        endif
+
+    endif
+
+    set bj_lastDyingWidget=null
+    call DestroyTrigger(GetTriggeringTrigger())
+endfunction
+
+function Unit000036_DropItems takes nothing returns nothing
+    local widget trigWidget= null
+    local unit trigUnit= null
+    local integer itemID= 0
+    local boolean canDrop= true
+
+    set trigWidget=bj_lastDyingWidget
+    if ( trigWidget == null ) then
+        set trigUnit=GetTriggerUnit()
+    endif
+
+    if ( trigUnit != null ) then
+        set canDrop=not IsUnitHidden(trigUnit)
+        if ( canDrop and GetChangingUnit() != null ) then
+            set canDrop=( GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE) )
+        endif
+    endif
+
+    if ( canDrop ) then
+        // Item set 0
+        call RandomDistReset()
         call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_PERMANENT, 3), 100)
         set itemID=RandomDistChoose()
         if ( trigUnit != null ) then
@@ -2023,9 +2062,209 @@ function Unit000033_DropItems takes nothing returns nothing
             call WidgetDropItem(trigWidget, itemID)
         endif
 
-        // Item set 1
+    endif
+
+    set bj_lastDyingWidget=null
+    call DestroyTrigger(GetTriggeringTrigger())
+endfunction
+
+function Unit000037_DropItems takes nothing returns nothing
+    local widget trigWidget= null
+    local unit trigUnit= null
+    local integer itemID= 0
+    local boolean canDrop= true
+
+    set trigWidget=bj_lastDyingWidget
+    if ( trigWidget == null ) then
+        set trigUnit=GetTriggerUnit()
+    endif
+
+    if ( trigUnit != null ) then
+        set canDrop=not IsUnitHidden(trigUnit)
+        if ( canDrop and GetChangingUnit() != null ) then
+            set canDrop=( GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE) )
+        endif
+    endif
+
+    if ( canDrop ) then
+        // Item set 0
+        call RandomDistReset()
+        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_PERMANENT, 3), 100)
+        set itemID=RandomDistChoose()
+        if ( trigUnit != null ) then
+            call UnitDropItem(trigUnit, itemID)
+        else
+            call WidgetDropItem(trigWidget, itemID)
+        endif
+
+    endif
+
+    set bj_lastDyingWidget=null
+    call DestroyTrigger(GetTriggeringTrigger())
+endfunction
+
+function Unit000038_DropItems takes nothing returns nothing
+    local widget trigWidget= null
+    local unit trigUnit= null
+    local integer itemID= 0
+    local boolean canDrop= true
+
+    set trigWidget=bj_lastDyingWidget
+    if ( trigWidget == null ) then
+        set trigUnit=GetTriggerUnit()
+    endif
+
+    if ( trigUnit != null ) then
+        set canDrop=not IsUnitHidden(trigUnit)
+        if ( canDrop and GetChangingUnit() != null ) then
+            set canDrop=( GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE) )
+        endif
+    endif
+
+    if ( canDrop ) then
+        // Item set 0
+        call RandomDistReset()
+        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_PERMANENT, 3), 100)
+        set itemID=RandomDistChoose()
+        if ( trigUnit != null ) then
+            call UnitDropItem(trigUnit, itemID)
+        else
+            call WidgetDropItem(trigWidget, itemID)
+        endif
+
+    endif
+
+    set bj_lastDyingWidget=null
+    call DestroyTrigger(GetTriggeringTrigger())
+endfunction
+
+function Unit000042_DropItems takes nothing returns nothing
+    local widget trigWidget= null
+    local unit trigUnit= null
+    local integer itemID= 0
+    local boolean canDrop= true
+
+    set trigWidget=bj_lastDyingWidget
+    if ( trigWidget == null ) then
+        set trigUnit=GetTriggerUnit()
+    endif
+
+    if ( trigUnit != null ) then
+        set canDrop=not IsUnitHidden(trigUnit)
+        if ( canDrop and GetChangingUnit() != null ) then
+            set canDrop=( GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE) )
+        endif
+    endif
+
+    if ( canDrop ) then
+        // Item set 0
+        call RandomDistReset()
+        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_PERMANENT, 3), 100)
+        set itemID=RandomDistChoose()
+        if ( trigUnit != null ) then
+            call UnitDropItem(trigUnit, itemID)
+        else
+            call WidgetDropItem(trigWidget, itemID)
+        endif
+
+    endif
+
+    set bj_lastDyingWidget=null
+    call DestroyTrigger(GetTriggeringTrigger())
+endfunction
+
+function Unit000046_DropItems takes nothing returns nothing
+    local widget trigWidget= null
+    local unit trigUnit= null
+    local integer itemID= 0
+    local boolean canDrop= true
+
+    set trigWidget=bj_lastDyingWidget
+    if ( trigWidget == null ) then
+        set trigUnit=GetTriggerUnit()
+    endif
+
+    if ( trigUnit != null ) then
+        set canDrop=not IsUnitHidden(trigUnit)
+        if ( canDrop and GetChangingUnit() != null ) then
+            set canDrop=( GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE) )
+        endif
+    endif
+
+    if ( canDrop ) then
+        // Item set 0
         call RandomDistReset()
         call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_POWERUP, 1), 100)
+        set itemID=RandomDistChoose()
+        if ( trigUnit != null ) then
+            call UnitDropItem(trigUnit, itemID)
+        else
+            call WidgetDropItem(trigWidget, itemID)
+        endif
+
+    endif
+
+    set bj_lastDyingWidget=null
+    call DestroyTrigger(GetTriggeringTrigger())
+endfunction
+
+function Unit000047_DropItems takes nothing returns nothing
+    local widget trigWidget= null
+    local unit trigUnit= null
+    local integer itemID= 0
+    local boolean canDrop= true
+
+    set trigWidget=bj_lastDyingWidget
+    if ( trigWidget == null ) then
+        set trigUnit=GetTriggerUnit()
+    endif
+
+    if ( trigUnit != null ) then
+        set canDrop=not IsUnitHidden(trigUnit)
+        if ( canDrop and GetChangingUnit() != null ) then
+            set canDrop=( GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE) )
+        endif
+    endif
+
+    if ( canDrop ) then
+        // Item set 0
+        call RandomDistReset()
+        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_POWERUP, 1), 100)
+        set itemID=RandomDistChoose()
+        if ( trigUnit != null ) then
+            call UnitDropItem(trigUnit, itemID)
+        else
+            call WidgetDropItem(trigWidget, itemID)
+        endif
+
+    endif
+
+    set bj_lastDyingWidget=null
+    call DestroyTrigger(GetTriggeringTrigger())
+endfunction
+
+function Unit000049_DropItems takes nothing returns nothing
+    local widget trigWidget= null
+    local unit trigUnit= null
+    local integer itemID= 0
+    local boolean canDrop= true
+
+    set trigWidget=bj_lastDyingWidget
+    if ( trigWidget == null ) then
+        set trigUnit=GetTriggerUnit()
+    endif
+
+    if ( trigUnit != null ) then
+        set canDrop=not IsUnitHidden(trigUnit)
+        if ( canDrop and GetChangingUnit() != null ) then
+            set canDrop=( GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE) )
+        endif
+    endif
+
+    if ( canDrop ) then
+        // Item set 0
+        call RandomDistReset()
+        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_PERMANENT, 1), 100)
         set itemID=RandomDistChoose()
         if ( trigUnit != null ) then
             call UnitDropItem(trigUnit, itemID)
@@ -2060,17 +2299,7 @@ function Unit000050_DropItems takes nothing returns nothing
     if ( canDrop ) then
         // Item set 0
         call RandomDistReset()
-        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_PERMANENT, 3), 100)
-        set itemID=RandomDistChoose()
-        if ( trigUnit != null ) then
-            call UnitDropItem(trigUnit, itemID)
-        else
-            call WidgetDropItem(trigWidget, itemID)
-        endif
-
-        // Item set 1
-        call RandomDistReset()
-        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_POWERUP, 1), 100)
+        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_PERMANENT, 5), 100)
         set itemID=RandomDistChoose()
         if ( trigUnit != null ) then
             call UnitDropItem(trigUnit, itemID)
@@ -2084,7 +2313,7 @@ function Unit000050_DropItems takes nothing returns nothing
     call DestroyTrigger(GetTriggeringTrigger())
 endfunction
 
-function Unit000053_DropItems takes nothing returns nothing
+function Unit000051_DropItems takes nothing returns nothing
     local widget trigWidget= null
     local unit trigUnit= null
     local integer itemID= 0
@@ -2105,7 +2334,7 @@ function Unit000053_DropItems takes nothing returns nothing
     if ( canDrop ) then
         // Item set 0
         call RandomDistReset()
-        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_PERMANENT, 2), 100)
+        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_POWERUP, 2), 100)
         set itemID=RandomDistChoose()
         if ( trigUnit != null ) then
             call UnitDropItem(trigUnit, itemID)
@@ -2119,7 +2348,7 @@ function Unit000053_DropItems takes nothing returns nothing
     call DestroyTrigger(GetTriggeringTrigger())
 endfunction
 
-function Unit000064_DropItems takes nothing returns nothing
+function Unit000054_DropItems takes nothing returns nothing
     local widget trigWidget= null
     local unit trigUnit= null
     local integer itemID= 0
@@ -2141,6 +2370,146 @@ function Unit000064_DropItems takes nothing returns nothing
         // Item set 0
         call RandomDistReset()
         call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_PERMANENT, 1), 100)
+        set itemID=RandomDistChoose()
+        if ( trigUnit != null ) then
+            call UnitDropItem(trigUnit, itemID)
+        else
+            call WidgetDropItem(trigWidget, itemID)
+        endif
+
+    endif
+
+    set bj_lastDyingWidget=null
+    call DestroyTrigger(GetTriggeringTrigger())
+endfunction
+
+function Unit000055_DropItems takes nothing returns nothing
+    local widget trigWidget= null
+    local unit trigUnit= null
+    local integer itemID= 0
+    local boolean canDrop= true
+
+    set trigWidget=bj_lastDyingWidget
+    if ( trigWidget == null ) then
+        set trigUnit=GetTriggerUnit()
+    endif
+
+    if ( trigUnit != null ) then
+        set canDrop=not IsUnitHidden(trigUnit)
+        if ( canDrop and GetChangingUnit() != null ) then
+            set canDrop=( GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE) )
+        endif
+    endif
+
+    if ( canDrop ) then
+        // Item set 0
+        call RandomDistReset()
+        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_PERMANENT, 3), 100)
+        set itemID=RandomDistChoose()
+        if ( trigUnit != null ) then
+            call UnitDropItem(trigUnit, itemID)
+        else
+            call WidgetDropItem(trigWidget, itemID)
+        endif
+
+    endif
+
+    set bj_lastDyingWidget=null
+    call DestroyTrigger(GetTriggeringTrigger())
+endfunction
+
+function Unit000058_DropItems takes nothing returns nothing
+    local widget trigWidget= null
+    local unit trigUnit= null
+    local integer itemID= 0
+    local boolean canDrop= true
+
+    set trigWidget=bj_lastDyingWidget
+    if ( trigWidget == null ) then
+        set trigUnit=GetTriggerUnit()
+    endif
+
+    if ( trigUnit != null ) then
+        set canDrop=not IsUnitHidden(trigUnit)
+        if ( canDrop and GetChangingUnit() != null ) then
+            set canDrop=( GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE) )
+        endif
+    endif
+
+    if ( canDrop ) then
+        // Item set 0
+        call RandomDistReset()
+        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_PERMANENT, 1), 100)
+        set itemID=RandomDistChoose()
+        if ( trigUnit != null ) then
+            call UnitDropItem(trigUnit, itemID)
+        else
+            call WidgetDropItem(trigWidget, itemID)
+        endif
+
+    endif
+
+    set bj_lastDyingWidget=null
+    call DestroyTrigger(GetTriggeringTrigger())
+endfunction
+
+function Unit000059_DropItems takes nothing returns nothing
+    local widget trigWidget= null
+    local unit trigUnit= null
+    local integer itemID= 0
+    local boolean canDrop= true
+
+    set trigWidget=bj_lastDyingWidget
+    if ( trigWidget == null ) then
+        set trigUnit=GetTriggerUnit()
+    endif
+
+    if ( trigUnit != null ) then
+        set canDrop=not IsUnitHidden(trigUnit)
+        if ( canDrop and GetChangingUnit() != null ) then
+            set canDrop=( GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE) )
+        endif
+    endif
+
+    if ( canDrop ) then
+        // Item set 0
+        call RandomDistReset()
+        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_ANY, 8), 100)
+        set itemID=RandomDistChoose()
+        if ( trigUnit != null ) then
+            call UnitDropItem(trigUnit, itemID)
+        else
+            call WidgetDropItem(trigWidget, itemID)
+        endif
+
+    endif
+
+    set bj_lastDyingWidget=null
+    call DestroyTrigger(GetTriggeringTrigger())
+endfunction
+
+function Unit000060_DropItems takes nothing returns nothing
+    local widget trigWidget= null
+    local unit trigUnit= null
+    local integer itemID= 0
+    local boolean canDrop= true
+
+    set trigWidget=bj_lastDyingWidget
+    if ( trigWidget == null ) then
+        set trigUnit=GetTriggerUnit()
+    endif
+
+    if ( trigUnit != null ) then
+        set canDrop=not IsUnitHidden(trigUnit)
+        if ( canDrop and GetChangingUnit() != null ) then
+            set canDrop=( GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE) )
+        endif
+    endif
+
+    if ( canDrop ) then
+        // Item set 0
+        call RandomDistReset()
+        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_CHARGED, 3), 100)
         set itemID=RandomDistChoose()
         if ( trigUnit != null ) then
             call UnitDropItem(trigUnit, itemID)
@@ -2175,7 +2544,7 @@ function Unit000065_DropItems takes nothing returns nothing
     if ( canDrop ) then
         // Item set 0
         call RandomDistReset()
-        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_PERMANENT, 4), 100)
+        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_POWERUP, 1), 100)
         set itemID=RandomDistChoose()
         if ( trigUnit != null ) then
             call UnitDropItem(trigUnit, itemID)
@@ -2210,7 +2579,7 @@ function Unit000066_DropItems takes nothing returns nothing
     if ( canDrop ) then
         // Item set 0
         call RandomDistReset()
-        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_PERMANENT, 4), 100)
+        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_POWERUP, 1), 100)
         set itemID=RandomDistChoose()
         if ( trigUnit != null ) then
             call UnitDropItem(trigUnit, itemID)
@@ -2224,7 +2593,7 @@ function Unit000066_DropItems takes nothing returns nothing
     call DestroyTrigger(GetTriggeringTrigger())
 endfunction
 
-function Unit000071_DropItems takes nothing returns nothing
+function Unit000067_DropItems takes nothing returns nothing
     local widget trigWidget= null
     local unit trigUnit= null
     local integer itemID= 0
@@ -2245,7 +2614,7 @@ function Unit000071_DropItems takes nothing returns nothing
     if ( canDrop ) then
         // Item set 0
         call RandomDistReset()
-        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_PERMANENT, 2), 100)
+        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_CHARGED, 3), 100)
         set itemID=RandomDistChoose()
         if ( trigUnit != null ) then
             call UnitDropItem(trigUnit, itemID)
@@ -2259,42 +2628,7 @@ function Unit000071_DropItems takes nothing returns nothing
     call DestroyTrigger(GetTriggeringTrigger())
 endfunction
 
-function Unit000073_DropItems takes nothing returns nothing
-    local widget trigWidget= null
-    local unit trigUnit= null
-    local integer itemID= 0
-    local boolean canDrop= true
-
-    set trigWidget=bj_lastDyingWidget
-    if ( trigWidget == null ) then
-        set trigUnit=GetTriggerUnit()
-    endif
-
-    if ( trigUnit != null ) then
-        set canDrop=not IsUnitHidden(trigUnit)
-        if ( canDrop and GetChangingUnit() != null ) then
-            set canDrop=( GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE) )
-        endif
-    endif
-
-    if ( canDrop ) then
-        // Item set 0
-        call RandomDistReset()
-        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_PERMANENT, 1), 100)
-        set itemID=RandomDistChoose()
-        if ( trigUnit != null ) then
-            call UnitDropItem(trigUnit, itemID)
-        else
-            call WidgetDropItem(trigWidget, itemID)
-        endif
-
-    endif
-
-    set bj_lastDyingWidget=null
-    call DestroyTrigger(GetTriggeringTrigger())
-endfunction
-
-function Unit000074_DropItems takes nothing returns nothing
+function Unit000068_DropItems takes nothing returns nothing
     local widget trigWidget= null
     local unit trigUnit= null
     local integer itemID= 0
@@ -2323,9 +2657,174 @@ function Unit000074_DropItems takes nothing returns nothing
             call WidgetDropItem(trigWidget, itemID)
         endif
 
-        // Item set 1
+    endif
+
+    set bj_lastDyingWidget=null
+    call DestroyTrigger(GetTriggeringTrigger())
+endfunction
+
+function Unit000070_DropItems takes nothing returns nothing
+    local widget trigWidget= null
+    local unit trigUnit= null
+    local integer itemID= 0
+    local boolean canDrop= true
+
+    set trigWidget=bj_lastDyingWidget
+    if ( trigWidget == null ) then
+        set trigUnit=GetTriggerUnit()
+    endif
+
+    if ( trigUnit != null ) then
+        set canDrop=not IsUnitHidden(trigUnit)
+        if ( canDrop and GetChangingUnit() != null ) then
+            set canDrop=( GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE) )
+        endif
+    endif
+
+    if ( canDrop ) then
+        // Item set 0
         call RandomDistReset()
-        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_PERMANENT, 1), 100)
+        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_PERMANENT, 3), 100)
+        set itemID=RandomDistChoose()
+        if ( trigUnit != null ) then
+            call UnitDropItem(trigUnit, itemID)
+        else
+            call WidgetDropItem(trigWidget, itemID)
+        endif
+
+    endif
+
+    set bj_lastDyingWidget=null
+    call DestroyTrigger(GetTriggeringTrigger())
+endfunction
+
+function Unit000072_DropItems takes nothing returns nothing
+    local widget trigWidget= null
+    local unit trigUnit= null
+    local integer itemID= 0
+    local boolean canDrop= true
+
+    set trigWidget=bj_lastDyingWidget
+    if ( trigWidget == null ) then
+        set trigUnit=GetTriggerUnit()
+    endif
+
+    if ( trigUnit != null ) then
+        set canDrop=not IsUnitHidden(trigUnit)
+        if ( canDrop and GetChangingUnit() != null ) then
+            set canDrop=( GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE) )
+        endif
+    endif
+
+    if ( canDrop ) then
+        // Item set 0
+        call RandomDistReset()
+        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_PERMANENT, 3), 100)
+        set itemID=RandomDistChoose()
+        if ( trigUnit != null ) then
+            call UnitDropItem(trigUnit, itemID)
+        else
+            call WidgetDropItem(trigWidget, itemID)
+        endif
+
+    endif
+
+    set bj_lastDyingWidget=null
+    call DestroyTrigger(GetTriggeringTrigger())
+endfunction
+
+function Unit000075_DropItems takes nothing returns nothing
+    local widget trigWidget= null
+    local unit trigUnit= null
+    local integer itemID= 0
+    local boolean canDrop= true
+
+    set trigWidget=bj_lastDyingWidget
+    if ( trigWidget == null ) then
+        set trigUnit=GetTriggerUnit()
+    endif
+
+    if ( trigUnit != null ) then
+        set canDrop=not IsUnitHidden(trigUnit)
+        if ( canDrop and GetChangingUnit() != null ) then
+            set canDrop=( GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE) )
+        endif
+    endif
+
+    if ( canDrop ) then
+        // Item set 0
+        call RandomDistReset()
+        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_POWERUP, 1), 100)
+        set itemID=RandomDistChoose()
+        if ( trigUnit != null ) then
+            call UnitDropItem(trigUnit, itemID)
+        else
+            call WidgetDropItem(trigWidget, itemID)
+        endif
+
+    endif
+
+    set bj_lastDyingWidget=null
+    call DestroyTrigger(GetTriggeringTrigger())
+endfunction
+
+function Unit000077_DropItems takes nothing returns nothing
+    local widget trigWidget= null
+    local unit trigUnit= null
+    local integer itemID= 0
+    local boolean canDrop= true
+
+    set trigWidget=bj_lastDyingWidget
+    if ( trigWidget == null ) then
+        set trigUnit=GetTriggerUnit()
+    endif
+
+    if ( trigUnit != null ) then
+        set canDrop=not IsUnitHidden(trigUnit)
+        if ( canDrop and GetChangingUnit() != null ) then
+            set canDrop=( GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE) )
+        endif
+    endif
+
+    if ( canDrop ) then
+        // Item set 0
+        call RandomDistReset()
+        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_POWERUP, 1), 100)
+        set itemID=RandomDistChoose()
+        if ( trigUnit != null ) then
+            call UnitDropItem(trigUnit, itemID)
+        else
+            call WidgetDropItem(trigWidget, itemID)
+        endif
+
+    endif
+
+    set bj_lastDyingWidget=null
+    call DestroyTrigger(GetTriggeringTrigger())
+endfunction
+
+function Unit000079_DropItems takes nothing returns nothing
+    local widget trigWidget= null
+    local unit trigUnit= null
+    local integer itemID= 0
+    local boolean canDrop= true
+
+    set trigWidget=bj_lastDyingWidget
+    if ( trigWidget == null ) then
+        set trigUnit=GetTriggerUnit()
+    endif
+
+    if ( trigUnit != null ) then
+        set canDrop=not IsUnitHidden(trigUnit)
+        if ( canDrop and GetChangingUnit() != null ) then
+            set canDrop=( GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE) )
+        endif
+    endif
+
+    if ( canDrop ) then
+        // Item set 0
+        call RandomDistReset()
+        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_POWERUP, 1), 100)
         set itemID=RandomDistChoose()
         if ( trigUnit != null ) then
             call UnitDropItem(trigUnit, itemID)
@@ -2360,6 +2859,41 @@ function Unit000080_DropItems takes nothing returns nothing
     if ( canDrop ) then
         // Item set 0
         call RandomDistReset()
+        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_POWERUP, 1), 100)
+        set itemID=RandomDistChoose()
+        if ( trigUnit != null ) then
+            call UnitDropItem(trigUnit, itemID)
+        else
+            call WidgetDropItem(trigWidget, itemID)
+        endif
+
+    endif
+
+    set bj_lastDyingWidget=null
+    call DestroyTrigger(GetTriggeringTrigger())
+endfunction
+
+function Unit000082_DropItems takes nothing returns nothing
+    local widget trigWidget= null
+    local unit trigUnit= null
+    local integer itemID= 0
+    local boolean canDrop= true
+
+    set trigWidget=bj_lastDyingWidget
+    if ( trigWidget == null ) then
+        set trigUnit=GetTriggerUnit()
+    endif
+
+    if ( trigUnit != null ) then
+        set canDrop=not IsUnitHidden(trigUnit)
+        if ( canDrop and GetChangingUnit() != null ) then
+            set canDrop=( GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE) )
+        endif
+    endif
+
+    if ( canDrop ) then
+        // Item set 0
+        call RandomDistReset()
         call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_PERMANENT, 3), 100)
         set itemID=RandomDistChoose()
         if ( trigUnit != null ) then
@@ -2368,9 +2902,69 @@ function Unit000080_DropItems takes nothing returns nothing
             call WidgetDropItem(trigWidget, itemID)
         endif
 
-        // Item set 1
+    endif
+
+    set bj_lastDyingWidget=null
+    call DestroyTrigger(GetTriggeringTrigger())
+endfunction
+
+function Unit000083_DropItems takes nothing returns nothing
+    local widget trigWidget= null
+    local unit trigUnit= null
+    local integer itemID= 0
+    local boolean canDrop= true
+
+    set trigWidget=bj_lastDyingWidget
+    if ( trigWidget == null ) then
+        set trigUnit=GetTriggerUnit()
+    endif
+
+    if ( trigUnit != null ) then
+        set canDrop=not IsUnitHidden(trigUnit)
+        if ( canDrop and GetChangingUnit() != null ) then
+            set canDrop=( GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE) )
+        endif
+    endif
+
+    if ( canDrop ) then
+        // Item set 0
         call RandomDistReset()
-        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_PERMANENT, 1), 100)
+        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_PERMANENT, 3), 100)
+        set itemID=RandomDistChoose()
+        if ( trigUnit != null ) then
+            call UnitDropItem(trigUnit, itemID)
+        else
+            call WidgetDropItem(trigWidget, itemID)
+        endif
+
+    endif
+
+    set bj_lastDyingWidget=null
+    call DestroyTrigger(GetTriggeringTrigger())
+endfunction
+
+function Unit000084_DropItems takes nothing returns nothing
+    local widget trigWidget= null
+    local unit trigUnit= null
+    local integer itemID= 0
+    local boolean canDrop= true
+
+    set trigWidget=bj_lastDyingWidget
+    if ( trigWidget == null ) then
+        set trigUnit=GetTriggerUnit()
+    endif
+
+    if ( trigUnit != null ) then
+        set canDrop=not IsUnitHidden(trigUnit)
+        if ( canDrop and GetChangingUnit() != null ) then
+            set canDrop=( GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE) )
+        endif
+    endif
+
+    if ( canDrop ) then
+        // Item set 0
+        call RandomDistReset()
+        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_POWERUP, 1), 100)
         set itemID=RandomDistChoose()
         if ( trigUnit != null ) then
             call UnitDropItem(trigUnit, itemID)
@@ -2405,7 +2999,7 @@ function Unit000085_DropItems takes nothing returns nothing
     if ( canDrop ) then
         // Item set 0
         call RandomDistReset()
-        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_PERMANENT, 1), 100)
+        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_PERMANENT, 3), 100)
         set itemID=RandomDistChoose()
         if ( trigUnit != null ) then
             call UnitDropItem(trigUnit, itemID)
@@ -2419,7 +3013,7 @@ function Unit000085_DropItems takes nothing returns nothing
     call DestroyTrigger(GetTriggeringTrigger())
 endfunction
 
-function Unit000086_DropItems takes nothing returns nothing
+function Unit000088_DropItems takes nothing returns nothing
     local widget trigWidget= null
     local unit trigUnit= null
     local integer itemID= 0
@@ -2439,16 +3033,6 @@ function Unit000086_DropItems takes nothing returns nothing
 
     if ( canDrop ) then
         // Item set 0
-        call RandomDistReset()
-        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_PERMANENT, 3), 100)
-        set itemID=RandomDistChoose()
-        if ( trigUnit != null ) then
-            call UnitDropItem(trigUnit, itemID)
-        else
-            call WidgetDropItem(trigWidget, itemID)
-        endif
-
-        // Item set 1
         call RandomDistReset()
         call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_POWERUP, 1), 100)
         set itemID=RandomDistChoose()
@@ -2464,7 +3048,7 @@ function Unit000086_DropItems takes nothing returns nothing
     call DestroyTrigger(GetTriggeringTrigger())
 endfunction
 
-function Unit000090_DropItems takes nothing returns nothing
+function Unit000091_DropItems takes nothing returns nothing
     local widget trigWidget= null
     local unit trigUnit= null
     local integer itemID= 0
@@ -2485,7 +3069,7 @@ function Unit000090_DropItems takes nothing returns nothing
     if ( canDrop ) then
         // Item set 0
         call RandomDistReset()
-        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_PERMANENT, 3), 100)
+        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_POWERUP, 1), 100)
         set itemID=RandomDistChoose()
         if ( trigUnit != null ) then
             call UnitDropItem(trigUnit, itemID)
@@ -2493,9 +3077,104 @@ function Unit000090_DropItems takes nothing returns nothing
             call WidgetDropItem(trigWidget, itemID)
         endif
 
-        // Item set 1
+    endif
+
+    set bj_lastDyingWidget=null
+    call DestroyTrigger(GetTriggeringTrigger())
+endfunction
+
+function Unit000092_DropItems takes nothing returns nothing
+    local widget trigWidget= null
+    local unit trigUnit= null
+    local integer itemID= 0
+    local boolean canDrop= true
+
+    set trigWidget=bj_lastDyingWidget
+    if ( trigWidget == null ) then
+        set trigUnit=GetTriggerUnit()
+    endif
+
+    if ( trigUnit != null ) then
+        set canDrop=not IsUnitHidden(trigUnit)
+        if ( canDrop and GetChangingUnit() != null ) then
+            set canDrop=( GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE) )
+        endif
+    endif
+
+    if ( canDrop ) then
+        // Item set 0
+        call RandomDistReset()
+        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_PERMANENT, 5), 100)
+        set itemID=RandomDistChoose()
+        if ( trigUnit != null ) then
+            call UnitDropItem(trigUnit, itemID)
+        else
+            call WidgetDropItem(trigWidget, itemID)
+        endif
+
+    endif
+
+    set bj_lastDyingWidget=null
+    call DestroyTrigger(GetTriggeringTrigger())
+endfunction
+
+function Unit000093_DropItems takes nothing returns nothing
+    local widget trigWidget= null
+    local unit trigUnit= null
+    local integer itemID= 0
+    local boolean canDrop= true
+
+    set trigWidget=bj_lastDyingWidget
+    if ( trigWidget == null ) then
+        set trigUnit=GetTriggerUnit()
+    endif
+
+    if ( trigUnit != null ) then
+        set canDrop=not IsUnitHidden(trigUnit)
+        if ( canDrop and GetChangingUnit() != null ) then
+            set canDrop=( GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE) )
+        endif
+    endif
+
+    if ( canDrop ) then
+        // Item set 0
         call RandomDistReset()
         call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_PERMANENT, 1), 100)
+        set itemID=RandomDistChoose()
+        if ( trigUnit != null ) then
+            call UnitDropItem(trigUnit, itemID)
+        else
+            call WidgetDropItem(trigWidget, itemID)
+        endif
+
+    endif
+
+    set bj_lastDyingWidget=null
+    call DestroyTrigger(GetTriggeringTrigger())
+endfunction
+
+function Unit000096_DropItems takes nothing returns nothing
+    local widget trigWidget= null
+    local unit trigUnit= null
+    local integer itemID= 0
+    local boolean canDrop= true
+
+    set trigWidget=bj_lastDyingWidget
+    if ( trigWidget == null ) then
+        set trigUnit=GetTriggerUnit()
+    endif
+
+    if ( trigUnit != null ) then
+        set canDrop=not IsUnitHidden(trigUnit)
+        if ( canDrop and GetChangingUnit() != null ) then
+            set canDrop=( GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE) )
+        endif
+    endif
+
+    if ( canDrop ) then
+        // Item set 0
+        call RandomDistReset()
+        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_POWERUP, 1), 100)
         set itemID=RandomDistChoose()
         if ( trigUnit != null ) then
             call UnitDropItem(trigUnit, itemID)
@@ -2530,7 +3209,42 @@ function Unit000098_DropItems takes nothing returns nothing
     if ( canDrop ) then
         // Item set 0
         call RandomDistReset()
-        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_PERMANENT, 4), 100)
+        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_PERMANENT, 1), 100)
+        set itemID=RandomDistChoose()
+        if ( trigUnit != null ) then
+            call UnitDropItem(trigUnit, itemID)
+        else
+            call WidgetDropItem(trigWidget, itemID)
+        endif
+
+    endif
+
+    set bj_lastDyingWidget=null
+    call DestroyTrigger(GetTriggeringTrigger())
+endfunction
+
+function Unit000099_DropItems takes nothing returns nothing
+    local widget trigWidget= null
+    local unit trigUnit= null
+    local integer itemID= 0
+    local boolean canDrop= true
+
+    set trigWidget=bj_lastDyingWidget
+    if ( trigWidget == null ) then
+        set trigUnit=GetTriggerUnit()
+    endif
+
+    if ( trigUnit != null ) then
+        set canDrop=not IsUnitHidden(trigUnit)
+        if ( canDrop and GetChangingUnit() != null ) then
+            set canDrop=( GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE) )
+        endif
+    endif
+
+    if ( canDrop ) then
+        // Item set 0
+        call RandomDistReset()
+        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_PERMANENT, 5), 100)
         set itemID=RandomDistChoose()
         if ( trigUnit != null ) then
             call UnitDropItem(trigUnit, itemID)
@@ -2565,7 +3279,322 @@ function Unit000102_DropItems takes nothing returns nothing
     if ( canDrop ) then
         // Item set 0
         call RandomDistReset()
-        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_PERMANENT, 4), 100)
+        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_ANY, 5), 100)
+        set itemID=RandomDistChoose()
+        if ( trigUnit != null ) then
+            call UnitDropItem(trigUnit, itemID)
+        else
+            call WidgetDropItem(trigWidget, itemID)
+        endif
+
+    endif
+
+    set bj_lastDyingWidget=null
+    call DestroyTrigger(GetTriggeringTrigger())
+endfunction
+
+function Unit000103_DropItems takes nothing returns nothing
+    local widget trigWidget= null
+    local unit trigUnit= null
+    local integer itemID= 0
+    local boolean canDrop= true
+
+    set trigWidget=bj_lastDyingWidget
+    if ( trigWidget == null ) then
+        set trigUnit=GetTriggerUnit()
+    endif
+
+    if ( trigUnit != null ) then
+        set canDrop=not IsUnitHidden(trigUnit)
+        if ( canDrop and GetChangingUnit() != null ) then
+            set canDrop=( GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE) )
+        endif
+    endif
+
+    if ( canDrop ) then
+        // Item set 0
+        call RandomDistReset()
+        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_PERMANENT, 5), 100)
+        set itemID=RandomDistChoose()
+        if ( trigUnit != null ) then
+            call UnitDropItem(trigUnit, itemID)
+        else
+            call WidgetDropItem(trigWidget, itemID)
+        endif
+
+    endif
+
+    set bj_lastDyingWidget=null
+    call DestroyTrigger(GetTriggeringTrigger())
+endfunction
+
+function Unit000104_DropItems takes nothing returns nothing
+    local widget trigWidget= null
+    local unit trigUnit= null
+    local integer itemID= 0
+    local boolean canDrop= true
+
+    set trigWidget=bj_lastDyingWidget
+    if ( trigWidget == null ) then
+        set trigUnit=GetTriggerUnit()
+    endif
+
+    if ( trigUnit != null ) then
+        set canDrop=not IsUnitHidden(trigUnit)
+        if ( canDrop and GetChangingUnit() != null ) then
+            set canDrop=( GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE) )
+        endif
+    endif
+
+    if ( canDrop ) then
+        // Item set 0
+        call RandomDistReset()
+        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_PERMANENT, 5), 100)
+        set itemID=RandomDistChoose()
+        if ( trigUnit != null ) then
+            call UnitDropItem(trigUnit, itemID)
+        else
+            call WidgetDropItem(trigWidget, itemID)
+        endif
+
+    endif
+
+    set bj_lastDyingWidget=null
+    call DestroyTrigger(GetTriggeringTrigger())
+endfunction
+
+function Unit000106_DropItems takes nothing returns nothing
+    local widget trigWidget= null
+    local unit trigUnit= null
+    local integer itemID= 0
+    local boolean canDrop= true
+
+    set trigWidget=bj_lastDyingWidget
+    if ( trigWidget == null ) then
+        set trigUnit=GetTriggerUnit()
+    endif
+
+    if ( trigUnit != null ) then
+        set canDrop=not IsUnitHidden(trigUnit)
+        if ( canDrop and GetChangingUnit() != null ) then
+            set canDrop=( GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE) )
+        endif
+    endif
+
+    if ( canDrop ) then
+        // Item set 0
+        call RandomDistReset()
+        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_POWERUP, 2), 100)
+        set itemID=RandomDistChoose()
+        if ( trigUnit != null ) then
+            call UnitDropItem(trigUnit, itemID)
+        else
+            call WidgetDropItem(trigWidget, itemID)
+        endif
+
+    endif
+
+    set bj_lastDyingWidget=null
+    call DestroyTrigger(GetTriggeringTrigger())
+endfunction
+
+function Unit000108_DropItems takes nothing returns nothing
+    local widget trigWidget= null
+    local unit trigUnit= null
+    local integer itemID= 0
+    local boolean canDrop= true
+
+    set trigWidget=bj_lastDyingWidget
+    if ( trigWidget == null ) then
+        set trigUnit=GetTriggerUnit()
+    endif
+
+    if ( trigUnit != null ) then
+        set canDrop=not IsUnitHidden(trigUnit)
+        if ( canDrop and GetChangingUnit() != null ) then
+            set canDrop=( GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE) )
+        endif
+    endif
+
+    if ( canDrop ) then
+        // Item set 0
+        call RandomDistReset()
+        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_PERMANENT, 3), 100)
+        set itemID=RandomDistChoose()
+        if ( trigUnit != null ) then
+            call UnitDropItem(trigUnit, itemID)
+        else
+            call WidgetDropItem(trigWidget, itemID)
+        endif
+
+    endif
+
+    set bj_lastDyingWidget=null
+    call DestroyTrigger(GetTriggeringTrigger())
+endfunction
+
+function Unit000109_DropItems takes nothing returns nothing
+    local widget trigWidget= null
+    local unit trigUnit= null
+    local integer itemID= 0
+    local boolean canDrop= true
+
+    set trigWidget=bj_lastDyingWidget
+    if ( trigWidget == null ) then
+        set trigUnit=GetTriggerUnit()
+    endif
+
+    if ( trigUnit != null ) then
+        set canDrop=not IsUnitHidden(trigUnit)
+        if ( canDrop and GetChangingUnit() != null ) then
+            set canDrop=( GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE) )
+        endif
+    endif
+
+    if ( canDrop ) then
+        // Item set 0
+        call RandomDistReset()
+        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_ANY, 5), 100)
+        set itemID=RandomDistChoose()
+        if ( trigUnit != null ) then
+            call UnitDropItem(trigUnit, itemID)
+        else
+            call WidgetDropItem(trigWidget, itemID)
+        endif
+
+    endif
+
+    set bj_lastDyingWidget=null
+    call DestroyTrigger(GetTriggeringTrigger())
+endfunction
+
+function Unit000110_DropItems takes nothing returns nothing
+    local widget trigWidget= null
+    local unit trigUnit= null
+    local integer itemID= 0
+    local boolean canDrop= true
+
+    set trigWidget=bj_lastDyingWidget
+    if ( trigWidget == null ) then
+        set trigUnit=GetTriggerUnit()
+    endif
+
+    if ( trigUnit != null ) then
+        set canDrop=not IsUnitHidden(trigUnit)
+        if ( canDrop and GetChangingUnit() != null ) then
+            set canDrop=( GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE) )
+        endif
+    endif
+
+    if ( canDrop ) then
+        // Item set 0
+        call RandomDistReset()
+        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_POWERUP, 2), 100)
+        set itemID=RandomDistChoose()
+        if ( trigUnit != null ) then
+            call UnitDropItem(trigUnit, itemID)
+        else
+            call WidgetDropItem(trigWidget, itemID)
+        endif
+
+    endif
+
+    set bj_lastDyingWidget=null
+    call DestroyTrigger(GetTriggeringTrigger())
+endfunction
+
+function Unit000113_DropItems takes nothing returns nothing
+    local widget trigWidget= null
+    local unit trigUnit= null
+    local integer itemID= 0
+    local boolean canDrop= true
+
+    set trigWidget=bj_lastDyingWidget
+    if ( trigWidget == null ) then
+        set trigUnit=GetTriggerUnit()
+    endif
+
+    if ( trigUnit != null ) then
+        set canDrop=not IsUnitHidden(trigUnit)
+        if ( canDrop and GetChangingUnit() != null ) then
+            set canDrop=( GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE) )
+        endif
+    endif
+
+    if ( canDrop ) then
+        // Item set 0
+        call RandomDistReset()
+        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_PERMANENT, 1), 100)
+        set itemID=RandomDistChoose()
+        if ( trigUnit != null ) then
+            call UnitDropItem(trigUnit, itemID)
+        else
+            call WidgetDropItem(trigWidget, itemID)
+        endif
+
+    endif
+
+    set bj_lastDyingWidget=null
+    call DestroyTrigger(GetTriggeringTrigger())
+endfunction
+
+function Unit000115_DropItems takes nothing returns nothing
+    local widget trigWidget= null
+    local unit trigUnit= null
+    local integer itemID= 0
+    local boolean canDrop= true
+
+    set trigWidget=bj_lastDyingWidget
+    if ( trigWidget == null ) then
+        set trigUnit=GetTriggerUnit()
+    endif
+
+    if ( trigUnit != null ) then
+        set canDrop=not IsUnitHidden(trigUnit)
+        if ( canDrop and GetChangingUnit() != null ) then
+            set canDrop=( GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE) )
+        endif
+    endif
+
+    if ( canDrop ) then
+        // Item set 0
+        call RandomDistReset()
+        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_PERMANENT, 1), 100)
+        set itemID=RandomDistChoose()
+        if ( trigUnit != null ) then
+            call UnitDropItem(trigUnit, itemID)
+        else
+            call WidgetDropItem(trigWidget, itemID)
+        endif
+
+    endif
+
+    set bj_lastDyingWidget=null
+    call DestroyTrigger(GetTriggeringTrigger())
+endfunction
+
+function Unit000116_DropItems takes nothing returns nothing
+    local widget trigWidget= null
+    local unit trigUnit= null
+    local integer itemID= 0
+    local boolean canDrop= true
+
+    set trigWidget=bj_lastDyingWidget
+    if ( trigWidget == null ) then
+        set trigUnit=GetTriggerUnit()
+    endif
+
+    if ( trigUnit != null ) then
+        set canDrop=not IsUnitHidden(trigUnit)
+        if ( canDrop and GetChangingUnit() != null ) then
+            set canDrop=( GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE) )
+        endif
+    endif
+
+    if ( canDrop ) then
+        // Item set 0
+        call RandomDistReset()
+        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_ANY, 5), 100)
         set itemID=RandomDistChoose()
         if ( trigUnit != null ) then
             call UnitDropItem(trigUnit, itemID)
@@ -2580,6 +3609,111 @@ function Unit000102_DropItems takes nothing returns nothing
 endfunction
 
 function Unit000119_DropItems takes nothing returns nothing
+    local widget trigWidget= null
+    local unit trigUnit= null
+    local integer itemID= 0
+    local boolean canDrop= true
+
+    set trigWidget=bj_lastDyingWidget
+    if ( trigWidget == null ) then
+        set trigUnit=GetTriggerUnit()
+    endif
+
+    if ( trigUnit != null ) then
+        set canDrop=not IsUnitHidden(trigUnit)
+        if ( canDrop and GetChangingUnit() != null ) then
+            set canDrop=( GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE) )
+        endif
+    endif
+
+    if ( canDrop ) then
+        // Item set 0
+        call RandomDistReset()
+        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_POWERUP, 2), 100)
+        set itemID=RandomDistChoose()
+        if ( trigUnit != null ) then
+            call UnitDropItem(trigUnit, itemID)
+        else
+            call WidgetDropItem(trigWidget, itemID)
+        endif
+
+    endif
+
+    set bj_lastDyingWidget=null
+    call DestroyTrigger(GetTriggeringTrigger())
+endfunction
+
+function Unit000120_DropItems takes nothing returns nothing
+    local widget trigWidget= null
+    local unit trigUnit= null
+    local integer itemID= 0
+    local boolean canDrop= true
+
+    set trigWidget=bj_lastDyingWidget
+    if ( trigWidget == null ) then
+        set trigUnit=GetTriggerUnit()
+    endif
+
+    if ( trigUnit != null ) then
+        set canDrop=not IsUnitHidden(trigUnit)
+        if ( canDrop and GetChangingUnit() != null ) then
+            set canDrop=( GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE) )
+        endif
+    endif
+
+    if ( canDrop ) then
+        // Item set 0
+        call RandomDistReset()
+        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_PERMANENT, 5), 100)
+        set itemID=RandomDistChoose()
+        if ( trigUnit != null ) then
+            call UnitDropItem(trigUnit, itemID)
+        else
+            call WidgetDropItem(trigWidget, itemID)
+        endif
+
+    endif
+
+    set bj_lastDyingWidget=null
+    call DestroyTrigger(GetTriggeringTrigger())
+endfunction
+
+function Unit000122_DropItems takes nothing returns nothing
+    local widget trigWidget= null
+    local unit trigUnit= null
+    local integer itemID= 0
+    local boolean canDrop= true
+
+    set trigWidget=bj_lastDyingWidget
+    if ( trigWidget == null ) then
+        set trigUnit=GetTriggerUnit()
+    endif
+
+    if ( trigUnit != null ) then
+        set canDrop=not IsUnitHidden(trigUnit)
+        if ( canDrop and GetChangingUnit() != null ) then
+            set canDrop=( GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE) )
+        endif
+    endif
+
+    if ( canDrop ) then
+        // Item set 0
+        call RandomDistReset()
+        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_POWERUP, 1), 100)
+        set itemID=RandomDistChoose()
+        if ( trigUnit != null ) then
+            call UnitDropItem(trigUnit, itemID)
+        else
+            call WidgetDropItem(trigWidget, itemID)
+        endif
+
+    endif
+
+    set bj_lastDyingWidget=null
+    call DestroyTrigger(GetTriggeringTrigger())
+endfunction
+
+function Unit000123_DropItems takes nothing returns nothing
     local widget trigWidget= null
     local unit trigUnit= null
     local integer itemID= 0
@@ -2635,7 +3769,42 @@ function Unit000126_DropItems takes nothing returns nothing
     if ( canDrop ) then
         // Item set 0
         call RandomDistReset()
-        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_PERMANENT, 5), 100)
+        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_PERMANENT, 1), 100)
+        set itemID=RandomDistChoose()
+        if ( trigUnit != null ) then
+            call UnitDropItem(trigUnit, itemID)
+        else
+            call WidgetDropItem(trigWidget, itemID)
+        endif
+
+    endif
+
+    set bj_lastDyingWidget=null
+    call DestroyTrigger(GetTriggeringTrigger())
+endfunction
+
+function Unit000129_DropItems takes nothing returns nothing
+    local widget trigWidget= null
+    local unit trigUnit= null
+    local integer itemID= 0
+    local boolean canDrop= true
+
+    set trigWidget=bj_lastDyingWidget
+    if ( trigWidget == null ) then
+        set trigUnit=GetTriggerUnit()
+    endif
+
+    if ( trigUnit != null ) then
+        set canDrop=not IsUnitHidden(trigUnit)
+        if ( canDrop and GetChangingUnit() != null ) then
+            set canDrop=( GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE) )
+        endif
+    endif
+
+    if ( canDrop ) then
+        // Item set 0
+        call RandomDistReset()
+        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_PERMANENT, 1), 100)
         set itemID=RandomDistChoose()
         if ( trigUnit != null ) then
             call UnitDropItem(trigUnit, itemID)
@@ -2670,7 +3839,7 @@ function Unit000140_DropItems takes nothing returns nothing
     if ( canDrop ) then
         // Item set 0
         call RandomDistReset()
-        call RandomDistAddItem('odef', 100)
+        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_ANY, 6), 100)
         set itemID=RandomDistChoose()
         if ( trigUnit != null ) then
             call UnitDropItem(trigUnit, itemID)
@@ -2684,252 +3853,7 @@ function Unit000140_DropItems takes nothing returns nothing
     call DestroyTrigger(GetTriggeringTrigger())
 endfunction
 
-function Unit000146_DropItems takes nothing returns nothing
-    local widget trigWidget= null
-    local unit trigUnit= null
-    local integer itemID= 0
-    local boolean canDrop= true
-
-    set trigWidget=bj_lastDyingWidget
-    if ( trigWidget == null ) then
-        set trigUnit=GetTriggerUnit()
-    endif
-
-    if ( trigUnit != null ) then
-        set canDrop=not IsUnitHidden(trigUnit)
-        if ( canDrop and GetChangingUnit() != null ) then
-            set canDrop=( GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE) )
-        endif
-    endif
-
-    if ( canDrop ) then
-        // Item set 0
-        call RandomDistReset()
-        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_PERMANENT, 2), 100)
-        set itemID=RandomDistChoose()
-        if ( trigUnit != null ) then
-            call UnitDropItem(trigUnit, itemID)
-        else
-            call WidgetDropItem(trigWidget, itemID)
-        endif
-
-    endif
-
-    set bj_lastDyingWidget=null
-    call DestroyTrigger(GetTriggeringTrigger())
-endfunction
-
-function Unit000165_DropItems takes nothing returns nothing
-    local widget trigWidget= null
-    local unit trigUnit= null
-    local integer itemID= 0
-    local boolean canDrop= true
-
-    set trigWidget=bj_lastDyingWidget
-    if ( trigWidget == null ) then
-        set trigUnit=GetTriggerUnit()
-    endif
-
-    if ( trigUnit != null ) then
-        set canDrop=not IsUnitHidden(trigUnit)
-        if ( canDrop and GetChangingUnit() != null ) then
-            set canDrop=( GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE) )
-        endif
-    endif
-
-    if ( canDrop ) then
-        // Item set 0
-        call RandomDistReset()
-        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_PERMANENT, 2), 100)
-        set itemID=RandomDistChoose()
-        if ( trigUnit != null ) then
-            call UnitDropItem(trigUnit, itemID)
-        else
-            call WidgetDropItem(trigWidget, itemID)
-        endif
-
-    endif
-
-    set bj_lastDyingWidget=null
-    call DestroyTrigger(GetTriggeringTrigger())
-endfunction
-
-function Unit000176_DropItems takes nothing returns nothing
-    local widget trigWidget= null
-    local unit trigUnit= null
-    local integer itemID= 0
-    local boolean canDrop= true
-
-    set trigWidget=bj_lastDyingWidget
-    if ( trigWidget == null ) then
-        set trigUnit=GetTriggerUnit()
-    endif
-
-    if ( trigUnit != null ) then
-        set canDrop=not IsUnitHidden(trigUnit)
-        if ( canDrop and GetChangingUnit() != null ) then
-            set canDrop=( GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE) )
-        endif
-    endif
-
-    if ( canDrop ) then
-        // Item set 0
-        call RandomDistReset()
-        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_ANY, 4), 100)
-        set itemID=RandomDistChoose()
-        if ( trigUnit != null ) then
-            call UnitDropItem(trigUnit, itemID)
-        else
-            call WidgetDropItem(trigWidget, itemID)
-        endif
-
-    endif
-
-    set bj_lastDyingWidget=null
-    call DestroyTrigger(GetTriggeringTrigger())
-endfunction
-
-function Unit000177_DropItems takes nothing returns nothing
-    local widget trigWidget= null
-    local unit trigUnit= null
-    local integer itemID= 0
-    local boolean canDrop= true
-
-    set trigWidget=bj_lastDyingWidget
-    if ( trigWidget == null ) then
-        set trigUnit=GetTriggerUnit()
-    endif
-
-    if ( trigUnit != null ) then
-        set canDrop=not IsUnitHidden(trigUnit)
-        if ( canDrop and GetChangingUnit() != null ) then
-            set canDrop=( GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE) )
-        endif
-    endif
-
-    if ( canDrop ) then
-        // Item set 0
-        call RandomDistReset()
-        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_PERMANENT, 4), 100)
-        set itemID=RandomDistChoose()
-        if ( trigUnit != null ) then
-            call UnitDropItem(trigUnit, itemID)
-        else
-            call WidgetDropItem(trigWidget, itemID)
-        endif
-
-    endif
-
-    set bj_lastDyingWidget=null
-    call DestroyTrigger(GetTriggeringTrigger())
-endfunction
-
-function Unit000179_DropItems takes nothing returns nothing
-    local widget trigWidget= null
-    local unit trigUnit= null
-    local integer itemID= 0
-    local boolean canDrop= true
-
-    set trigWidget=bj_lastDyingWidget
-    if ( trigWidget == null ) then
-        set trigUnit=GetTriggerUnit()
-    endif
-
-    if ( trigUnit != null ) then
-        set canDrop=not IsUnitHidden(trigUnit)
-        if ( canDrop and GetChangingUnit() != null ) then
-            set canDrop=( GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE) )
-        endif
-    endif
-
-    if ( canDrop ) then
-        // Item set 0
-        call RandomDistReset()
-        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_PERMANENT, 2), 100)
-        set itemID=RandomDistChoose()
-        if ( trigUnit != null ) then
-            call UnitDropItem(trigUnit, itemID)
-        else
-            call WidgetDropItem(trigWidget, itemID)
-        endif
-
-    endif
-
-    set bj_lastDyingWidget=null
-    call DestroyTrigger(GetTriggeringTrigger())
-endfunction
-
-function Unit000186_DropItems takes nothing returns nothing
-    local widget trigWidget= null
-    local unit trigUnit= null
-    local integer itemID= 0
-    local boolean canDrop= true
-
-    set trigWidget=bj_lastDyingWidget
-    if ( trigWidget == null ) then
-        set trigUnit=GetTriggerUnit()
-    endif
-
-    if ( trigUnit != null ) then
-        set canDrop=not IsUnitHidden(trigUnit)
-        if ( canDrop and GetChangingUnit() != null ) then
-            set canDrop=( GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE) )
-        endif
-    endif
-
-    if ( canDrop ) then
-        // Item set 0
-        call RandomDistReset()
-        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_PERMANENT, 4), 100)
-        set itemID=RandomDistChoose()
-        if ( trigUnit != null ) then
-            call UnitDropItem(trigUnit, itemID)
-        else
-            call WidgetDropItem(trigWidget, itemID)
-        endif
-
-    endif
-
-    set bj_lastDyingWidget=null
-    call DestroyTrigger(GetTriggeringTrigger())
-endfunction
-
-function Unit000187_DropItems takes nothing returns nothing
-    local widget trigWidget= null
-    local unit trigUnit= null
-    local integer itemID= 0
-    local boolean canDrop= true
-
-    set trigWidget=bj_lastDyingWidget
-    if ( trigWidget == null ) then
-        set trigUnit=GetTriggerUnit()
-    endif
-
-    if ( trigUnit != null ) then
-        set canDrop=not IsUnitHidden(trigUnit)
-        if ( canDrop and GetChangingUnit() != null ) then
-            set canDrop=( GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE) )
-        endif
-    endif
-
-    if ( canDrop ) then
-        // Item set 0
-        call RandomDistReset()
-        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_ANY, 7), 100)
-        set itemID=RandomDistChoose()
-        if ( trigUnit != null ) then
-            call UnitDropItem(trigUnit, itemID)
-        else
-            call WidgetDropItem(trigWidget, itemID)
-        endif
-
-    endif
-
-    set bj_lastDyingWidget=null
-    call DestroyTrigger(GetTriggeringTrigger())
-endfunction
-
-function Unit000188_DropItems takes nothing returns nothing
+function Unit000141_DropItems takes nothing returns nothing
     local widget trigWidget= null
     local unit trigUnit= null
     local integer itemID= 0
@@ -2964,7 +3888,7 @@ function Unit000188_DropItems takes nothing returns nothing
     call DestroyTrigger(GetTriggeringTrigger())
 endfunction
 
-function Unit000194_DropItems takes nothing returns nothing
+function Unit000143_DropItems takes nothing returns nothing
     local widget trigWidget= null
     local unit trigUnit= null
     local integer itemID= 0
@@ -2985,17 +3909,7 @@ function Unit000194_DropItems takes nothing returns nothing
     if ( canDrop ) then
         // Item set 0
         call RandomDistReset()
-        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_PERMANENT, 3), 100)
-        set itemID=RandomDistChoose()
-        if ( trigUnit != null ) then
-            call UnitDropItem(trigUnit, itemID)
-        else
-            call WidgetDropItem(trigWidget, itemID)
-        endif
-
-        // Item set 1
-        call RandomDistReset()
-        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_POWERUP, 1), 100)
+        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_ANY, 6), 100)
         set itemID=RandomDistChoose()
         if ( trigUnit != null ) then
             call UnitDropItem(trigUnit, itemID)
@@ -3009,7 +3923,7 @@ function Unit000194_DropItems takes nothing returns nothing
     call DestroyTrigger(GetTriggeringTrigger())
 endfunction
 
-function Unit000197_DropItems takes nothing returns nothing
+function Unit000144_DropItems takes nothing returns nothing
     local widget trigWidget= null
     local unit trigUnit= null
     local integer itemID= 0
@@ -3030,77 +3944,7 @@ function Unit000197_DropItems takes nothing returns nothing
     if ( canDrop ) then
         // Item set 0
         call RandomDistReset()
-        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_ANY, 7), 100)
-        set itemID=RandomDistChoose()
-        if ( trigUnit != null ) then
-            call UnitDropItem(trigUnit, itemID)
-        else
-            call WidgetDropItem(trigWidget, itemID)
-        endif
-
-    endif
-
-    set bj_lastDyingWidget=null
-    call DestroyTrigger(GetTriggeringTrigger())
-endfunction
-
-function Unit000212_DropItems takes nothing returns nothing
-    local widget trigWidget= null
-    local unit trigUnit= null
-    local integer itemID= 0
-    local boolean canDrop= true
-
-    set trigWidget=bj_lastDyingWidget
-    if ( trigWidget == null ) then
-        set trigUnit=GetTriggerUnit()
-    endif
-
-    if ( trigUnit != null ) then
-        set canDrop=not IsUnitHidden(trigUnit)
-        if ( canDrop and GetChangingUnit() != null ) then
-            set canDrop=( GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE) )
-        endif
-    endif
-
-    if ( canDrop ) then
-        // Item set 0
-        call RandomDistReset()
-        call RandomDistAddItem('ckng', 100)
-        set itemID=RandomDistChoose()
-        if ( trigUnit != null ) then
-            call UnitDropItem(trigUnit, itemID)
-        else
-            call WidgetDropItem(trigWidget, itemID)
-        endif
-
-    endif
-
-    set bj_lastDyingWidget=null
-    call DestroyTrigger(GetTriggeringTrigger())
-endfunction
-
-function Unit000218_DropItems takes nothing returns nothing
-    local widget trigWidget= null
-    local unit trigUnit= null
-    local integer itemID= 0
-    local boolean canDrop= true
-
-    set trigWidget=bj_lastDyingWidget
-    if ( trigWidget == null ) then
-        set trigUnit=GetTriggerUnit()
-    endif
-
-    if ( trigUnit != null ) then
-        set canDrop=not IsUnitHidden(trigUnit)
-        if ( canDrop and GetChangingUnit() != null ) then
-            set canDrop=( GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE) )
-        endif
-    endif
-
-    if ( canDrop ) then
-        // Item set 0
-        call RandomDistReset()
-        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_ANY, 7), 100)
+        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_PERMANENT, 5), 100)
         set itemID=RandomDistChoose()
         if ( trigUnit != null ) then
             call UnitDropItem(trigUnit, itemID)
@@ -3122,69 +3966,98 @@ endfunction
 //***************************************************************************
 
 function InitSounds takes nothing returns nothing
+    set gg_snd_QuestCompleted=CreateSound("Sound\\Interface\\QuestCompleted.wav", false, false, false, 10, 10, "")
+    call SetSoundParamsFromLabel(gg_snd_QuestCompleted, "QuestCompleted")
+    call SetSoundDuration(gg_snd_QuestCompleted, 5154)
+    set gg_snd_QuestFailed=CreateSound("Sound\\Interface\\QuestFailed.wav", false, false, false, 10, 10, "")
+    call SetSoundParamsFromLabel(gg_snd_QuestFailed, "QuestFailed")
+    call SetSoundDuration(gg_snd_QuestFailed, 4690)
     set gg_snd_Arthasrecruited=CreateSound("war3mapImported\\Arthasrecruited.mp3", false, false, false, 10, 10, "")
-    call SetSoundDuration(gg_snd_Arthasrecruited, 3265)
+    call SetSoundDuration(gg_snd_Arthasrecruited, 4690)
     call SetSoundChannel(gg_snd_Arthasrecruited, 0)
     call SetSoundVolume(gg_snd_Arthasrecruited, 127)
     call SetSoundPitch(gg_snd_Arthasrecruited, 1.0)
     set gg_snd_Cairnerecruited=CreateSound("war3mapImported\\Cairnerecruited.mp3", false, false, false, 10, 10, "")
-    call SetSoundDuration(gg_snd_Cairnerecruited, 5784)
+    call SetSoundDuration(gg_snd_Cairnerecruited, 4690)
     call SetSoundChannel(gg_snd_Cairnerecruited, 0)
     call SetSoundVolume(gg_snd_Cairnerecruited, 127)
     call SetSoundPitch(gg_snd_Cairnerecruited, 1.0)
     set gg_snd_Doom=CreateSound("war3mapImported\\Doom.mp3", false, false, false, 10, 10, "")
-    call SetSoundDuration(gg_snd_Doom, 66115)
+    call SetSoundDuration(gg_snd_Doom, 4690)
     call SetSoundChannel(gg_snd_Doom, 0)
     call SetSoundVolume(gg_snd_Doom, 127)
     call SetSoundPitch(gg_snd_Doom, 1.0)
     set gg_snd_FurionRecruited=CreateSound("war3mapImported\\FurionRecruited.mp3", false, false, false, 10, 10, "")
-    call SetSoundDuration(gg_snd_FurionRecruited, 2821)
+    call SetSoundDuration(gg_snd_FurionRecruited, 4690)
     call SetSoundChannel(gg_snd_FurionRecruited, 0)
     call SetSoundVolume(gg_snd_FurionRecruited, 127)
     call SetSoundPitch(gg_snd_FurionRecruited, 1.0)
     set gg_snd_GromRecruited=CreateSound("war3mapImported\\GromRecruited.mp3", false, false, false, 10, 10, "")
-    call SetSoundDuration(gg_snd_GromRecruited, 4414)
+    call SetSoundDuration(gg_snd_GromRecruited, 4690)
     call SetSoundChannel(gg_snd_GromRecruited, 0)
     call SetSoundVolume(gg_snd_GromRecruited, 127)
     call SetSoundPitch(gg_snd_GromRecruited, 1.0)
     set gg_snd_Jainarecruited=CreateSound("war3mapImported\\Jainarecruited.mp3", false, false, false, 10, 10, "")
-    call SetSoundDuration(gg_snd_Jainarecruited, 1462)
+    call SetSoundDuration(gg_snd_Jainarecruited, 4690)
     call SetSoundChannel(gg_snd_Jainarecruited, 0)
     call SetSoundVolume(gg_snd_Jainarecruited, 127)
     call SetSoundPitch(gg_snd_Jainarecruited, 1.0)
     set gg_snd_KelThuzadrecruited=CreateSound("war3mapImported\\KelThuzadrecruited.mp3", false, false, false, 10, 10, "")
-    call SetSoundDuration(gg_snd_KelThuzadrecruited, 3604)
+    call SetSoundDuration(gg_snd_KelThuzadrecruited, 4690)
     call SetSoundChannel(gg_snd_KelThuzadrecruited, 0)
     call SetSoundVolume(gg_snd_KelThuzadrecruited, 127)
     call SetSoundPitch(gg_snd_KelThuzadrecruited, 1.0)
     set gg_snd_Muradinrecruited=CreateSound("war3mapImported\\Muradinrecruited.mp3", false, false, false, 10, 10, "")
-    call SetSoundDuration(gg_snd_Muradinrecruited, 1593)
+    call SetSoundDuration(gg_snd_Muradinrecruited, 4690)
     call SetSoundChannel(gg_snd_Muradinrecruited, 0)
     call SetSoundVolume(gg_snd_Muradinrecruited, 127)
     call SetSoundPitch(gg_snd_Muradinrecruited, 1.0)
+    set gg_snd_Orc1=CreateSound("war3mapImported\\Orc1.mp3", false, false, false, 10, 10, "")
+    call SetSoundDuration(gg_snd_Orc1, 4690)
+    call SetSoundChannel(gg_snd_Orc1, 0)
+    call SetSoundVolume(gg_snd_Orc1, 127)
+    call SetSoundPitch(gg_snd_Orc1, 1.0)
     set gg_snd_Sylvanasrecruited=CreateSound("war3mapImported\\Sylvanasrecruited.mp3", false, false, false, 10, 10, "")
-    call SetSoundDuration(gg_snd_Sylvanasrecruited, 2220)
+    call SetSoundDuration(gg_snd_Sylvanasrecruited, 4690)
     call SetSoundChannel(gg_snd_Sylvanasrecruited, 0)
     call SetSoundVolume(gg_snd_Sylvanasrecruited, 127)
     call SetSoundPitch(gg_snd_Sylvanasrecruited, 1.0)
     set gg_snd_ThrallRecruited=CreateSound("war3mapImported\\ThrallRecruited.mp3", false, false, false, 10, 10, "")
-    call SetSoundDuration(gg_snd_ThrallRecruited, 2612)
+    call SetSoundDuration(gg_snd_ThrallRecruited, 4690)
     call SetSoundChannel(gg_snd_ThrallRecruited, 0)
     call SetSoundVolume(gg_snd_ThrallRecruited, 127)
     call SetSoundPitch(gg_snd_ThrallRecruited, 1.0)
     set gg_snd_TyrandeRecruited=CreateSound("war3mapImported\\TyrandeRecruited.mp3", false, false, false, 10, 10, "")
-    call SetSoundDuration(gg_snd_TyrandeRecruited, 2716)
+    call SetSoundDuration(gg_snd_TyrandeRecruited, 4690)
     call SetSoundChannel(gg_snd_TyrandeRecruited, 0)
     call SetSoundVolume(gg_snd_TyrandeRecruited, 127)
     call SetSoundPitch(gg_snd_TyrandeRecruited, 1.0)
+    set gg_snd_t_voice5445299931759779715=CreateSound("war3mapImported\\t_voice5445299931759779715.mp3", false, false, false, 10, 10, "")
+    call SetSoundDuration(gg_snd_t_voice5445299931759779715, 4690)
+    call SetSoundChannel(gg_snd_t_voice5445299931759779715, 0)
+    call SetSoundVolume(gg_snd_t_voice5445299931759779715, 127)
+    call SetSoundPitch(gg_snd_t_voice5445299931759779715, 1.0)
     set gg_snd_Utherrecruited=CreateSound("war3mapImported\\Utherrecruited.mp3", false, false, false, 10, 10, "")
-    call SetSoundDuration(gg_snd_Utherrecruited, 2716)
+    call SetSoundDuration(gg_snd_Utherrecruited, 4690)
     call SetSoundChannel(gg_snd_Utherrecruited, 0)
     call SetSoundVolume(gg_snd_Utherrecruited, 127)
     call SetSoundPitch(gg_snd_Utherrecruited, 1.0)
-    set gg_snd_NecromancerNoGold1=CreateSound("Sound\\Interface\\Warning\\Undead\\NecromancerNoGold1.wav", false, false, false, 10, 10, "")
-    call SetSoundParamsFromLabel(gg_snd_NecromancerNoGold1, "NoGoldUndead")
-    call SetSoundDuration(gg_snd_NecromancerNoGold1, 2403)
+    set gg_snd_NecromancerNoLumber1=CreateSound("Sound\\Interface\\Warning\\Undead\\NecromancerNoLumber1.wav", false, false, false, 10, 10, "")
+    call SetSoundParamsFromLabel(gg_snd_NecromancerNoLumber1, "NoLumberUndead")
+    call SetSoundDuration(gg_snd_NecromancerNoLumber1, 1697)
+    set gg_snd_KelthuzadRecruited=CreateSound("war3mapImported\\KelthuzadRecruited.mp3", false, false, false, 10, 10, "")
+    call SetSoundDuration(gg_snd_KelthuzadRecruited, 1697)
+    call SetSoundChannel(gg_snd_KelthuzadRecruited, 0)
+    call SetSoundVolume(gg_snd_KelthuzadRecruited, 127)
+    call SetSoundPitch(gg_snd_KelthuzadRecruited, 1.0)
+    set gg_snd_Doom01=CreateSound("Sound\\Music\\mp3Music\\Doom.mp3", false, false, false, 10, 10, "")
+    call SetSoundDuration(gg_snd_Doom01, 66115)
+    call SetSoundChannel(gg_snd_Doom01, 0)
+    call SetSoundVolume(gg_snd_Doom01, 127)
+    call SetSoundPitch(gg_snd_Doom01, 1.0)
+    set gg_snd_N07Archimonde28=CreateSound("Sound\\Dialogue\\NightElfCampaign\\NightElf07\\N07Archimonde28.mp3", false, false, false, 10, 10, "")
+    call SetSoundParamsFromLabel(gg_snd_N07Archimonde28, "N07Archimonde28")
+    call SetSoundDuration(gg_snd_N07Archimonde28, 15568)
 endfunction
 
 //***************************************************************************
@@ -3201,320 +4074,404 @@ function CreateNeutralHostile takes nothing returns nothing
     local trigger t
     local real life
 
-    set u=CreateUnit(p, 'nsel', - 125.9, - 1101.7, 289.140)
-    call SetUnitAcquireRange(u, 200.0)
+    set u=CreateUnit(p, 'ngst', - 5938.0, 8194.5, 264.631)
     set t=CreateTrigger()
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
-    call TriggerAddAction(t, function Unit000024_DropItems)
-    set u=CreateUnit(p, 'nmcf', 3311.8, 1606.0, 355.016)
-    call SetUnitAcquireRange(u, 200.0)
-    set u=CreateUnit(p, 'nmcf', 3285.0, 1733.2, 323.977)
-    call SetUnitAcquireRange(u, 200.0)
-    set u=CreateUnit(p, 'nmbg', - 6181.3, - 960.3, 13.022)
-    set u=CreateUnit(p, 'nmbg', - 6082.9, 4411.8, 13.022)
-    set u=CreateUnit(p, 'nrel', 304.7, - 935.5, 244.996)
-    call SetUnitAcquireRange(u, 200.0)
-    set u=CreateUnit(p, 'nrel', - 257.4, - 888.5, 293.556)
-    call SetUnitAcquireRange(u, 200.0)
-    set u=CreateUnit(p, 'nsel', 187.7, - 1085.3, 250.110)
-    call SetUnitAcquireRange(u, 200.0)
+    call TriggerAddAction(t, function Unit000033_DropItems)
+    set u=CreateUnit(p, 'ngrk', - 6254.2, 7938.2, 289.652)
+    set u=CreateUnit(p, 'ngrk', - 6071.5, 8029.9, 273.762)
+    set u=CreateUnit(p, 'ngst', - 8577.4, 535.7, 7.605)
     set t=CreateTrigger()
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
-    call TriggerAddAction(t, function Unit000126_DropItems)
-    set u=CreateUnit(p, 'n00G', 30.2, - 1208.4, 279.890)
+    call TriggerAddAction(t, function Unit000077_DropItems)
+    set u=CreateUnit(p, 'ngst', 6637.1, 8225.8, 244.938)
     set t=CreateTrigger()
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
-    call TriggerAddAction(t, function Unit000218_DropItems)
-    set u=CreateUnit(p, 'nmbg', 5641.4, 4867.1, 214.888)
-    set u=CreateUnit(p, 'nmbg', 6401.4, - 1246.9, 173.530)
-    set u=CreateUnit(p, 'nmbg', 5661.1, - 5112.2, 190.988)
-    set u=CreateUnit(p, 'nmtw', 6330.3, - 1179.1, 163.878)
-    set u=CreateUnit(p, 'nmtw', 6131.9, - 1206.9, 154.837)
-    set u=CreateUnit(p, 'nmsn', 5593.0, - 5233.6, 33.672)
-    set t=CreateTrigger()
-    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
-    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
-    call TriggerAddAction(t, function Unit000021_DropItems)
-    set u=CreateUnit(p, 'nmbg', - 5984.6, - 5033.0, 2.871)
-    set u=CreateUnit(p, 'nscb', 4552.9, - 3308.3, 206.607)
-    call SetUnitAcquireRange(u, 200.0)
-    set u=CreateUnit(p, 'nscb', 4600.4, - 3598.7, 150.116)
-    call SetUnitAcquireRange(u, 200.0)
-    set u=CreateUnit(p, 'nsc2', 4774.2, - 3424.9, 91.290)
-    call SetUnitAcquireRange(u, 200.0)
+    call TriggerAddAction(t, function Unit000075_DropItems)
+    set u=CreateUnit(p, 'ngrk', 6253.0, 8091.1, 269.959)
+    set u=CreateUnit(p, 'ngrk', 6456.0, 8115.9, 254.068)
+    set u=CreateUnit(p, 'ngrk', - 8256.6, 285.1, 32.626)
+    set u=CreateUnit(p, 'ngst', 8136.7, - 992.1, 231.500)
     set t=CreateTrigger()
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
     call TriggerAddAction(t, function Unit000085_DropItems)
-    set u=CreateUnit(p, 'nscb', - 5145.8, - 3137.5, 116.607)
-    call SetUnitAcquireRange(u, 200.0)
-    set u=CreateUnit(p, 'nmtw', 6152.3, - 1427.0, 138.077)
-    set u=CreateUnit(p, 'nhyh', - 2114.0, 5939.1, 296.830)
-    call SetUnitAcquireRange(u, 200.0)
-    set u=CreateUnit(p, 'nmtw', 3228.8, 1673.1, 168.920)
+    set u=CreateUnit(p, 'ngst', 8400.6, - 1351.3, 203.220)
+    set t=CreateTrigger()
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
+    call TriggerAddAction(t, function Unit000032_DropItems)
+    set u=CreateUnit(p, 'ngrk', 8192.3, - 1312.8, 212.351)
+    set u=CreateUnit(p, 'ngrk', - 8387.0, 442.5, 16.735)
+    set u=CreateUnit(p, 'ngst', 4299.5, - 8762.2, 79.693)
+    set t=CreateTrigger()
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
+    call TriggerAddAction(t, function Unit000088_DropItems)
+    set u=CreateUnit(p, 'ngrk', 4636.6, - 8534.1, 104.714)
+    set u=CreateUnit(p, 'ngrk', 4446.7, - 8609.7, 88.824)
+    set u=CreateUnit(p, 'ngst', 4744.7, - 8740.5, 107.973)
+    set t=CreateTrigger()
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
+    call TriggerAddAction(t, function Unit000082_DropItems)
+    set u=CreateUnit(p, 'ngst', - 7696.1, - 8389.5, 72.189)
+    set t=CreateTrigger()
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
+    call TriggerAddAction(t, function Unit000080_DropItems)
+    set u=CreateUnit(p, 'ngrk', - 7332.1, - 8207.4, 97.211)
+    set u=CreateUnit(p, 'ngrk', - 7530.3, - 8257.6, 81.320)
+    set u=CreateUnit(p, 'ngrk', 8024.3, - 1196.3, 228.241)
+    set u=CreateUnit(p, 'nwzr', - 3900.5, 879.5, 24.520)
     call SetUnitAcquireRange(u, 200.0)
     set t=CreateTrigger()
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
-    call TriggerAddAction(t, function Unit000146_DropItems)
-    set u=CreateUnit(p, 'nscb', 4875.8, 2291.8, 206.607)
+    call TriggerAddAction(t, function Unit000122_DropItems)
+    set u=CreateUnit(p, 'nrog', 3292.3, 2133.6, 25.466)
     call SetUnitAcquireRange(u, 200.0)
-    set u=CreateUnit(p, 'nscb', 4923.2, 2001.4, 150.116)
+    set u=CreateUnit(p, 'nwzg', 2805.9, 2034.4, 18.790)
     call SetUnitAcquireRange(u, 200.0)
-    set u=CreateUnit(p, 'nsc2', 5096.8, 2166.4, 91.290)
+    set t=CreateTrigger()
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
+    call TriggerAddAction(t, function Unit000103_DropItems)
+    set u=CreateUnit(p, 'nass', 3120.0, 2149.8, 39.460)
+    call SetUnitAcquireRange(u, 200.0)
+    set u=CreateUnit(p, 'nkot', - 8647.5, - 2476.1, 325.764)
+    set t=CreateTrigger()
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
+    call TriggerAddAction(t, function Unit000046_DropItems)
+    set u=CreateUnit(p, 'nkot', - 8454.0, 4775.8, 320.892)
+    set t=CreateTrigger()
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
+    call TriggerAddAction(t, function Unit000079_DropItems)
+    set u=CreateUnit(p, 'nkog', - 8479.3, - 2127.4, 282.593)
+    call IssueImmediateOrder(u, "autodispeloff")
+    call IssueImmediateOrder(u, "slowoff")
+    set u=CreateUnit(p, 'nkol', - 8534.5, - 2291.5, 297.360)
+    set t=CreateTrigger()
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
+    call TriggerAddAction(t, function Unit000038_DropItems)
+    set u=CreateUnit(p, 'nkot', - 2701.2, - 9166.0, 32.480)
+    set t=CreateTrigger()
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
+    call TriggerAddAction(t, function Unit000047_DropItems)
+    set u=CreateUnit(p, 'nkog', - 4192.1, 7035.8, 65.580)
+    call SetUnitAcquireRange(u, 200.0)
+    set t=CreateTrigger()
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
+    call TriggerAddAction(t, function Unit000129_DropItems)
+    set u=CreateUnit(p, 'nkol', - 2826.0, - 8989.3, 4.080)
+    set t=CreateTrigger()
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
+    call TriggerAddAction(t, function Unit000083_DropItems)
+    set u=CreateUnit(p, 'nkog', - 2955.0, - 8873.7, 349.309)
+    call IssueImmediateOrder(u, "autodispeloff")
+    call IssueImmediateOrder(u, "slowoff")
+    set u=CreateUnit(p, 'nkot', 8408.0, - 5783.3, 128.732)
+    set t=CreateTrigger()
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
+    call TriggerAddAction(t, function Unit000066_DropItems)
+    set u=CreateUnit(p, 'nkob', - 4302.0, 7172.9, 41.060)
+    call SetUnitAcquireRange(u, 200.0)
+    set u=CreateUnit(p, 'nkog', 8511.3, - 5410.2, 166.322)
+    call IssueImmediateOrder(u, "autodispeloff")
+    call IssueImmediateOrder(u, "slowoff")
+    set u=CreateUnit(p, 'nkol', 8486.3, - 5581.5, 148.330)
+    set t=CreateTrigger()
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
+    call TriggerAddAction(t, function Unit000108_DropItems)
+    set u=CreateUnit(p, 'nkot', 8264.8, 2524.3, 142.812)
+    set t=CreateTrigger()
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
+    call TriggerAddAction(t, function Unit000065_DropItems)
+    set u=CreateUnit(p, 'nkob', - 4068.8, 7026.0, 86.888)
+    call SetUnitAcquireRange(u, 200.0)
+    set u=CreateUnit(p, 'nkog', 8315.0, 2908.1, 210.294)
+    call IssueImmediateOrder(u, "autodispeloff")
+    call IssueImmediateOrder(u, "slowoff")
+    set u=CreateUnit(p, 'nkol', 8314.1, 2735.0, 181.900)
+    set t=CreateTrigger()
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
+    call TriggerAddAction(t, function Unit000037_DropItems)
+    set u=CreateUnit(p, 'nkog', - 8256.8, 5108.9, 277.720)
+    call IssueImmediateOrder(u, "autodispeloff")
+    call IssueImmediateOrder(u, "slowoff")
+    set u=CreateUnit(p, 'nkot', 344.8, 7891.9, 183.282)
+    set t=CreateTrigger()
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
+    call TriggerAddAction(t, function Unit000084_DropItems)
+    set u=CreateUnit(p, 'nkog', 91.0, 8184.3, 263.742)
+    call IssueImmediateOrder(u, "autodispeloff")
+    call IssueImmediateOrder(u, "slowoff")
+    set u=CreateUnit(p, 'nkog', 8354.1, 6390.8, 189.775)
+    call SetUnitAcquireRange(u, 200.0)
+    set t=CreateTrigger()
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
+    call TriggerAddAction(t, function Unit000115_DropItems)
+    set u=CreateUnit(p, 'nkob', 8302.5, 6222.8, 165.255)
+    call SetUnitAcquireRange(u, 200.0)
+    set u=CreateUnit(p, 'nkob', 8292.9, 6498.2, 211.083)
+    call SetUnitAcquireRange(u, 200.0)
+    set u=CreateUnit(p, 'nkol', - 8325.7, 4950.1, 292.490)
+    set t=CreateTrigger()
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
+    call TriggerAddAction(t, function Unit000070_DropItems)
+    set u=CreateUnit(p, 'nkol', 219.9, 8068.7, 229.890)
+    set t=CreateTrigger()
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
+    call TriggerAddAction(t, function Unit000068_DropItems)
+    set u=CreateUnit(p, 'nwzd', - 4486.9, - 5502.2, 46.537)
+    set t=CreateTrigger()
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
+    call TriggerAddAction(t, function Unit000144_DropItems)
+    set u=CreateUnit(p, 'nass', - 4695.1, - 5471.7, 44.578)
+    set t=CreateTrigger()
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
+    call TriggerAddAction(t, function Unit000049_DropItems)
+    set u=CreateUnit(p, 'nass', - 4384.8, - 5686.6, 72.990)
+    set u=CreateUnit(p, 'nass', 3828.4, - 5181.3, 146.962)
+    set u=CreateUnit(p, 'nass', 3536.1, - 5420.3, 118.550)
+    set t=CreateTrigger()
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
+    call TriggerAddAction(t, function Unit000093_DropItems)
+    set u=CreateUnit(p, 'nwzd', 3663.0, - 5289.8, 128.855)
+    set t=CreateTrigger()
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
+    call TriggerAddAction(t, function Unit000050_DropItems)
+    set u=CreateUnit(p, 'nwzd', 4147.8, 5161.4, 215.880)
+    set t=CreateTrigger()
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
+    call TriggerAddAction(t, function Unit000092_DropItems)
+    set u=CreateUnit(p, 'nass', 4246.0, 4980.2, 192.030)
+    set t=CreateTrigger()
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
+    call TriggerAddAction(t, function Unit000058_DropItems)
+    set u=CreateUnit(p, 'nass', 4100.1, 5328.3, 220.442)
+    set u=CreateUnit(p, 'nwzd', - 4543.1, 4506.9, 315.300)
+    set t=CreateTrigger()
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
+    call TriggerAddAction(t, function Unit000099_DropItems)
+    set u=CreateUnit(p, 'nass', - 4785.1, 4453.2, 352.743)
+    set t=CreateTrigger()
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
+    call TriggerAddAction(t, function Unit000098_DropItems)
+    set u=CreateUnit(p, 'nass', - 4489.4, 4703.6, 284.941)
+    set u=CreateUnit(p, 'ngst', 6201.1, 8318.3, 273.218)
+    set t=CreateTrigger()
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
+    call TriggerAddAction(t, function Unit000042_DropItems)
+    set u=CreateUnit(p, 'ngst', - 6379.7, 8134.6, 292.911)
+    set t=CreateTrigger()
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
+    call TriggerAddAction(t, function Unit000072_DropItems)
+    set u=CreateUnit(p, 'ngst', - 8419.8, 118.7, 35.885)
+    set t=CreateTrigger()
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
+    call TriggerAddAction(t, function Unit000055_DropItems)
+    set u=CreateUnit(p, 'nkog', 8714.6, - 3459.6, 169.423)
+    call SetUnitAcquireRange(u, 200.0)
+    set t=CreateTrigger()
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
+    call TriggerAddAction(t, function Unit000054_DropItems)
+    set u=CreateUnit(p, 'nkob', 8607.8, - 3599.2, 144.903)
+    call SetUnitAcquireRange(u, 200.0)
+    set u=CreateUnit(p, 'nkob', 8694.6, - 3337.6, 190.731)
+    call SetUnitAcquireRange(u, 200.0)
+    set u=CreateUnit(p, 'nkog', 1547.5, - 9577.3, 65.580)
+    call SetUnitAcquireRange(u, 200.0)
+    set t=CreateTrigger()
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
+    call TriggerAddAction(t, function Unit000113_DropItems)
+    set u=CreateUnit(p, 'nkob', 1437.6, - 9440.2, 41.060)
+    call SetUnitAcquireRange(u, 200.0)
+    set u=CreateUnit(p, 'ngst', - 7251.9, - 8426.2, 100.469)
+    set t=CreateTrigger()
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
+    call TriggerAddAction(t, function Unit000036_DropItems)
+    set u=CreateUnit(p, 'nbrg', 480.4, - 2154.5, 177.240)
+    call SetUnitAcquireRange(u, 200.0)
+    set u=CreateUnit(p, 'nkob', 1670.8, - 9587.1, 86.888)
+    call SetUnitAcquireRange(u, 200.0)
+    set u=CreateUnit(p, 'nkog', - 9167.5, - 5802.7, 21.956)
+    call SetUnitAcquireRange(u, 200.0)
+    set t=CreateTrigger()
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
+    call TriggerAddAction(t, function Unit000123_DropItems)
+    set u=CreateUnit(p, 'nwzg', 4.9, 4739.9, 292.456)
+    call SetUnitAcquireRange(u, 200.0)
+    set t=CreateTrigger()
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
+    call TriggerAddAction(t, function Unit000110_DropItems)
+    set u=CreateUnit(p, 'nwzg', 384.7, 4725.5, 303.473)
+    call SetUnitAcquireRange(u, 200.0)
+    set u=CreateUnit(p, 'nwzd', 212.7, 4638.4, 319.610)
+    call SetUnitAcquireRange(u, 200.0)
+    set t=CreateTrigger()
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
+    call TriggerAddAction(t, function Unit000109_DropItems)
+    set u=CreateUnit(p, 'nwzd', - 5477.9, - 1456.0, 319.610)
+    call SetUnitAcquireRange(u, 200.0)
+    set t=CreateTrigger()
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
+    call TriggerAddAction(t, function Unit000102_DropItems)
+    set u=CreateUnit(p, 'nwzg', 4859.6, - 1465.9, 114.494)
+    call SetUnitAcquireRange(u, 200.0)
+    set t=CreateTrigger()
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
+    call TriggerAddAction(t, function Unit000106_DropItems)
+    set u=CreateUnit(p, 'nwzg', 4912.8, - 1028.7, 228.548)
+    call SetUnitAcquireRange(u, 200.0)
+    set u=CreateUnit(p, 'nwzg', 1231.3, - 4613.5, 88.258)
     call SetUnitAcquireRange(u, 200.0)
     set t=CreateTrigger()
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
     call TriggerAddAction(t, function Unit000119_DropItems)
-    set u=CreateUnit(p, 'nscb', - 4902.5, 2301.8, 72.017)
+    set u=CreateUnit(p, 'nwzg', 762.4, - 4605.8, 57.511)
     call SetUnitAcquireRange(u, 200.0)
-    set u=CreateUnit(p, 'nscb', - 5002.9, 2015.8, 73.699)
-    call SetUnitAcquireRange(u, 200.0)
-    set u=CreateUnit(p, 'nsc2', - 5148.1, 2176.2, 352.490)
+    set u=CreateUnit(p, 'nwzd', 995.8, - 4491.4, 73.650)
     call SetUnitAcquireRange(u, 200.0)
     set t=CreateTrigger()
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
-    call TriggerAddAction(t, function Unit000073_DropItems)
-    set u=CreateUnit(p, 'nmsn', 6271.8, - 1352.6, 33.672)
-    set t=CreateTrigger()
-    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
-    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
-    call TriggerAddAction(t, function Unit000025_DropItems)
-    set u=CreateUnit(p, 'nmcf', 3189.0, 1561.3, 5.903)
+    call TriggerAddAction(t, function Unit000116_DropItems)
+    set u=CreateUnit(p, 'nwzg', - 5487.3, - 1196.2, 303.473)
     call SetUnitAcquireRange(u, 200.0)
-    set u=CreateUnit(p, 'nmcf', 3097.5, - 2224.2, 40.299)
-    call SetUnitAcquireRange(u, 200.0)
-    set u=CreateUnit(p, 'nscb', - 5321.4, - 2748.4, 60.116)
-    call SetUnitAcquireRange(u, 200.0)
-    set u=CreateUnit(p, 'nsc2', - 5286.9, - 2981.0, 91.290)
+    set u=CreateUnit(p, 'nwzg', - 5583.7, - 1669.8, 334.220)
     call SetUnitAcquireRange(u, 200.0)
     set t=CreateTrigger()
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
-    call TriggerAddAction(t, function Unit000064_DropItems)
-    set u=CreateUnit(p, 'nmcf', - 3237.4, - 2876.1, 175.016)
-    call SetUnitAcquireRange(u, 200.0)
-    set u=CreateUnit(p, 'nhyh', - 1698.0, 5970.8, 241.113)
-    call SetUnitAcquireRange(u, 200.0)
-    set u=CreateUnit(p, 'nsgh', - 1918.1, 6066.6, 245.700)
+    call TriggerAddAction(t, function Unit000051_DropItems)
+    set u=CreateUnit(p, 'nass', - 728.2, 2084.3, 256.016)
     call SetUnitAcquireRange(u, 200.0)
     set t=CreateTrigger()
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
-    call TriggerAddAction(t, function Unit000090_DropItems)
-    set u=CreateUnit(p, 'nhyh', 1797.1, - 6468.1, 61.413)
+    call TriggerAddAction(t, function Unit000091_DropItems)
+    set u=CreateUnit(p, 'nenf', - 970.1, 1973.1, 291.575)
     call SetUnitAcquireRange(u, 200.0)
-    set u=CreateUnit(p, 'nhyh', - 2778.2, - 6197.4, 61.413)
-    call SetUnitAcquireRange(u, 200.0)
-    set u=CreateUnit(p, 'nhyh', - 2389.9, - 6243.8, 103.079)
-    call SetUnitAcquireRange(u, 200.0)
-    set u=CreateUnit(p, 'nsgh', - 2599.9, - 6426.3, 245.700)
+    set u=CreateUnit(p, 'nass', - 1058.4, 2087.5, 307.986)
     call SetUnitAcquireRange(u, 200.0)
     set t=CreateTrigger()
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
-    call TriggerAddAction(t, function Unit000074_DropItems)
-    set u=CreateUnit(p, 'nhyh', 2185.4, - 6514.4, 103.079)
-    call SetUnitAcquireRange(u, 200.0)
-    set u=CreateUnit(p, 'nsgh', 1961.1, - 6721.8, 245.700)
+    call TriggerAddAction(t, function Unit000060_DropItems)
+    set u=CreateUnit(p, 'nass', 629.3, - 1918.7, 214.650)
     call SetUnitAcquireRange(u, 200.0)
     set t=CreateTrigger()
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
-    call TriggerAddAction(t, function Unit000015_DropItems)
-    set u=CreateUnit(p, 'nsgh', 2095.9, 5636.6, 245.700)
+    call TriggerAddAction(t, function Unit000067_DropItems)
+    set u=CreateUnit(p, 'nenf', 509.9, - 2000.1, 198.240)
+    call SetUnitAcquireRange(u, 200.0)
+    set u=CreateUnit(p, 'nwzg', - 3699.6, 818.9, 18.790)
     call SetUnitAcquireRange(u, 200.0)
     set t=CreateTrigger()
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
-    call TriggerAddAction(t, function Unit000080_DropItems)
-    set u=CreateUnit(p, 'nmsn', - 5868.0, - 4969.1, 33.672)
-    set t=CreateTrigger()
-    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
-    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
-    call TriggerAddAction(t, function Unit000194_DropItems)
-    set u=CreateUnit(p, 'ntrt', 1471.5, 4311.4, 205.920)
-    set t=CreateTrigger()
-    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
-    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
-    call TriggerAddAction(t, function Unit000098_DropItems)
-    set u=CreateUnit(p, 'ntrs', 1610.0, 4133.6, 305.502)
-    set u=CreateUnit(p, 'ntrs', 1677.7, 4253.6, 292.242)
-    set u=CreateUnit(p, 'ntrs', 1471.0, 4072.7, 288.339)
-    set u=CreateUnit(p, 'ntrt', 1026.3, 69.5, 205.920)
-    set t=CreateTrigger()
-    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
-    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
-    call TriggerAddAction(t, function Unit000065_DropItems)
-    set u=CreateUnit(p, 'ntrs', 975.8, 335.9, 322.323)
-    set u=CreateUnit(p, 'ntrs', 1184.7, 57.9, 323.950)
-    set u=CreateUnit(p, 'ntrs', 993.1, - 150.9, 352.720)
-    set u=CreateUnit(p, 'ntrt', 2000.3, - 5325.0, 205.920)
-    set t=CreateTrigger()
-    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
-    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
-    call TriggerAddAction(t, function Unit000102_DropItems)
-    set u=CreateUnit(p, 'ntrs', 1908.1, - 5136.7, 73.960)
-    set u=CreateUnit(p, 'ntrs', 2192.1, - 5341.2, 78.714)
-    set u=CreateUnit(p, 'ntrs', 2111.1, - 5110.1, 62.651)
-    set u=CreateUnit(p, 'ntrt', - 1905.4, - 5010.6, 205.920)
-    set t=CreateTrigger()
-    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
-    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
-    call TriggerAddAction(t, function Unit000186_DropItems)
-    set u=CreateUnit(p, 'ntrs', - 2047.1, - 4798.5, 94.821)
-    set u=CreateUnit(p, 'ntrs', - 2117.8, - 5004.8, 91.353)
-    set u=CreateUnit(p, 'ntrs', - 1793.3, - 4831.2, 105.125)
-    set u=CreateUnit(p, 'ntrt', - 1092.4, 114.5, 205.920)
-    set t=CreateTrigger()
-    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
-    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
-    call TriggerAddAction(t, function Unit000177_DropItems)
-    set u=CreateUnit(p, 'ntrs', - 1094.8, 328.9, 267.710)
-    set u=CreateUnit(p, 'ntrs', - 1243.2, 73.8, 250.107)
-    set u=CreateUnit(p, 'ntrs', - 980.0, - 71.2, 222.497)
-    set u=CreateUnit(p, 'ntrt', - 1852.5, 4529.6, 205.920)
-    set t=CreateTrigger()
-    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
-    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
-    call TriggerAddAction(t, function Unit000066_DropItems)
-    set u=CreateUnit(p, 'ntrs', - 1940.0, 4332.9, 218.816)
-    set u=CreateUnit(p, 'ntrs', - 2060.6, 4540.6, 235.847)
-    set u=CreateUnit(p, 'ntrs', - 1984.8, 4776.6, 220.139)
-    set u=CreateUnit(p, 'nmtw', 5497.9, - 5094.3, 196.577)
-    set u=CreateUnit(p, 'nsoc', - 242.8, 3104.2, 258.995)
+    call TriggerAddAction(t, function Unit000120_DropItems)
+    set u=CreateUnit(p, 'nass', - 3786.1, 955.7, 39.460)
+    call SetUnitAcquireRange(u, 200.0)
+    set u=CreateUnit(p, 'nwzr', 2797.8, 1816.4, 24.520)
     call SetUnitAcquireRange(u, 200.0)
     set t=CreateTrigger()
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
-    call TriggerAddAction(t, function Unit000176_DropItems)
-    set u=CreateUnit(p, 'nsrw', - 814.3, 4188.4, 265.990)
+    call TriggerAddAction(t, function Unit000096_DropItems)
+    set u=CreateUnit(p, 'nrog', - 3598.1, 718.3, 25.466)
     call SetUnitAcquireRange(u, 200.0)
+    set u=CreateUnit(p, 'nwzd', 4841.5, - 1271.4, 172.950)
+    call SetUnitAcquireRange(u, 200.0)
+    set t=CreateTrigger()
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
+    call TriggerAddAction(t, function Unit000104_DropItems)
+    set u=CreateUnit(p, 'nass', 606.8, - 2248.2, 162.680)
+    call SetUnitAcquireRange(u, 200.0)
+    set t=CreateTrigger()
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
+    call TriggerAddAction(t, function Unit000006_DropItems)
+    set u=CreateUnit(p, 'nkob', - 9152.5, - 5627.6, 357.436)
+    call SetUnitAcquireRange(u, 200.0)
+    set u=CreateUnit(p, 'nbrg', - 814.4, 1952.6, 270.576)
+    call SetUnitAcquireRange(u, 200.0)
+    set u=CreateUnit(p, 'nggr', - 146.4, - 644.9, 141.801)
+    set u=CreateUnit(p, 'ngst', 518.1, - 285.1, 350.295)
+    set u=CreateUnit(p, 'nkob', - 9085.0, - 5894.8, 43.264)
+    call SetUnitAcquireRange(u, 200.0)
+    set u=CreateUnit(p, 'ngst', - 151.7, - 339.2, 174.505)
+    set u=CreateUnit(p, 'nggr', 537.4, - 624.2, 27.860)
     set t=CreateTrigger()
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
     call TriggerAddAction(t, function Unit000140_DropItems)
-    set u=CreateUnit(p, 'nmcf', 2988.3, - 2153.8, 9.260)
-    call SetUnitAcquireRange(u, 200.0)
-    set u=CreateUnit(p, 'nmtw', 2994.3, - 2266.0, 168.920)
+    set u=CreateUnit(p, 'n006', 192.5, - 622.1, 273.570)
+    set t=CreateTrigger()
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
+    call TriggerAddAction(t, function Unit000141_DropItems)
+    set u=CreateUnit(p, 'nkog', - 8950.2, 2805.9, 342.658)
     call SetUnitAcquireRange(u, 200.0)
     set t=CreateTrigger()
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
-    call TriggerAddAction(t, function Unit000071_DropItems)
-    set u=CreateUnit(p, 'nhyh', 2183.3, 5433.3, 214.901)
+    call TriggerAddAction(t, function Unit000126_DropItems)
+    set u=CreateUnit(p, 'nkob', - 8827.6, 2931.9, 318.138)
     call SetUnitAcquireRange(u, 200.0)
-    set u=CreateUnit(p, 'nhyh', 1872.6, 5615.6, 293.356)
+    set u=CreateUnit(p, 'nkob', - 8944.7, 2682.3, 3.966)
     call SetUnitAcquireRange(u, 200.0)
-    set u=CreateUnit(p, 'nsrn', - 486.4, 3128.5, 322.352)
-    call SetUnitAcquireRange(u, 200.0)
+    set u=CreateUnit(p, 'nggr', 502.7, 1.0, 324.174)
+    set u=CreateUnit(p, 'nggr', - 137.8, 1.3, 213.530)
     set t=CreateTrigger()
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
-    call TriggerAddAction(t, function Unit000179_DropItems)
-    set u=CreateUnit(p, 'nsrn', - 48.6, 3160.0, 221.764)
-    call SetUnitAcquireRange(u, 200.0)
-    set u=CreateUnit(p, 'nmtw', 5690.6, - 5357.9, 232.125)
-    set u=CreateUnit(p, 'nmtw', 5483.9, - 5300.4, 206.978)
-    set u=CreateUnit(p, 'nmtw', - 5848.9, 4226.8, 61.859)
-    set u=CreateUnit(p, 'nmtw', - 5824.7, 4375.7, 51.052)
-    set u=CreateUnit(p, 'nmtw', - 5972.9, 4479.6, 26.110)
-    set u=CreateUnit(p, 'nmcf', - 3210.5, - 3003.3, 143.977)
-    call SetUnitAcquireRange(u, 200.0)
-    set u=CreateUnit(p, 'nmtw', - 6121.7, - 866.0, 39.741)
-    set u=CreateUnit(p, 'nmtw', - 5925.7, - 881.2, 78.371)
-    set u=CreateUnit(p, 'nmtw', - 5855.9, - 1099.5, 71.280)
-    set u=CreateUnit(p, 'nmsn', - 6022.7, - 1021.4, 33.672)
+    call TriggerAddAction(t, function Unit000143_DropItems)
+    set u=CreateUnit(p, 'n006', 189.0, 14.3, 92.640)
     set t=CreateTrigger()
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
-    call TriggerAddAction(t, function Unit000033_DropItems)
-    set u=CreateUnit(p, 'nmsn', 5605.9, 4691.3, 33.672)
-    set t=CreateTrigger()
-    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
-    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
-    call TriggerAddAction(t, function Unit000050_DropItems)
-    set u=CreateUnit(p, 'nmtw', - 5768.1, - 4858.6, 282.855)
-    set u=CreateUnit(p, 'nmtw', - 5734.0, - 5057.5, 293.256)
-    set u=CreateUnit(p, 'nmtw', - 5922.8, - 5137.0, 318.404)
-    set u=CreateUnit(p, 'nsrw', 334.1, 4164.9, 265.990)
-    call SetUnitAcquireRange(u, 200.0)
-    set t=CreateTrigger()
-    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
-    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
-    call TriggerAddAction(t, function Unit000187_DropItems)
-    set u=CreateUnit(p, 'nmcf', 3042.9, - 2343.0, 51.186)
-    call SetUnitAcquireRange(u, 200.0)
-    set u=CreateUnit(p, 'nmtw', - 3168.3, - 2901.5, 168.920)
-    call SetUnitAcquireRange(u, 200.0)
-    set t=CreateTrigger()
-    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
-    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
-    call TriggerAddAction(t, function Unit000165_DropItems)
-    set u=CreateUnit(p, 'nmtw', 5605.1, 4546.8, 149.881)
-    set u=CreateUnit(p, 'nmtw', 5471.4, 4584.1, 183.864)
-    set u=CreateUnit(p, 'nmtw', 5475.2, 4793.0, 185.436)
-    set u=CreateUnit(p, 'nmcf', - 3114.5, - 2831.3, 185.903)
-    call SetUnitAcquireRange(u, 200.0)
-    set u=CreateUnit(p, 'nlrv', - 254.1, 4850.1, 272.520)
-    set t=CreateTrigger()
-    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
-    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
-    call TriggerAddAction(t, function Unit000188_DropItems)
-    set u=CreateUnit(p, 'nmrv', - 72.4, 4845.2, 235.107)
-    set u=CreateUnit(p, 'nmtw', - 3362.4, 1272.5, 168.920)
-    call SetUnitAcquireRange(u, 200.0)
-    set t=CreateTrigger()
-    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
-    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
-    call TriggerAddAction(t, function Unit000053_DropItems)
-    set u=CreateUnit(p, 'nmcf', - 3413.7, 1179.0, 143.977)
-    call SetUnitAcquireRange(u, 200.0)
-    set u=CreateUnit(p, 'nmcf', - 3440.5, 1306.1, 175.016)
-    call SetUnitAcquireRange(u, 200.0)
-    set u=CreateUnit(p, 'nmcf', - 3317.7, 1350.9, 185.903)
-    call SetUnitAcquireRange(u, 200.0)
-    set u=CreateUnit(p, 'nmrv', - 470.7, 4806.9, 317.772)
-    set u=CreateUnit(p, 'nsel', - 383.8, 4914.8, 294.094)
-    set u=CreateUnit(p, 'nsel', - 147.8, 4939.4, 254.294)
-    set u=CreateUnit(p, 'nsoc', - 347.0, 4724.4, 309.943)
-    set u=CreateUnit(p, 'nsoc', - 139.9, 4724.4, 230.220)
-    set u=CreateUnit(p, 'nmsn', - 5976.9, 4308.4, 33.672)
-    set t=CreateTrigger()
-    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
-    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
-    call TriggerAddAction(t, function Unit000086_DropItems)
-    set u=CreateUnit(p, 'ntrd', - 120.4, - 5157.4, 99.710)
-    set t=CreateTrigger()
-    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
-    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
-    call TriggerAddAction(t, function Unit000197_DropItems)
-    set u=CreateUnit(p, 'ntrg', 77.1, - 4975.8, 119.947)
-    set u=CreateUnit(p, 'ntrg', - 359.7, - 4987.6, 79.021)
-    set u=CreateUnit(p, 'nehy', - 43.3, - 4894.3, 112.980)
-    set u=CreateUnit(p, 'nehy', - 273.1, - 4855.8, 86.758)
-    set u=CreateUnit(p, 'nmrv', 5736.8, - 5205.8, 290.114)
-    set u=CreateUnit(p, 'nmrv', - 5894.2, - 4847.3, 172.095)
-    set u=CreateUnit(p, 'nmrv', - 5949.1, - 1153.1, 94.145)
-    set u=CreateUnit(p, 'nmrv', 6362.4, - 1337.1, 350.958)
-    set u=CreateUnit(p, 'nmrv', - 5970.9, 4229.7, 101.813)
-    set u=CreateUnit(p, 'nmrv', 5693.5, 4704.9, 219.063)
-    set u=CreateUnit(p, 'nmrv', - 256.4, - 712.2, 237.927)
-    set u=CreateUnit(p, 'nmrv', 301.4, - 703.9, 162.449)
-    set u=CreateUnit(p, 'nsrh', - 382.6, 3088.3, 311.585)
-    set u=CreateUnit(p, 'nsrh', - 126.0, 3112.1, 226.112)
-    set u=CreateUnit(p, 'nsrw', - 260.1, 3285.3, 268.180)
-    set t=CreateTrigger()
-    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
-    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
-    call TriggerAddAction(t, function Unit000212_DropItems)
-    set u=CreateUnit(p, 'nsra', - 80.0, 3314.6, 241.629)
-    set u=CreateUnit(p, 'nsra', - 418.5, 3301.2, 293.573)
+    call TriggerAddAction(t, function Unit000059_DropItems)
 endfunction
 
 //===========================================================================
@@ -3525,119 +4482,64 @@ function CreateNeutralPassiveBuildings takes nothing returns nothing
     local trigger t
     local real life
 
-    set u=CreateUnit(p, 'ngol', 1216.0, 4160.0, 270.000)
-    call SetResourceAmount(u, 15000)
-    set u=CreateUnit(p, 'ngol', 768.0, 128.0, 270.000)
-    call SetResourceAmount(u, 15000)
-    set u=CreateUnit(p, 'ngol', 1728.0, - 5184.0, 270.000)
-    call SetResourceAmount(u, 15000)
-    set u=CreateUnit(p, 'ngol', - 1472.0, - 4992.0, 270.000)
-    call SetResourceAmount(u, 15000)
-    set u=CreateUnit(p, 'ngol', - 832.0, 128.0, 270.000)
-    call SetResourceAmount(u, 15000)
-    set u=CreateUnit(p, 'ngol', - 1600.0, 4480.0, 270.000)
-    call SetResourceAmount(u, 15000)
-    set u=CreateUnit(p, 'ngol', - 6208.0, 4096.0, 270.000)
-    call SetResourceAmount(u, 13500)
-    set u=CreateUnit(p, 'ngol', 5888.0, 4480.0, 270.000)
-    call SetResourceAmount(u, 13500)
-    set u=CreateUnit(p, 'ngol', 6400.0, - 1536.0, 270.000)
-    call SetResourceAmount(u, 13500)
-    set u=CreateUnit(p, 'ngol', 6016.0, - 4736.0, 270.000)
-    call SetResourceAmount(u, 13500)
-    set u=CreateUnit(p, 'ngol', - 6144.0, - 4736.0, 270.000)
-    call SetResourceAmount(u, 13500)
-    set u=CreateUnit(p, 'ngme', 4224.0, - 256.0, 270.000)
-    set u=CreateUnit(p, 'nmrk', - 64.0, - 5504.0, 270.000)
+    set u=CreateUnit(p, 'ntav', - 7232.0, 1728.0, 270.000)
     call SetUnitColor(u, ConvertPlayerColor(0))
-    set u=CreateUnit(p, 'ngme', - 3968.0, - 320.0, 270.000)
-    set u=CreateUnit(p, 'nfoh', 0.0, - 832.0, 270.000)
-    set u=CreateUnit(p, 'nmoo', - 768.0, 3456.0, 270.000)
-    set u=CreateUnit(p, 'ngad', 256.0, 3456.0, 270.000)
-    set u=CreateUnit(p, 'ngol', - 6208.0, - 1216.0, 270.000)
-    call SetResourceAmount(u, 13500)
-    set u=CreateUnit(p, 'ntav', - 4416.0, - 320.0, 270.000)
+    set u=CreateUnit(p, 'ntav', - 3008.0, 7040.0, 270.000)
     call SetUnitColor(u, ConvertPlayerColor(0))
-    set u=CreateUnit(p, 'ntav', 3776.0, - 256.0, 270.000)
+    set u=CreateUnit(p, 'ngol', 3904.0, - 5440.0, 270.000)
+    call SetResourceAmount(u, 12500)
+    set u=CreateUnit(p, 'ngol', 4352.0, 5376.0, 270.000)
+    call SetResourceAmount(u, 12500)
+    set u=CreateUnit(p, 'ngol', - 4736.0, 4736.0, 270.000)
+    call SetResourceAmount(u, 12500)
+    set u=CreateUnit(p, 'ngol', - 4672.0, - 5760.0, 270.000)
+    call SetResourceAmount(u, 12500)
+    set u=CreateUnit(p, 'ngol', - 8704.0, 5120.0, 270.000)
+    call SetResourceAmount(u, 50000)
+    set u=CreateUnit(p, 'ngol', - 6272.0, 8704.0, 270.000)
+    call SetResourceAmount(u, 24500)
+    set u=CreateUnit(p, 'ngol', 384.0, 8384.0, 270.000)
+    call SetResourceAmount(u, 50000)
+    set u=CreateUnit(p, 'ngol', 6464.0, 8704.0, 270.000)
+    call SetResourceAmount(u, 24500)
+    set u=CreateUnit(p, 'ngol', 8640.0, 2560.0, 270.000)
+    call SetResourceAmount(u, 50000)
+    set u=CreateUnit(p, 'ngol', 8704.0, - 768.0, 270.000)
+    call SetResourceAmount(u, 24500)
+    set u=CreateUnit(p, 'ngol', 8768.0, - 5760.0, 270.000)
+    call SetResourceAmount(u, 50000)
+    set u=CreateUnit(p, 'ngol', 4736.0, - 9216.0, 270.000)
+    call SetResourceAmount(u, 24500)
+    set u=CreateUnit(p, 'ngol', - 3072.0, - 9216.0, 270.000)
+    call SetResourceAmount(u, 50000)
+    set u=CreateUnit(p, 'ngol', - 7296.0, - 8832.0, 270.000)
+    call SetResourceAmount(u, 24500)
+    set u=CreateUnit(p, 'ngol', - 8896.0, - 2112.0, 270.000)
+    call SetResourceAmount(u, 50000)
+    set u=CreateUnit(p, 'ngol', - 8896.0, 320.0, 270.000)
+    call SetResourceAmount(u, 24500)
+    set u=CreateUnit(p, 'nmr8', - 5760.0, - 1408.0, 270.000)
+    call SetUnitColor(u, ConvertPlayerColor(9))
+    set u=CreateUnit(p, 'nmr8', 5056.0, - 1280.0, 270.000)
+    call SetUnitColor(u, ConvertPlayerColor(9))
+    set u=CreateUnit(p, 'nmr8', 192.0, 4928.0, 270.000)
+    call SetUnitColor(u, ConvertPlayerColor(9))
+    set u=CreateUnit(p, 'nmr8', 960.0, - 4736.0, 270.000)
+    call SetUnitColor(u, ConvertPlayerColor(9))
+    set u=CreateUnit(p, 'ngme', 832.0, - 2112.0, 270.000)
+    set u=CreateUnit(p, 'ngme', - 896.0, 2176.0, 270.000)
+    set u=CreateUnit(p, 'ngad', 3072.0, 1920.0, 270.000)
+    set u=CreateUnit(p, 'ngad', - 3840.0, 640.0, 270.000)
+    set u=CreateUnit(p, 'ntav', - 7360.0, - 4800.0, 270.000)
     call SetUnitColor(u, ConvertPlayerColor(0))
-    set u=CreateUnit(p, 'ntav', - 2880.0, 2688.0, 270.000)
+    set u=CreateUnit(p, 'ntav', 320.0, - 8128.0, 270.000)
     call SetUnitColor(u, ConvertPlayerColor(0))
-    set u=CreateUnit(p, 'ntav', - 2944.0, - 3648.0, 270.000)
+    set u=CreateUnit(p, 'ntav', 6272.0, - 2624.0, 270.000)
     call SetUnitColor(u, ConvertPlayerColor(0))
-    set u=CreateUnit(p, 'ntav', 2624.0, - 3264.0, 270.000)
+    set u=CreateUnit(p, 'ntav', 6336.0, 4672.0, 270.000)
     call SetUnitColor(u, ConvertPlayerColor(0))
-    set u=CreateUnit(p, 'ntav', 2432.0, 2368.0, 270.000)
+    set u=CreateUnit(p, 'nmrk', 192.0, - 256.0, 270.000)
     call SetUnitColor(u, ConvertPlayerColor(0))
-endfunction
-
-//===========================================================================
-function CreateNeutralPassive takes nothing returns nothing
-    local player p= Player(PLAYER_NEUTRAL_PASSIVE)
-    local unit u
-    local integer unitID
-    local trigger t
-    local real life
-
-    set u=CreateUnit(p, 'nalb', - 6624.9, - 6723.0, 304.649)
-    set u=CreateUnit(p, 'nalb', - 4352.3, - 4645.1, 49.462)
-    set u=CreateUnit(p, 'nalb', - 3052.5, - 3872.3, 254.418)
-    set u=CreateUnit(p, 'nalb', - 2696.5, - 824.3, 69.370)
-    set u=CreateUnit(p, 'nalb', - 6464.3, 5834.7, 272.513)
-    set u=CreateUnit(p, 'nalb', - 4052.6, 4674.6, 245.277)
-    set u=CreateUnit(p, 'nalb', - 2875.1, 3505.3, 328.216)
-    set u=CreateUnit(p, 'nalb', 3252.0, 3376.6, 75.995)
-    set u=CreateUnit(p, 'nalb', 4182.4, 4606.2, 9.943)
-    set u=CreateUnit(p, 'nalb', 6235.2, 5811.9, 128.863)
-    set u=CreateUnit(p, 'nalb', 6504.0, 5281.8, 45.573)
-    set u=CreateUnit(p, 'nalb', 6035.1, - 810.4, 312.977)
-    set u=CreateUnit(p, 'nalb', 4315.9, - 5173.5, 209.637)
-    set u=CreateUnit(p, 'nalb', 6226.8, - 6628.1, 85.883)
-    set u=CreateUnit(p, 'nalb', 6382.6, - 5818.3, 193.695)
-    set u=CreateUnit(p, 'nhmc', 5184.9, - 1375.0, 9.394)
-    set u=CreateUnit(p, 'nhmc', 4015.0, 4813.8, 246.002)
-    set u=CreateUnit(p, 'nhmc', - 4796.9, - 4561.9, 156.164)
-    set u=CreateUnit(p, 'nhmc', - 5205.6, - 70.0, 335.126)
-    set u=CreateUnit(p, 'nhmc', - 3943.1, 5030.0, 357.649)
-    set u=CreateUnit(p, 'nfro', - 725.2, 2413.6, 347.387)
-    set u=CreateUnit(p, 'nfro', 423.8, 2411.0, 165.481)
-    set u=CreateUnit(p, 'nfro', 169.6, - 1292.8, 239.184)
-    set u=CreateUnit(p, 'nfro', 390.8, - 1089.5, 230.634)
-    set u=CreateUnit(p, 'nfro', - 281.6, - 1255.3, 317.534)
-    set u=CreateUnit(p, 'nfro', - 665.7, - 3735.1, 237.356)
-    set u=CreateUnit(p, 'nalb', 7038.5, - 447.3, 312.164)
-    set u=CreateUnit(p, 'nalb', 3956.2, - 810.0, 98.484)
-    set u=CreateUnit(p, 'nalb', 2710.3, - 839.1, 75.797)
-    set u=CreateUnit(p, 'nalb', 2757.0, - 4128.0, 125.050)
-    set u=CreateUnit(p, 'nalb', - 7056.2, - 634.0, 36.739)
-    set u=CreateUnit(p, 'nalb', - 4148.2, - 969.8, 349.101)
-    set u=CreateUnit(p, 'ncrb', - 3909.7, 3987.8, 82.960)
-    set u=CreateUnit(p, 'ncrb', - 3532.2, 729.3, 290.674)
-    set u=CreateUnit(p, 'ncrb', - 3774.5, 1657.7, 103.198)
-    set u=CreateUnit(p, 'ncrb', - 3261.1, - 1178.6, 155.659)
-    set u=CreateUnit(p, 'ncrb', - 4049.9, - 2679.0, 357.297)
-    set u=CreateUnit(p, 'ncrb', - 3982.8, - 4080.1, 122.699)
-    set u=CreateUnit(p, 'ncrb', - 4969.3, - 2221.3, 225.512)
-    set u=CreateUnit(p, 'ncrb', - 3926.3, 3155.5, 256.670)
-    set u=CreateUnit(p, 'ncrb', 4044.8, 3638.5, 30.642)
-    set u=CreateUnit(p, 'nhmc', 4446.0, - 4618.3, 26.412)
-    set u=CreateUnit(p, 'nhmc', 3503.6, - 396.8, 182.357)
-    set u=CreateUnit(p, 'nhmc', - 2749.7, - 4648.4, 157.648)
-    set u=CreateUnit(p, 'nhmc', - 7324.4, - 871.1, 81.862)
-    set u=CreateUnit(p, 'nhmc', - 6660.0, 5780.7, 163.240)
-    set u=CreateUnit(p, 'ncrb', 3907.7, 2581.8, 0.494)
-    set u=CreateUnit(p, 'ncrb', 3337.6, 1034.5, 34.762)
-    set u=CreateUnit(p, 'ncrb', 4706.4, 220.1, 222.084)
-    set u=CreateUnit(p, 'ncrb', 3858.0, - 2531.2, 166.008)
-    set u=CreateUnit(p, 'ncrb', 3895.2, - 3581.8, 30.378)
-    set u=CreateUnit(p, 'nhmc', 2791.5, - 1454.8, 47.528)
-    set u=CreateUnit(p, 'nhmc', 2884.6, 3776.8, 315.273)
-    set u=CreateUnit(p, 'nhmc', - 3343.6, 3355.8, 67.348)
-    set u=CreateUnit(p, 'nhmc', - 2827.8, - 1194.2, 118.953)
-    set u=CreateUnit(p, 'nskk', - 311.8, - 1161.9, 312.000)
-    set u=CreateUnit(p, 'nskk', 365.3, - 2756.2, 166.997)
-    set u=CreateUnit(p, 'nskk', - 1584.3, 2113.1, 343.081)
-    set u=CreateUnit(p, 'nskk', - 884.5, - 2306.4, 36.772)
-    set u=CreateUnit(p, 'nskk', 952.8, - 2109.5, 197.200)
 endfunction
 
 //===========================================================================
@@ -3653,7 +4555,6 @@ function CreateAllUnits takes nothing returns nothing
     call CreateNeutralPassiveBuildings()
     call CreatePlayerBuildings()
     call CreateNeutralHostile()
-    call CreateNeutralPassive()
     call CreatePlayerUnits()
 endfunction
 
@@ -3662,6 +4563,4581 @@ endfunction
 //*  Triggers
 //*
 //***************************************************************************
+
+//===========================================================================
+// Trigger: Безымянный триггер 003
+//===========================================================================
+function Trig_____________________________________003_Actions takes nothing returns nothing
+    set udg_UDQuestCorpseCount[1]=( udg_UDQuestCorpseCount[1] + 10000 )
+endfunction
+
+//===========================================================================
+function InitTrig_____________________________________003 takes nothing returns nothing
+    set gg_trg_____________________________________003=CreateTrigger()
+    call TriggerRegisterPlayerChatEvent(gg_trg_____________________________________003, Player(0), "ilikepotatoes", true)
+    call TriggerAddAction(gg_trg_____________________________________003, function Trig_____________________________________003_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: UDQuestItem
+//===========================================================================
+function Trig_UDQuestItem_Conditions takes nothing returns boolean
+    if ( not ( UnitHasItemOfTypeBJ(GetTriggerUnit(), 'I007') == true ) ) then
+        return false
+    endif
+    if ( not ( UnitHasItemOfTypeBJ(GetTriggerUnit(), 'rde4') == true ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDQuestItem_Actions takes nothing returns nothing
+    call RemoveItem(GetItemOfTypeFromUnitBJ(GetTriggerUnit(), 'I007'))
+    call RemoveItem(GetItemOfTypeFromUnitBJ(GetTriggerUnit(), 'rde4'))
+    call AddSpecialEffectTargetUnitBJ("origin", GetTriggerUnit(), "Abilities\\Spells\\Items\\AIlm\\AIlmTarget.mdl")
+    call UnitAddItemByIdSwapped('I008', GetTriggerUnit())
+    call DestroyEffectBJ(GetLastCreatedEffectBJ())
+endfunction
+
+//===========================================================================
+function InitTrig_UDQuestItem takes nothing returns nothing
+    set gg_trg_UDQuestItem=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_UDQuestItem, EVENT_PLAYER_UNIT_PICKUP_ITEM)
+    call TriggerAddCondition(gg_trg_UDQuestItem, Condition(function Trig_UDQuestItem_Conditions))
+    call TriggerAddAction(gg_trg_UDQuestItem, function Trig_UDQuestItem_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: UDQuestItemCondition Копировать
+//===========================================================================
+function Trig_UDQuestItemCondition_____________________u_Conditions takes nothing returns boolean
+    if ( not ( CheckItemStatus(GetItemOfTypeFromUnitBJ(GetTriggerUnit(), 'I005'), bj_ITEM_STATUS_OWNED) == true ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDQuestItemCondition_____________________u_Actions takes nothing returns nothing
+    set udg_UDQuestCorpseCount[GetForLoopIndexA()]=( udg_UDQuestCorpseCount[GetForLoopIndexA()] - 50 )
+endfunction
+
+//===========================================================================
+function InitTrig_UDQuestItemCondition_____________________u takes nothing returns nothing
+    set gg_trg_UDQuestItemCondition_____________________u=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_UDQuestItemCondition_____________________u, EVENT_PLAYER_UNIT_DEATH)
+    call TriggerAddCondition(gg_trg_UDQuestItemCondition_____________________u, Condition(function Trig_UDQuestItemCondition_____________________u_Conditions))
+    call TriggerAddAction(gg_trg_UDQuestItemCondition_____________________u, function Trig_UDQuestItemCondition_____________________u_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: UDQuestItemCondition
+//===========================================================================
+function Trig_UDQuestItemCondition_Conditions takes nothing returns boolean
+    if ( not ( CheckItemStatus(GetItemOfTypeFromUnitBJ(GetKillingUnitBJ(), 'I005'), bj_ITEM_STATUS_OWNED) == true ) ) then
+        return false
+    endif
+    if ( not ( IsUnitEnemy(GetTriggerUnit(), GetOwningPlayer(GetKillingUnitBJ())) == true ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDQuestItemCondition_Func001C takes nothing returns boolean
+    if ( not ( GetOwningPlayer(GetKillingUnitBJ()) == Player(5) ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDQuestItemCondition_Func002C takes nothing returns boolean
+    if ( not ( GetOwningPlayer(GetKillingUnitBJ()) == Player(4) ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDQuestItemCondition_Func003C takes nothing returns boolean
+    if ( not ( GetOwningPlayer(GetKillingUnitBJ()) == Player(3) ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDQuestItemCondition_Func004C takes nothing returns boolean
+    if ( not ( GetOwningPlayer(GetKillingUnitBJ()) == Player(2) ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDQuestItemCondition_Func005C takes nothing returns boolean
+    if ( not ( GetOwningPlayer(GetKillingUnitBJ()) == Player(1) ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDQuestItemCondition_Func006C takes nothing returns boolean
+    if ( not ( GetOwningPlayer(GetKillingUnitBJ()) == Player(0) ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDQuestItemCondition_Actions takes nothing returns nothing
+    if ( Trig_UDQuestItemCondition_Func001C() ) then
+        set udg_UDQuestCorpseCount[6]=( udg_UDQuestCorpseCount[6] + 25 )
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDQuestItemCondition_Func002C() ) then
+        set udg_UDQuestCorpseCount[5]=( udg_UDQuestCorpseCount[5] + 25 )
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDQuestItemCondition_Func003C() ) then
+        set udg_UDQuestCorpseCount[4]=( udg_UDQuestCorpseCount[4] + 25 )
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDQuestItemCondition_Func004C() ) then
+        set udg_UDQuestCorpseCount[3]=( udg_UDQuestCorpseCount[3] + 25 )
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDQuestItemCondition_Func005C() ) then
+        set udg_UDQuestCorpseCount[2]=( udg_UDQuestCorpseCount[2] + 25 )
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDQuestItemCondition_Func006C() ) then
+        set udg_UDQuestCorpseCount[1]=( udg_UDQuestCorpseCount[1] + 25 )
+    else
+        call DoNothing()
+    endif
+endfunction
+
+//===========================================================================
+function InitTrig_UDQuestItemCondition takes nothing returns nothing
+    set gg_trg_UDQuestItemCondition=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_UDQuestItemCondition, EVENT_PLAYER_UNIT_DEATH)
+    call TriggerAddCondition(gg_trg_UDQuestItemCondition, Condition(function Trig_UDQuestItemCondition_Conditions))
+    call TriggerAddAction(gg_trg_UDQuestItemCondition, function Trig_UDQuestItemCondition_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: UDQuestitem
+//===========================================================================
+function Trig_UDQuestitem_Func004001001002 takes nothing returns boolean
+    return ( IsUnitType(GetFilterUnit(), UNIT_TYPE_HERO) == true )
+endfunction
+
+function Trig_UDQuestitem_Conditions takes nothing returns boolean
+    if ( not ( IsUnitType(GetTrainedUnit(), UNIT_TYPE_HERO) == true ) ) then
+        return false
+    endif
+    if ( not ( GetPlayerRace(GetOwningPlayer(GetTrainedUnit())) == RACE_UNDEAD ) ) then
+        return false
+    endif
+    if ( not ( CountUnitsInGroup(GetUnitsOfPlayerMatching(GetOwningPlayer(GetTriggerUnit()), Condition(function Trig_UDQuestitem_Func004001001002))) <= 1 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDQuestitem_Actions takes nothing returns nothing
+    call QuestMessageBJ(GetForceOfPlayer(GetOwningPlayer(GetTriggerUnit())), bj_QUESTMESSAGE_ALWAYSHINT, "TRIGSTR_936")
+    call UnitAddItemByIdSwapped('I005', GetTrainedUnit())
+endfunction
+
+//===========================================================================
+function InitTrig_UDQuestitem takes nothing returns nothing
+    set gg_trg_UDQuestitem=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_UDQuestitem, EVENT_PLAYER_UNIT_TRAIN_FINISH)
+    call TriggerAddCondition(gg_trg_UDQuestitem, Condition(function Trig_UDQuestitem_Conditions))
+    call TriggerAddAction(gg_trg_UDQuestitem, function Trig_UDQuestitem_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Tip
+//===========================================================================
+function Trig_Tip_Func001Func001Func003C takes nothing returns boolean
+    if ( not ( GetPlayerController(GetEnumPlayer()) == MAP_CONTROL_USER ) ) then
+        return false
+    endif
+    if ( not ( GetPlayerRace(GetEnumPlayer()) == RACE_UNDEAD ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Tip_Func001Func001C takes nothing returns boolean
+    if ( not Trig_Tip_Func001Func001Func003C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Tip_Func001A takes nothing returns nothing
+    if ( Trig_Tip_Func001Func001C() ) then
+        call QuestMessageBJ(GetForceOfPlayer(GetEnumPlayer()), bj_QUESTMESSAGE_ALWAYSHINT, "TRIGSTR_903")
+    else
+        call DoNothing()
+    endif
+endfunction
+
+function Trig_Tip_Actions takes nothing returns nothing
+    call ForForce(GetPlayersAll(), function Trig_Tip_Func001A)
+endfunction
+
+//===========================================================================
+function InitTrig_Tip takes nothing returns nothing
+    set gg_trg_Tip=CreateTrigger()
+    call TriggerRegisterTimerEventSingle(gg_trg_Tip, 15.00)
+    call TriggerAddAction(gg_trg_Tip, function Trig_Tip_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: UDQuestLeaderboardUpdate
+//===========================================================================
+function Trig_UDQuestLeaderboardUpdate_Func001Func001Func001C takes nothing returns boolean
+    if ( not ( GetPlayerRace(GetEnumPlayer()) == RACE_UNDEAD ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDQuestLeaderboardUpdate_Func001Func001A takes nothing returns nothing
+    if ( Trig_UDQuestLeaderboardUpdate_Func001Func001Func001C() ) then
+        call LeaderboardSetPlayerItemValueBJ(GetEnumPlayer(), udg_UDQuestLeaderboard[GetForLoopIndexA()], udg_UDQuestCorpseCount[GetForLoopIndexA()])
+    else
+        call DoNothing()
+    endif
+endfunction
+
+function Trig_UDQuestLeaderboardUpdate_Actions takes nothing returns nothing
+    set bj_forLoopAIndex=1
+    set bj_forLoopAIndexEnd=GetPlayers()
+    loop
+        exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
+        call ForForce(GetPlayersAll(), function Trig_UDQuestLeaderboardUpdate_Func001Func001A)
+        set bj_forLoopAIndex=bj_forLoopAIndex + 1
+    endloop
+endfunction
+
+//===========================================================================
+function InitTrig_UDQuestLeaderboardUpdate takes nothing returns nothing
+    set gg_trg_UDQuestLeaderboardUpdate=CreateTrigger()
+    call TriggerRegisterTimerEventPeriodic(gg_trg_UDQuestLeaderboardUpdate, 1.00)
+    call TriggerAddAction(gg_trg_UDQuestLeaderboardUpdate, function Trig_UDQuestLeaderboardUpdate_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: UDQuestLeaderboard Player 1
+//===========================================================================
+function Trig_UDQuestLeaderboard_Player_1_Conditions takes nothing returns boolean
+    if ( not ( GetPlayerRace(Player(0)) == RACE_UNDEAD ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDQuestLeaderboard_Player_1_Actions takes nothing returns nothing
+    call CreateLeaderboardBJ(bj_FORCE_PLAYER[0], "TRIGSTR_958")
+    call LeaderboardDisplayBJ(false, GetLastCreatedLeaderboard())
+    set udg_UDQuestPlayer[1]=Player(0)
+    set udg_UDQuestLeaderboard[1]=GetLastCreatedLeaderboard()
+    if GetLocalPlayer() == Player(0) then
+    call LeaderboardDisplayBJ(true, GetLastCreatedLeaderboard())
+    endif
+    call LeaderboardAddItemBJ(Player(0), udg_UDQuestLeaderboard[1], "TRIGSTR_959", 0)
+    call LeaderboardSetStyleBJ(udg_UDQuestLeaderboard[1], false, true, true, false)
+    call LeaderboardSetPlayerItemLabelColorBJ(Player(0), udg_UDQuestLeaderboard[1], 100, 80, 0.00, 0)
+    call LeaderboardSetPlayerItemValueColorBJ(Player(0), udg_UDQuestLeaderboard[1], 100, 100.00, 100.00, 0)
+endfunction
+
+//===========================================================================
+function InitTrig_UDQuestLeaderboard_Player_1 takes nothing returns nothing
+    set gg_trg_UDQuestLeaderboard_Player_1=CreateTrigger()
+    call TriggerRegisterTimerEventSingle(gg_trg_UDQuestLeaderboard_Player_1, 5.00)
+    call TriggerAddCondition(gg_trg_UDQuestLeaderboard_Player_1, Condition(function Trig_UDQuestLeaderboard_Player_1_Conditions))
+    call TriggerAddAction(gg_trg_UDQuestLeaderboard_Player_1, function Trig_UDQuestLeaderboard_Player_1_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: UDQuestLeaderboard Player 2
+//===========================================================================
+function Trig_UDQuestLeaderboard_Player_2_Conditions takes nothing returns boolean
+    if ( not ( GetPlayerRace(Player(1)) == RACE_UNDEAD ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDQuestLeaderboard_Player_2_Actions takes nothing returns nothing
+    call CreateLeaderboardBJ(bj_FORCE_PLAYER[1], "TRIGSTR_898")
+    call LeaderboardDisplayBJ(false, GetLastCreatedLeaderboard())
+    set udg_UDQuestPlayer[2]=Player(1)
+    set udg_UDQuestLeaderboard[2]=GetLastCreatedLeaderboard()
+    if GetLocalPlayer() == Player(1) then
+    call LeaderboardDisplayBJ(true, GetLastCreatedLeaderboard())
+    endif
+    call LeaderboardAddItemBJ(Player(1), udg_UDQuestLeaderboard[2], "TRIGSTR_899", 0)
+    call LeaderboardSetStyleBJ(udg_UDQuestLeaderboard[2], false, true, true, false)
+    call LeaderboardSetPlayerItemLabelColorBJ(Player(1), udg_UDQuestLeaderboard[2], 100, 80, 0.00, 0)
+    call LeaderboardSetPlayerItemValueColorBJ(Player(1), udg_UDQuestLeaderboard[2], 100, 100.00, 100.00, 0)
+endfunction
+
+//===========================================================================
+function InitTrig_UDQuestLeaderboard_Player_2 takes nothing returns nothing
+    set gg_trg_UDQuestLeaderboard_Player_2=CreateTrigger()
+    call TriggerRegisterTimerEventSingle(gg_trg_UDQuestLeaderboard_Player_2, 6.00)
+    call TriggerAddCondition(gg_trg_UDQuestLeaderboard_Player_2, Condition(function Trig_UDQuestLeaderboard_Player_2_Conditions))
+    call TriggerAddAction(gg_trg_UDQuestLeaderboard_Player_2, function Trig_UDQuestLeaderboard_Player_2_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: UDQuestLeaderboard Player 3
+//===========================================================================
+function Trig_UDQuestLeaderboard_Player_3_Conditions takes nothing returns boolean
+    if ( not ( GetPlayerRace(Player(2)) == RACE_UNDEAD ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDQuestLeaderboard_Player_3_Actions takes nothing returns nothing
+    call CreateLeaderboardBJ(bj_FORCE_PLAYER[2], "TRIGSTR_946")
+    call LeaderboardDisplayBJ(false, GetLastCreatedLeaderboard())
+    set udg_UDQuestPlayer[3]=Player(2)
+    set udg_UDQuestLeaderboard[3]=GetLastCreatedLeaderboard()
+    if GetLocalPlayer() == Player(2) then
+    call LeaderboardDisplayBJ(true, GetLastCreatedLeaderboard())
+    endif
+    call LeaderboardAddItemBJ(Player(2), udg_UDQuestLeaderboard[3], "TRIGSTR_947", 0)
+    call LeaderboardSetStyleBJ(udg_UDQuestLeaderboard[3], false, true, true, false)
+    call LeaderboardSetPlayerItemLabelColorBJ(Player(2), udg_UDQuestLeaderboard[3], 100, 80, 0.00, 0)
+    call LeaderboardSetPlayerItemValueColorBJ(Player(2), udg_UDQuestLeaderboard[3], 100, 100.00, 100.00, 0)
+endfunction
+
+//===========================================================================
+function InitTrig_UDQuestLeaderboard_Player_3 takes nothing returns nothing
+    set gg_trg_UDQuestLeaderboard_Player_3=CreateTrigger()
+    call TriggerRegisterTimerEventSingle(gg_trg_UDQuestLeaderboard_Player_3, 7.00)
+    call TriggerAddCondition(gg_trg_UDQuestLeaderboard_Player_3, Condition(function Trig_UDQuestLeaderboard_Player_3_Conditions))
+    call TriggerAddAction(gg_trg_UDQuestLeaderboard_Player_3, function Trig_UDQuestLeaderboard_Player_3_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: UDQuestLeaderboard Player 4
+//===========================================================================
+function Trig_UDQuestLeaderboard_Player_4_Conditions takes nothing returns boolean
+    if ( not ( GetPlayerRace(Player(3)) == RACE_UNDEAD ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDQuestLeaderboard_Player_4_Actions takes nothing returns nothing
+    call CreateLeaderboardBJ(bj_FORCE_PLAYER[3], "TRIGSTR_948")
+    call LeaderboardDisplayBJ(false, GetLastCreatedLeaderboard())
+    set udg_UDQuestPlayer[4]=Player(3)
+    set udg_UDQuestLeaderboard[4]=GetLastCreatedLeaderboard()
+    if GetLocalPlayer() == Player(3) then
+    call LeaderboardDisplayBJ(true, GetLastCreatedLeaderboard())
+    endif
+    call LeaderboardAddItemBJ(Player(3), udg_UDQuestLeaderboard[4], "TRIGSTR_949", 0)
+    call LeaderboardSetStyleBJ(udg_UDQuestLeaderboard[4], false, true, true, false)
+    call LeaderboardSetPlayerItemLabelColorBJ(Player(3), udg_UDQuestLeaderboard[4], 100, 80, 0.00, 0)
+    call LeaderboardSetPlayerItemValueColorBJ(Player(3), udg_UDQuestLeaderboard[4], 100, 100.00, 100.00, 0)
+endfunction
+
+//===========================================================================
+function InitTrig_UDQuestLeaderboard_Player_4 takes nothing returns nothing
+    set gg_trg_UDQuestLeaderboard_Player_4=CreateTrigger()
+    call TriggerRegisterTimerEventSingle(gg_trg_UDQuestLeaderboard_Player_4, 8.00)
+    call TriggerAddCondition(gg_trg_UDQuestLeaderboard_Player_4, Condition(function Trig_UDQuestLeaderboard_Player_4_Conditions))
+    call TriggerAddAction(gg_trg_UDQuestLeaderboard_Player_4, function Trig_UDQuestLeaderboard_Player_4_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: UDQuestLeaderboard Player 5
+//===========================================================================
+function Trig_UDQuestLeaderboard_Player_5_Conditions takes nothing returns boolean
+    if ( not ( GetPlayerRace(Player(4)) == RACE_UNDEAD ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDQuestLeaderboard_Player_5_Actions takes nothing returns nothing
+    call CreateLeaderboardBJ(bj_FORCE_PLAYER[4], "TRIGSTR_950")
+    call LeaderboardDisplayBJ(false, GetLastCreatedLeaderboard())
+    set udg_UDQuestPlayer[5]=Player(4)
+    set udg_UDQuestLeaderboard[5]=GetLastCreatedLeaderboard()
+    if GetLocalPlayer() == Player(4) then
+    call LeaderboardDisplayBJ(true, GetLastCreatedLeaderboard())
+    endif
+    call LeaderboardAddItemBJ(Player(4), udg_UDQuestLeaderboard[5], "TRIGSTR_951", 0)
+    call LeaderboardSetStyleBJ(udg_UDQuestLeaderboard[5], false, true, true, false)
+    call LeaderboardSetPlayerItemLabelColorBJ(Player(4), udg_UDQuestLeaderboard[5], 100, 80, 0.00, 0)
+    call LeaderboardSetPlayerItemValueColorBJ(Player(4), udg_UDQuestLeaderboard[5], 100, 100.00, 100.00, 0)
+endfunction
+
+//===========================================================================
+function InitTrig_UDQuestLeaderboard_Player_5 takes nothing returns nothing
+    set gg_trg_UDQuestLeaderboard_Player_5=CreateTrigger()
+    call TriggerRegisterTimerEventSingle(gg_trg_UDQuestLeaderboard_Player_5, 9.00)
+    call TriggerAddCondition(gg_trg_UDQuestLeaderboard_Player_5, Condition(function Trig_UDQuestLeaderboard_Player_5_Conditions))
+    call TriggerAddAction(gg_trg_UDQuestLeaderboard_Player_5, function Trig_UDQuestLeaderboard_Player_5_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: UDQuestLeaderboard Player 6
+//===========================================================================
+function Trig_UDQuestLeaderboard_Player_6_Conditions takes nothing returns boolean
+    if ( not ( GetPlayerRace(Player(5)) == RACE_UNDEAD ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDQuestLeaderboard_Player_6_Actions takes nothing returns nothing
+    call CreateLeaderboardBJ(bj_FORCE_PLAYER[5], "TRIGSTR_952")
+    call LeaderboardDisplayBJ(false, GetLastCreatedLeaderboard())
+    set udg_UDQuestPlayer[6]=Player(5)
+    set udg_UDQuestLeaderboard[6]=GetLastCreatedLeaderboard()
+    if GetLocalPlayer() == Player(5) then
+    call LeaderboardDisplayBJ(true, GetLastCreatedLeaderboard())
+    endif
+    call LeaderboardAddItemBJ(Player(5), udg_UDQuestLeaderboard[6], "TRIGSTR_953", 0)
+    call LeaderboardSetStyleBJ(udg_UDQuestLeaderboard[6], false, true, true, false)
+    call LeaderboardSetPlayerItemLabelColorBJ(Player(5), udg_UDQuestLeaderboard[6], 100, 80, 0.00, 0)
+    call LeaderboardSetPlayerItemValueColorBJ(Player(5), udg_UDQuestLeaderboard[6], 100, 100.00, 100.00, 0)
+endfunction
+
+//===========================================================================
+function InitTrig_UDQuestLeaderboard_Player_6 takes nothing returns nothing
+    set gg_trg_UDQuestLeaderboard_Player_6=CreateTrigger()
+    call TriggerRegisterTimerEventSingle(gg_trg_UDQuestLeaderboard_Player_6, 10.00)
+    call TriggerAddCondition(gg_trg_UDQuestLeaderboard_Player_6, Condition(function Trig_UDQuestLeaderboard_Player_6_Conditions))
+    call TriggerAddAction(gg_trg_UDQuestLeaderboard_Player_6, function Trig_UDQuestLeaderboard_Player_6_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: UDQuestStart
+//===========================================================================
+function Trig_UDQuestStart_Func003Func001Func002C takes nothing returns boolean
+    if ( not ( GetPlayerRace(GetEnumPlayer()) == RACE_UNDEAD ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDQuestStart_Func003Func001C takes nothing returns boolean
+    if ( not Trig_UDQuestStart_Func003Func001Func002C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDQuestStart_Func003A takes nothing returns nothing
+    if ( Trig_UDQuestStart_Func003Func001C() ) then
+        call QuestMessageBJ(GetForceOfPlayer(GetEnumPlayer()), bj_QUESTMESSAGE_DISCOVERED, "TRIGSTR_896")
+        call EnableTrigger(gg_trg_UDQuestLeaderboard_Player_1)
+        call EnableTrigger(gg_trg_UDQuestLeaderboard_Player_2)
+        call EnableTrigger(gg_trg_UDQuestLeaderboard_Player_4)
+        call EnableTrigger(gg_trg_UDQuestLeaderboard_Player_3)
+        call EnableTrigger(gg_trg_UDQuestLeaderboard_Player_5)
+        call EnableTrigger(gg_trg_UDQuestLeaderboard_Player_6)
+    else
+        call DoNothing()
+    endif
+endfunction
+
+function Trig_UDQuestStart_Actions takes nothing returns nothing
+    set bj_forLoopAIndex=1
+    set bj_forLoopAIndexEnd=6
+    loop
+        exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
+        set udg_UDQuestCorpseCount[GetForLoopIndexA()]=0
+        set udg_QuestUndead1[GetForLoopIndexA()]=0
+        set bj_forLoopAIndex=bj_forLoopAIndex + 1
+    endloop
+    call ForForce(GetPlayersAll(), function Trig_UDQuestStart_Func003A)
+endfunction
+
+//===========================================================================
+function InitTrig_UDQuestStart takes nothing returns nothing
+    set gg_trg_UDQuestStart=CreateTrigger()
+    call TriggerRegisterTimerEventSingle(gg_trg_UDQuestStart, 5)
+    call TriggerAddAction(gg_trg_UDQuestStart, function Trig_UDQuestStart_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: UDQuest
+//===========================================================================
+function Trig_UDQuest_Func001Func001C takes nothing returns boolean
+    if ( not ( GetPlayerController(GetEnumPlayer()) == MAP_CONTROL_USER ) ) then
+        return false
+    endif
+    if ( not ( GetPlayerRace(GetEnumPlayer()) == RACE_UNDEAD ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDQuest_Func001A takes nothing returns nothing
+    if ( Trig_UDQuest_Func001Func001C() ) then
+        call CreateQuestBJ(bj_QUESTTYPE_REQ_DISCOVERED, "TRIGSTR_893", "TRIGSTR_894", "ReplaceableTextures\\CommandButtons\\BTNSacrificialSkull.blp")
+        set udg_UDQuest=GetLastCreatedQuestBJ()
+        call CreateQuestItemBJ(udg_UDQuest, "TRIGSTR_895")
+        set udg_UDQuestRequirement=GetLastCreatedQuestItemBJ()
+    else
+        call DoNothing()
+    endif
+endfunction
+
+function Trig_UDQuest_Actions takes nothing returns nothing
+    call ForForce(GetPlayersAll(), function Trig_UDQuest_Func001A)
+endfunction
+
+//===========================================================================
+function InitTrig_UDQuest takes nothing returns nothing
+    set gg_trg_UDQuest=CreateTrigger()
+    call TriggerAddAction(gg_trg_UDQuest, function Trig_UDQuest_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: UDCircle
+//===========================================================================
+function Trig_UDCircle_Conditions takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetTransportUnitBJ()) == 'u00I' ) ) then
+        return false
+    endif
+    if ( not ( GetOwningPlayer(GetTransportUnitBJ()) == Player(0) ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Func001Func001C takes nothing returns boolean
+    if ( not ( GetUnitLevel(GetTriggerUnit()) == 10 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Func001Func002Func002C takes nothing returns boolean
+    if ( not ( GetUnitLevel(GetTriggerUnit()) >= 5 ) ) then
+        return false
+    endif
+    if ( not ( GetUnitLevel(GetTriggerUnit()) != 10 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Func001Func002C takes nothing returns boolean
+    if ( not Trig_UDCircle_Func001Func002Func002C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Func001Func003C takes nothing returns boolean
+    if ( not ( GetUnitLevel(GetTriggerUnit()) <= 5 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Func001C takes nothing returns boolean
+    if ( not ( IsUnitEnemy(GetTriggerUnit(), GetOwningPlayer(GetTransportUnitBJ())) == true ) ) then
+        return false
+    endif
+    if ( not ( GetOwningPlayer(GetTriggerUnit()) == Player(PLAYER_NEUTRAL_AGGRESSIVE) ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Func002C takes nothing returns boolean
+    if ( not ( IsUnitAlly(GetTriggerUnit(), GetOwningPlayer(GetTransportUnitBJ())) == true ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Func003Func003C takes nothing returns boolean
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'uaco' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'opeo' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'ncpn' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'hpea' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'h00G' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_UDCircle_Func003C takes nothing returns boolean
+    if ( not ( IsUnitEnemy(GetTriggerUnit(), GetOwningPlayer(GetTransportUnitBJ())) == true ) ) then
+        return false
+    endif
+    if ( not Trig_UDCircle_Func003Func003C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Func004Func003C takes nothing returns boolean
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'nzom' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'ospw' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'hspt' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'edry' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_UDCircle_Func004C takes nothing returns boolean
+    if ( not ( IsUnitEnemy(GetTriggerUnit(), GetOwningPlayer(GetTransportUnitBJ())) == true ) ) then
+        return false
+    endif
+    if ( not Trig_UDCircle_Func004Func003C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Func005Func003C takes nothing returns boolean
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'n00M' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'orai' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'nchr' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'hmtm' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'edoc' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'edcm' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_UDCircle_Func005C takes nothing returns boolean
+    if ( not ( IsUnitEnemy(GetTriggerUnit(), GetOwningPlayer(GetTransportUnitBJ())) == true ) ) then
+        return false
+    endif
+    if ( not Trig_UDCircle_Func005Func003C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Func006Func002C takes nothing returns boolean
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'unec' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'n00O' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'oshm' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'nchw' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'odoc' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'hmpr' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'hsor' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'edot' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'n00S' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_UDCircle_Func006C takes nothing returns boolean
+    if ( not ( IsUnitEnemy(GetTriggerUnit(), GetOwningPlayer(GetTransportUnitBJ())) == true ) ) then
+        return false
+    endif
+    if ( not Trig_UDCircle_Func006Func002C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Func007Func003C takes nothing returns boolean
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'ucry' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'ohun' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'hrif' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'n00Z' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'esen' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_UDCircle_Func007C takes nothing returns boolean
+    if ( not ( IsUnitEnemy(GetTriggerUnit(), GetOwningPlayer(GetTransportUnitBJ())) == true ) ) then
+        return false
+    endif
+    if ( not Trig_UDCircle_Func007Func003C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Func008Func003C takes nothing returns boolean
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'uabo' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'otau' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'okod' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'nckb' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'hkni' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'n00T' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_UDCircle_Func008C takes nothing returns boolean
+    if ( not ( IsUnitEnemy(GetTriggerUnit(), GetOwningPlayer(GetTransportUnitBJ())) == true ) ) then
+        return false
+    endif
+    if ( not Trig_UDCircle_Func008Func003C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Func009Func003C takes nothing returns boolean
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'ugho' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'ogru' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'nchg' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'hfoo' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'earc' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_UDCircle_Func009C takes nothing returns boolean
+    if ( not ( IsUnitEnemy(GetTriggerUnit(), GetOwningPlayer(GetTransportUnitBJ())) == true ) ) then
+        return false
+    endif
+    if ( not Trig_UDCircle_Func009Func003C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Actions takes nothing returns nothing
+    if ( Trig_UDCircle_Func001C() ) then
+        if ( Trig_UDCircle_Func001Func001C() ) then
+            set udg_UDQuestCorpseCount[1]=( udg_UDQuestCorpseCount[1] + 500 )
+            call RemoveUnit(GetLoadedUnitBJ())
+        else
+            call DoNothing()
+        endif
+        if ( Trig_UDCircle_Func001Func002C() ) then
+            set udg_UDQuestCorpseCount[1]=( udg_UDQuestCorpseCount[1] + 350 )
+            call RemoveUnit(GetLoadedUnitBJ())
+        else
+            call DoNothing()
+        endif
+        if ( Trig_UDCircle_Func001Func003C() ) then
+            set udg_UDQuestCorpseCount[1]=( udg_UDQuestCorpseCount[1] + 100 )
+            call RemoveUnit(GetLoadedUnitBJ())
+        else
+            call DoNothing()
+        endif
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDCircle_Func002C() ) then
+        call RemoveUnit(GetLoadedUnitBJ())
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDCircle_Func003C() ) then
+        set udg_UDQuestCorpseCount[1]=( udg_UDQuestCorpseCount[1] + 200 )
+        call RemoveUnit(GetLoadedUnitBJ())
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDCircle_Func004C() ) then
+        set udg_UDQuestCorpseCount[1]=( udg_UDQuestCorpseCount[1] + 110 )
+        call RemoveUnit(GetLoadedUnitBJ())
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDCircle_Func005C() ) then
+        set udg_UDQuestCorpseCount[1]=( udg_UDQuestCorpseCount[1] + 180 )
+        call RemoveUnit(GetLoadedUnitBJ())
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDCircle_Func006C() ) then
+        set udg_UDQuestCorpseCount[1]=( udg_UDQuestCorpseCount[1] + 120 )
+        call RemoveUnit(GetLoadedUnitBJ())
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDCircle_Func007C() ) then
+        set udg_UDQuestCorpseCount[1]=( udg_UDQuestCorpseCount[1] + 100 )
+        call RemoveUnit(GetLoadedUnitBJ())
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDCircle_Func008C() ) then
+        set udg_UDQuestCorpseCount[1]=( udg_UDQuestCorpseCount[1] + 150 )
+        call RemoveUnit(GetLoadedUnitBJ())
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDCircle_Func009C() ) then
+        set udg_UDQuestCorpseCount[1]=( udg_UDQuestCorpseCount[1] + 80 )
+        call RemoveUnit(GetLoadedUnitBJ())
+    else
+        call DoNothing()
+    endif
+endfunction
+
+//===========================================================================
+function InitTrig_UDCircle takes nothing returns nothing
+    set gg_trg_UDCircle=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_UDCircle, EVENT_PLAYER_UNIT_LOADED)
+    call TriggerAddCondition(gg_trg_UDCircle, Condition(function Trig_UDCircle_Conditions))
+    call TriggerAddAction(gg_trg_UDCircle, function Trig_UDCircle_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: UDCircle Player 2
+//===========================================================================
+function Trig_UDCircle_Player_2_Conditions takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetTransportUnitBJ()) == 'u00I' ) ) then
+        return false
+    endif
+    if ( not ( GetOwningPlayer(GetTransportUnitBJ()) == Player(1) ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Player_2_Func001Func001C takes nothing returns boolean
+    if ( not ( GetUnitLevel(GetTriggerUnit()) == 10 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Player_2_Func001Func002Func002C takes nothing returns boolean
+    if ( not ( GetUnitLevel(GetTriggerUnit()) >= 5 ) ) then
+        return false
+    endif
+    if ( not ( GetUnitLevel(GetTriggerUnit()) != 10 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Player_2_Func001Func002C takes nothing returns boolean
+    if ( not Trig_UDCircle_Player_2_Func001Func002Func002C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Player_2_Func001Func003C takes nothing returns boolean
+    if ( not ( GetUnitLevel(GetTriggerUnit()) <= 5 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Player_2_Func001C takes nothing returns boolean
+    if ( not ( IsUnitEnemy(GetTriggerUnit(), GetOwningPlayer(GetTransportUnitBJ())) == true ) ) then
+        return false
+    endif
+    if ( not ( GetOwningPlayer(GetTriggerUnit()) == Player(PLAYER_NEUTRAL_AGGRESSIVE) ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Player_2_Func002C takes nothing returns boolean
+    if ( not ( IsUnitAlly(GetTriggerUnit(), GetOwningPlayer(GetTransportUnitBJ())) == true ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Player_2_Func003Func003C takes nothing returns boolean
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'uaco' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'opeo' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'ncpn' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'hpea' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'h00G' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_UDCircle_Player_2_Func003C takes nothing returns boolean
+    if ( not ( IsUnitEnemy(GetTriggerUnit(), GetOwningPlayer(GetTransportUnitBJ())) == true ) ) then
+        return false
+    endif
+    if ( not Trig_UDCircle_Player_2_Func003Func003C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Player_2_Func004Func003C takes nothing returns boolean
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'nzom' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'ospw' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'hspt' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'edry' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_UDCircle_Player_2_Func004C takes nothing returns boolean
+    if ( not ( IsUnitEnemy(GetTriggerUnit(), GetOwningPlayer(GetTransportUnitBJ())) == true ) ) then
+        return false
+    endif
+    if ( not Trig_UDCircle_Player_2_Func004Func003C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Player_2_Func005Func003C takes nothing returns boolean
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'n00M' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'orai' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'nchr' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'hmtm' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'edoc' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'edcm' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_UDCircle_Player_2_Func005C takes nothing returns boolean
+    if ( not ( IsUnitEnemy(GetTriggerUnit(), GetOwningPlayer(GetTransportUnitBJ())) == true ) ) then
+        return false
+    endif
+    if ( not Trig_UDCircle_Player_2_Func005Func003C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Player_2_Func006Func002C takes nothing returns boolean
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'unec' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'n00O' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'oshm' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'nchw' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'odoc' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'hmpr' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'hsor' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'edot' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'n00S' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_UDCircle_Player_2_Func006C takes nothing returns boolean
+    if ( not ( IsUnitEnemy(GetTriggerUnit(), GetOwningPlayer(GetTransportUnitBJ())) == true ) ) then
+        return false
+    endif
+    if ( not Trig_UDCircle_Player_2_Func006Func002C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Player_2_Func007Func003C takes nothing returns boolean
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'ucry' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'ohun' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'hrif' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'n00Z' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'esen' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_UDCircle_Player_2_Func007C takes nothing returns boolean
+    if ( not ( IsUnitEnemy(GetTriggerUnit(), GetOwningPlayer(GetTransportUnitBJ())) == true ) ) then
+        return false
+    endif
+    if ( not Trig_UDCircle_Player_2_Func007Func003C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Player_2_Func008Func003C takes nothing returns boolean
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'uabo' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'otau' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'okod' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'nckb' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'hkni' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'n00T' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_UDCircle_Player_2_Func008C takes nothing returns boolean
+    if ( not ( IsUnitEnemy(GetTriggerUnit(), GetOwningPlayer(GetTransportUnitBJ())) == true ) ) then
+        return false
+    endif
+    if ( not Trig_UDCircle_Player_2_Func008Func003C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Player_2_Func009Func003C takes nothing returns boolean
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'ugho' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'ogru' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'nchg' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'hfoo' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'earc' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_UDCircle_Player_2_Func009C takes nothing returns boolean
+    if ( not ( IsUnitEnemy(GetTriggerUnit(), GetOwningPlayer(GetTransportUnitBJ())) == true ) ) then
+        return false
+    endif
+    if ( not Trig_UDCircle_Player_2_Func009Func003C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Player_2_Actions takes nothing returns nothing
+    if ( Trig_UDCircle_Player_2_Func001C() ) then
+        if ( Trig_UDCircle_Player_2_Func001Func001C() ) then
+            set udg_UDQuestCorpseCount[2]=( udg_UDQuestCorpseCount[2] + 500 )
+            call RemoveUnit(GetLoadedUnitBJ())
+        else
+            call DoNothing()
+        endif
+        if ( Trig_UDCircle_Player_2_Func001Func002C() ) then
+            set udg_UDQuestCorpseCount[2]=( udg_UDQuestCorpseCount[2] + 350 )
+            call RemoveUnit(GetLoadedUnitBJ())
+        else
+            call DoNothing()
+        endif
+        if ( Trig_UDCircle_Player_2_Func001Func003C() ) then
+            set udg_UDQuestCorpseCount[2]=( udg_UDQuestCorpseCount[2] + 100 )
+            call RemoveUnit(GetLoadedUnitBJ())
+        else
+            call DoNothing()
+        endif
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDCircle_Player_2_Func002C() ) then
+        call RemoveUnit(GetLoadedUnitBJ())
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDCircle_Player_2_Func003C() ) then
+        set udg_UDQuestCorpseCount[2]=( udg_UDQuestCorpseCount[2] + 200 )
+        call RemoveUnit(GetLoadedUnitBJ())
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDCircle_Player_2_Func004C() ) then
+        set udg_UDQuestCorpseCount[2]=( udg_UDQuestCorpseCount[2] + 110 )
+        call RemoveUnit(GetLoadedUnitBJ())
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDCircle_Player_2_Func005C() ) then
+        set udg_UDQuestCorpseCount[2]=( udg_UDQuestCorpseCount[2] + 180 )
+        call RemoveUnit(GetLoadedUnitBJ())
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDCircle_Player_2_Func006C() ) then
+        set udg_UDQuestCorpseCount[2]=( udg_UDQuestCorpseCount[2] + 120 )
+        call RemoveUnit(GetLoadedUnitBJ())
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDCircle_Player_2_Func007C() ) then
+        set udg_UDQuestCorpseCount[2]=( udg_UDQuestCorpseCount[2] + 100 )
+        call RemoveUnit(GetLoadedUnitBJ())
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDCircle_Player_2_Func008C() ) then
+        set udg_UDQuestCorpseCount[2]=( udg_UDQuestCorpseCount[2] + 150 )
+        call RemoveUnit(GetLoadedUnitBJ())
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDCircle_Player_2_Func009C() ) then
+        set udg_UDQuestCorpseCount[2]=( udg_UDQuestCorpseCount[2] + 80 )
+        call RemoveUnit(GetLoadedUnitBJ())
+    else
+        call DoNothing()
+    endif
+endfunction
+
+//===========================================================================
+function InitTrig_UDCircle_Player_2 takes nothing returns nothing
+    set gg_trg_UDCircle_Player_2=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_UDCircle_Player_2, EVENT_PLAYER_UNIT_LOADED)
+    call TriggerAddCondition(gg_trg_UDCircle_Player_2, Condition(function Trig_UDCircle_Player_2_Conditions))
+    call TriggerAddAction(gg_trg_UDCircle_Player_2, function Trig_UDCircle_Player_2_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: UDCircle Player 3
+//===========================================================================
+function Trig_UDCircle_Player_3_Conditions takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetTransportUnitBJ()) == 'u00I' ) ) then
+        return false
+    endif
+    if ( not ( GetOwningPlayer(GetTransportUnitBJ()) == Player(2) ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Player_3_Func001Func001C takes nothing returns boolean
+    if ( not ( GetUnitLevel(GetTriggerUnit()) == 10 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Player_3_Func001Func002Func002C takes nothing returns boolean
+    if ( not ( GetUnitLevel(GetTriggerUnit()) >= 5 ) ) then
+        return false
+    endif
+    if ( not ( GetUnitLevel(GetTriggerUnit()) != 10 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Player_3_Func001Func002C takes nothing returns boolean
+    if ( not Trig_UDCircle_Player_3_Func001Func002Func002C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Player_3_Func001Func003C takes nothing returns boolean
+    if ( not ( GetUnitLevel(GetTriggerUnit()) <= 5 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Player_3_Func001C takes nothing returns boolean
+    if ( not ( IsUnitEnemy(GetTriggerUnit(), GetOwningPlayer(GetTransportUnitBJ())) == true ) ) then
+        return false
+    endif
+    if ( not ( GetOwningPlayer(GetTriggerUnit()) == Player(PLAYER_NEUTRAL_AGGRESSIVE) ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Player_3_Func002C takes nothing returns boolean
+    if ( not ( IsUnitAlly(GetTriggerUnit(), GetOwningPlayer(GetTransportUnitBJ())) == true ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Player_3_Func003Func003C takes nothing returns boolean
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'uaco' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'opeo' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'ncpn' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'hpea' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'h00G' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_UDCircle_Player_3_Func003C takes nothing returns boolean
+    if ( not ( IsUnitEnemy(GetTriggerUnit(), GetOwningPlayer(GetTransportUnitBJ())) == true ) ) then
+        return false
+    endif
+    if ( not Trig_UDCircle_Player_3_Func003Func003C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Player_3_Func004Func003C takes nothing returns boolean
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'nzom' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'ospw' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'hspt' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'edry' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_UDCircle_Player_3_Func004C takes nothing returns boolean
+    if ( not ( IsUnitEnemy(GetTriggerUnit(), GetOwningPlayer(GetTransportUnitBJ())) == true ) ) then
+        return false
+    endif
+    if ( not Trig_UDCircle_Player_3_Func004Func003C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Player_3_Func005Func003C takes nothing returns boolean
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'n00M' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'orai' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'nchr' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'hmtm' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'edoc' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'edcm' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_UDCircle_Player_3_Func005C takes nothing returns boolean
+    if ( not ( IsUnitEnemy(GetTriggerUnit(), GetOwningPlayer(GetTransportUnitBJ())) == true ) ) then
+        return false
+    endif
+    if ( not Trig_UDCircle_Player_3_Func005Func003C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Player_3_Func006Func002C takes nothing returns boolean
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'unec' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'n00O' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'oshm' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'nchw' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'odoc' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'hmpr' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'hsor' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'edot' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'n00S' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_UDCircle_Player_3_Func006C takes nothing returns boolean
+    if ( not ( IsUnitEnemy(GetTriggerUnit(), GetOwningPlayer(GetTransportUnitBJ())) == true ) ) then
+        return false
+    endif
+    if ( not Trig_UDCircle_Player_3_Func006Func002C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Player_3_Func007Func003C takes nothing returns boolean
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'ucry' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'ohun' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'hrif' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'n00Z' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'esen' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_UDCircle_Player_3_Func007C takes nothing returns boolean
+    if ( not ( IsUnitEnemy(GetTriggerUnit(), GetOwningPlayer(GetTransportUnitBJ())) == true ) ) then
+        return false
+    endif
+    if ( not Trig_UDCircle_Player_3_Func007Func003C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Player_3_Func008Func003C takes nothing returns boolean
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'uabo' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'otau' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'okod' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'nckb' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'hkni' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'n00T' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_UDCircle_Player_3_Func008C takes nothing returns boolean
+    if ( not ( IsUnitEnemy(GetTriggerUnit(), GetOwningPlayer(GetTransportUnitBJ())) == true ) ) then
+        return false
+    endif
+    if ( not Trig_UDCircle_Player_3_Func008Func003C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Player_3_Func009Func003C takes nothing returns boolean
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'ugho' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'ogru' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'nchg' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'hfoo' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'earc' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_UDCircle_Player_3_Func009C takes nothing returns boolean
+    if ( not ( IsUnitEnemy(GetTriggerUnit(), GetOwningPlayer(GetTransportUnitBJ())) == true ) ) then
+        return false
+    endif
+    if ( not Trig_UDCircle_Player_3_Func009Func003C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Player_3_Actions takes nothing returns nothing
+    if ( Trig_UDCircle_Player_3_Func001C() ) then
+        if ( Trig_UDCircle_Player_3_Func001Func001C() ) then
+            set udg_UDQuestCorpseCount[3]=( udg_UDQuestCorpseCount[3] + 500 )
+            call RemoveUnit(GetLoadedUnitBJ())
+        else
+            call DoNothing()
+        endif
+        if ( Trig_UDCircle_Player_3_Func001Func002C() ) then
+            set udg_UDQuestCorpseCount[3]=( udg_UDQuestCorpseCount[3] + 350 )
+            call RemoveUnit(GetLoadedUnitBJ())
+        else
+            call DoNothing()
+        endif
+        if ( Trig_UDCircle_Player_3_Func001Func003C() ) then
+            set udg_UDQuestCorpseCount[3]=( udg_UDQuestCorpseCount[3] + 100 )
+            call RemoveUnit(GetLoadedUnitBJ())
+        else
+            call DoNothing()
+        endif
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDCircle_Player_3_Func002C() ) then
+        call RemoveUnit(GetLoadedUnitBJ())
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDCircle_Player_3_Func003C() ) then
+        set udg_UDQuestCorpseCount[3]=( udg_UDQuestCorpseCount[3] + 200 )
+        call RemoveUnit(GetLoadedUnitBJ())
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDCircle_Player_3_Func004C() ) then
+        set udg_UDQuestCorpseCount[3]=( udg_UDQuestCorpseCount[3] + 110 )
+        call RemoveUnit(GetLoadedUnitBJ())
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDCircle_Player_3_Func005C() ) then
+        set udg_UDQuestCorpseCount[3]=( udg_UDQuestCorpseCount[3] + 180 )
+        call RemoveUnit(GetLoadedUnitBJ())
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDCircle_Player_3_Func006C() ) then
+        set udg_UDQuestCorpseCount[3]=( udg_UDQuestCorpseCount[3] + 120 )
+        call RemoveUnit(GetLoadedUnitBJ())
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDCircle_Player_3_Func007C() ) then
+        set udg_UDQuestCorpseCount[3]=( udg_UDQuestCorpseCount[3] + 100 )
+        call RemoveUnit(GetLoadedUnitBJ())
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDCircle_Player_3_Func008C() ) then
+        set udg_UDQuestCorpseCount[3]=( udg_UDQuestCorpseCount[3] + 150 )
+        call RemoveUnit(GetLoadedUnitBJ())
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDCircle_Player_3_Func009C() ) then
+        set udg_UDQuestCorpseCount[3]=( udg_UDQuestCorpseCount[3] + 80 )
+        call RemoveUnit(GetLoadedUnitBJ())
+    else
+        call DoNothing()
+    endif
+endfunction
+
+//===========================================================================
+function InitTrig_UDCircle_Player_3 takes nothing returns nothing
+    set gg_trg_UDCircle_Player_3=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_UDCircle_Player_3, EVENT_PLAYER_UNIT_LOADED)
+    call TriggerAddCondition(gg_trg_UDCircle_Player_3, Condition(function Trig_UDCircle_Player_3_Conditions))
+    call TriggerAddAction(gg_trg_UDCircle_Player_3, function Trig_UDCircle_Player_3_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: UDCircle Player 4
+//===========================================================================
+function Trig_UDCircle_Player_4_Conditions takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetTransportUnitBJ()) == 'u00I' ) ) then
+        return false
+    endif
+    if ( not ( GetOwningPlayer(GetTransportUnitBJ()) == Player(3) ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Player_4_Func001Func001C takes nothing returns boolean
+    if ( not ( GetUnitLevel(GetTriggerUnit()) == 10 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Player_4_Func001Func002Func002C takes nothing returns boolean
+    if ( not ( GetUnitLevel(GetTriggerUnit()) >= 5 ) ) then
+        return false
+    endif
+    if ( not ( GetUnitLevel(GetTriggerUnit()) != 10 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Player_4_Func001Func002C takes nothing returns boolean
+    if ( not Trig_UDCircle_Player_4_Func001Func002Func002C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Player_4_Func001Func003C takes nothing returns boolean
+    if ( not ( GetUnitLevel(GetTriggerUnit()) <= 5 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Player_4_Func001C takes nothing returns boolean
+    if ( not ( IsUnitEnemy(GetTriggerUnit(), GetOwningPlayer(GetTransportUnitBJ())) == true ) ) then
+        return false
+    endif
+    if ( not ( GetOwningPlayer(GetTriggerUnit()) == Player(PLAYER_NEUTRAL_AGGRESSIVE) ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Player_4_Func002C takes nothing returns boolean
+    if ( not ( IsUnitAlly(GetTriggerUnit(), GetOwningPlayer(GetTransportUnitBJ())) == true ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Player_4_Func003Func003C takes nothing returns boolean
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'uaco' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'opeo' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'ncpn' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'hpea' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'h00G' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_UDCircle_Player_4_Func003C takes nothing returns boolean
+    if ( not ( IsUnitEnemy(GetTriggerUnit(), GetOwningPlayer(GetTransportUnitBJ())) == true ) ) then
+        return false
+    endif
+    if ( not Trig_UDCircle_Player_4_Func003Func003C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Player_4_Func004Func003C takes nothing returns boolean
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'nzom' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'ospw' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'hspt' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'edry' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_UDCircle_Player_4_Func004C takes nothing returns boolean
+    if ( not ( IsUnitEnemy(GetTriggerUnit(), GetOwningPlayer(GetTransportUnitBJ())) == true ) ) then
+        return false
+    endif
+    if ( not Trig_UDCircle_Player_4_Func004Func003C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Player_4_Func005Func003C takes nothing returns boolean
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'n00M' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'orai' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'nchr' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'hmtm' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'edoc' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'edcm' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_UDCircle_Player_4_Func005C takes nothing returns boolean
+    if ( not ( IsUnitEnemy(GetTriggerUnit(), GetOwningPlayer(GetTransportUnitBJ())) == true ) ) then
+        return false
+    endif
+    if ( not Trig_UDCircle_Player_4_Func005Func003C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Player_4_Func006Func002C takes nothing returns boolean
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'unec' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'n00O' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'oshm' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'nchw' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'odoc' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'hmpr' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'hsor' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'edot' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'n00S' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_UDCircle_Player_4_Func006C takes nothing returns boolean
+    if ( not ( IsUnitEnemy(GetTriggerUnit(), GetOwningPlayer(GetTransportUnitBJ())) == true ) ) then
+        return false
+    endif
+    if ( not Trig_UDCircle_Player_4_Func006Func002C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Player_4_Func007Func003C takes nothing returns boolean
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'ucry' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'ohun' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'hrif' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'n00Z' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'esen' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_UDCircle_Player_4_Func007C takes nothing returns boolean
+    if ( not ( IsUnitEnemy(GetTriggerUnit(), GetOwningPlayer(GetTransportUnitBJ())) == true ) ) then
+        return false
+    endif
+    if ( not Trig_UDCircle_Player_4_Func007Func003C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Player_4_Func008Func003C takes nothing returns boolean
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'uabo' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'otau' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'okod' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'nckb' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'hkni' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'n00T' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_UDCircle_Player_4_Func008C takes nothing returns boolean
+    if ( not ( IsUnitEnemy(GetTriggerUnit(), GetOwningPlayer(GetTransportUnitBJ())) == true ) ) then
+        return false
+    endif
+    if ( not Trig_UDCircle_Player_4_Func008Func003C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Player_4_Func009Func003C takes nothing returns boolean
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'ugho' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'ogru' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'nchg' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'hfoo' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'earc' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_UDCircle_Player_4_Func009C takes nothing returns boolean
+    if ( not ( IsUnitEnemy(GetTriggerUnit(), GetOwningPlayer(GetTransportUnitBJ())) == true ) ) then
+        return false
+    endif
+    if ( not Trig_UDCircle_Player_4_Func009Func003C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Player_4_Actions takes nothing returns nothing
+    if ( Trig_UDCircle_Player_4_Func001C() ) then
+        if ( Trig_UDCircle_Player_4_Func001Func001C() ) then
+            set udg_UDQuestCorpseCount[4]=( udg_UDQuestCorpseCount[4] + 500 )
+            call RemoveUnit(GetLoadedUnitBJ())
+        else
+            call DoNothing()
+        endif
+        if ( Trig_UDCircle_Player_4_Func001Func002C() ) then
+            set udg_UDQuestCorpseCount[4]=( udg_UDQuestCorpseCount[4] + 350 )
+            call RemoveUnit(GetLoadedUnitBJ())
+        else
+            call DoNothing()
+        endif
+        if ( Trig_UDCircle_Player_4_Func001Func003C() ) then
+            set udg_UDQuestCorpseCount[4]=( udg_UDQuestCorpseCount[4] + 100 )
+            call RemoveUnit(GetLoadedUnitBJ())
+        else
+            call DoNothing()
+        endif
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDCircle_Player_4_Func002C() ) then
+        call RemoveUnit(GetLoadedUnitBJ())
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDCircle_Player_4_Func003C() ) then
+        set udg_UDQuestCorpseCount[4]=( udg_UDQuestCorpseCount[4] + 200 )
+        call RemoveUnit(GetLoadedUnitBJ())
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDCircle_Player_4_Func004C() ) then
+        set udg_UDQuestCorpseCount[4]=( udg_UDQuestCorpseCount[4] + 110 )
+        call RemoveUnit(GetLoadedUnitBJ())
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDCircle_Player_4_Func005C() ) then
+        set udg_UDQuestCorpseCount[4]=( udg_UDQuestCorpseCount[4] + 180 )
+        call RemoveUnit(GetLoadedUnitBJ())
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDCircle_Player_4_Func006C() ) then
+        set udg_UDQuestCorpseCount[4]=( udg_UDQuestCorpseCount[4] + 120 )
+        call RemoveUnit(GetLoadedUnitBJ())
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDCircle_Player_4_Func007C() ) then
+        set udg_UDQuestCorpseCount[4]=( udg_UDQuestCorpseCount[4] + 100 )
+        call RemoveUnit(GetLoadedUnitBJ())
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDCircle_Player_4_Func008C() ) then
+        set udg_UDQuestCorpseCount[4]=( udg_UDQuestCorpseCount[4] + 150 )
+        call RemoveUnit(GetLoadedUnitBJ())
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDCircle_Player_4_Func009C() ) then
+        set udg_UDQuestCorpseCount[4]=( udg_UDQuestCorpseCount[4] + 80 )
+        call RemoveUnit(GetLoadedUnitBJ())
+    else
+        call DoNothing()
+    endif
+endfunction
+
+//===========================================================================
+function InitTrig_UDCircle_Player_4 takes nothing returns nothing
+    set gg_trg_UDCircle_Player_4=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_UDCircle_Player_4, EVENT_PLAYER_UNIT_LOADED)
+    call TriggerAddCondition(gg_trg_UDCircle_Player_4, Condition(function Trig_UDCircle_Player_4_Conditions))
+    call TriggerAddAction(gg_trg_UDCircle_Player_4, function Trig_UDCircle_Player_4_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: UDCircle Player 5
+//===========================================================================
+function Trig_UDCircle_Player_5_Conditions takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetTransportUnitBJ()) == 'u00I' ) ) then
+        return false
+    endif
+    if ( not ( GetOwningPlayer(GetTransportUnitBJ()) == Player(4) ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Player_5_Func001Func001C takes nothing returns boolean
+    if ( not ( GetUnitLevel(GetTriggerUnit()) == 10 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Player_5_Func001Func002Func002C takes nothing returns boolean
+    if ( not ( GetUnitLevel(GetTriggerUnit()) >= 5 ) ) then
+        return false
+    endif
+    if ( not ( GetUnitLevel(GetTriggerUnit()) != 10 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Player_5_Func001Func002C takes nothing returns boolean
+    if ( not Trig_UDCircle_Player_5_Func001Func002Func002C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Player_5_Func001Func003C takes nothing returns boolean
+    if ( not ( GetUnitLevel(GetTriggerUnit()) <= 5 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Player_5_Func001C takes nothing returns boolean
+    if ( not ( IsUnitEnemy(GetTriggerUnit(), GetOwningPlayer(GetTransportUnitBJ())) == true ) ) then
+        return false
+    endif
+    if ( not ( GetOwningPlayer(GetTriggerUnit()) == Player(PLAYER_NEUTRAL_AGGRESSIVE) ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Player_5_Func002C takes nothing returns boolean
+    if ( not ( IsUnitAlly(GetTriggerUnit(), GetOwningPlayer(GetTransportUnitBJ())) == true ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Player_5_Func003Func003C takes nothing returns boolean
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'uaco' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'opeo' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'ncpn' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'hpea' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'h00G' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_UDCircle_Player_5_Func003C takes nothing returns boolean
+    if ( not ( IsUnitEnemy(GetTriggerUnit(), GetOwningPlayer(GetTransportUnitBJ())) == true ) ) then
+        return false
+    endif
+    if ( not Trig_UDCircle_Player_5_Func003Func003C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Player_5_Func004Func003C takes nothing returns boolean
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'nzom' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'ospw' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'hspt' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'edry' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_UDCircle_Player_5_Func004C takes nothing returns boolean
+    if ( not ( IsUnitEnemy(GetTriggerUnit(), GetOwningPlayer(GetTransportUnitBJ())) == true ) ) then
+        return false
+    endif
+    if ( not Trig_UDCircle_Player_5_Func004Func003C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Player_5_Func005Func003C takes nothing returns boolean
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'n00M' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'orai' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'nchr' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'hmtm' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'edoc' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'edcm' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_UDCircle_Player_5_Func005C takes nothing returns boolean
+    if ( not ( IsUnitEnemy(GetTriggerUnit(), GetOwningPlayer(GetTransportUnitBJ())) == true ) ) then
+        return false
+    endif
+    if ( not Trig_UDCircle_Player_5_Func005Func003C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Player_5_Func006Func002C takes nothing returns boolean
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'unec' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'n00O' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'oshm' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'nchw' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'odoc' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'hmpr' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'hsor' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'edot' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'n00S' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_UDCircle_Player_5_Func006C takes nothing returns boolean
+    if ( not ( IsUnitEnemy(GetTriggerUnit(), GetOwningPlayer(GetTransportUnitBJ())) == true ) ) then
+        return false
+    endif
+    if ( not Trig_UDCircle_Player_5_Func006Func002C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Player_5_Func007Func003C takes nothing returns boolean
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'ucry' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'ohun' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'hrif' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'n00Z' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'esen' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_UDCircle_Player_5_Func007C takes nothing returns boolean
+    if ( not ( IsUnitEnemy(GetTriggerUnit(), GetOwningPlayer(GetTransportUnitBJ())) == true ) ) then
+        return false
+    endif
+    if ( not Trig_UDCircle_Player_5_Func007Func003C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Player_5_Func008Func003C takes nothing returns boolean
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'uabo' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'otau' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'okod' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'nckb' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'hkni' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'n00T' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_UDCircle_Player_5_Func008C takes nothing returns boolean
+    if ( not ( IsUnitEnemy(GetTriggerUnit(), GetOwningPlayer(GetTransportUnitBJ())) == true ) ) then
+        return false
+    endif
+    if ( not Trig_UDCircle_Player_5_Func008Func003C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Player_5_Func009Func003C takes nothing returns boolean
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'ugho' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'ogru' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'nchg' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'hfoo' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'earc' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_UDCircle_Player_5_Func009C takes nothing returns boolean
+    if ( not ( IsUnitEnemy(GetTriggerUnit(), GetOwningPlayer(GetTransportUnitBJ())) == true ) ) then
+        return false
+    endif
+    if ( not Trig_UDCircle_Player_5_Func009Func003C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Player_5_Actions takes nothing returns nothing
+    if ( Trig_UDCircle_Player_5_Func001C() ) then
+        if ( Trig_UDCircle_Player_5_Func001Func001C() ) then
+            set udg_UDQuestCorpseCount[5]=( udg_UDQuestCorpseCount[5] + 500 )
+            call RemoveUnit(GetLoadedUnitBJ())
+        else
+            call DoNothing()
+        endif
+        if ( Trig_UDCircle_Player_5_Func001Func002C() ) then
+            set udg_UDQuestCorpseCount[5]=( udg_UDQuestCorpseCount[5] + 350 )
+            call RemoveUnit(GetLoadedUnitBJ())
+        else
+            call DoNothing()
+        endif
+        if ( Trig_UDCircle_Player_5_Func001Func003C() ) then
+            set udg_UDQuestCorpseCount[5]=( udg_UDQuestCorpseCount[5] + 100 )
+            call RemoveUnit(GetLoadedUnitBJ())
+        else
+            call DoNothing()
+        endif
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDCircle_Player_5_Func002C() ) then
+        call RemoveUnit(GetLoadedUnitBJ())
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDCircle_Player_5_Func003C() ) then
+        set udg_UDQuestCorpseCount[5]=( udg_UDQuestCorpseCount[5] + 200 )
+        call RemoveUnit(GetLoadedUnitBJ())
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDCircle_Player_5_Func004C() ) then
+        set udg_UDQuestCorpseCount[5]=( udg_UDQuestCorpseCount[5] + 110 )
+        call RemoveUnit(GetLoadedUnitBJ())
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDCircle_Player_5_Func005C() ) then
+        set udg_UDQuestCorpseCount[5]=( udg_UDQuestCorpseCount[5] + 180 )
+        call RemoveUnit(GetLoadedUnitBJ())
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDCircle_Player_5_Func006C() ) then
+        set udg_UDQuestCorpseCount[5]=( udg_UDQuestCorpseCount[5] + 120 )
+        call RemoveUnit(GetLoadedUnitBJ())
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDCircle_Player_5_Func007C() ) then
+        set udg_UDQuestCorpseCount[5]=( udg_UDQuestCorpseCount[5] + 100 )
+        call RemoveUnit(GetLoadedUnitBJ())
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDCircle_Player_5_Func008C() ) then
+        set udg_UDQuestCorpseCount[5]=( udg_UDQuestCorpseCount[5] + 150 )
+        call RemoveUnit(GetLoadedUnitBJ())
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDCircle_Player_5_Func009C() ) then
+        set udg_UDQuestCorpseCount[5]=( udg_UDQuestCorpseCount[5] + 80 )
+        call RemoveUnit(GetLoadedUnitBJ())
+    else
+        call DoNothing()
+    endif
+endfunction
+
+//===========================================================================
+function InitTrig_UDCircle_Player_5 takes nothing returns nothing
+    set gg_trg_UDCircle_Player_5=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_UDCircle_Player_5, EVENT_PLAYER_UNIT_LOADED)
+    call TriggerAddCondition(gg_trg_UDCircle_Player_5, Condition(function Trig_UDCircle_Player_5_Conditions))
+    call TriggerAddAction(gg_trg_UDCircle_Player_5, function Trig_UDCircle_Player_5_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: UDCircle Player 6
+//===========================================================================
+function Trig_UDCircle_Player_6_Conditions takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetTransportUnitBJ()) == 'u00I' ) ) then
+        return false
+    endif
+    if ( not ( GetOwningPlayer(GetTransportUnitBJ()) == Player(5) ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Player_6_Func001Func001C takes nothing returns boolean
+    if ( not ( GetUnitLevel(GetTriggerUnit()) == 10 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Player_6_Func001Func002Func002C takes nothing returns boolean
+    if ( not ( GetUnitLevel(GetTriggerUnit()) >= 5 ) ) then
+        return false
+    endif
+    if ( not ( GetUnitLevel(GetTriggerUnit()) != 10 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Player_6_Func001Func002C takes nothing returns boolean
+    if ( not Trig_UDCircle_Player_6_Func001Func002Func002C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Player_6_Func001Func003C takes nothing returns boolean
+    if ( not ( GetUnitLevel(GetTriggerUnit()) <= 5 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Player_6_Func001C takes nothing returns boolean
+    if ( not ( IsUnitEnemy(GetTriggerUnit(), GetOwningPlayer(GetTransportUnitBJ())) == true ) ) then
+        return false
+    endif
+    if ( not ( GetOwningPlayer(GetTriggerUnit()) == Player(PLAYER_NEUTRAL_AGGRESSIVE) ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Player_6_Func002C takes nothing returns boolean
+    if ( not ( IsUnitAlly(GetTriggerUnit(), GetOwningPlayer(GetTransportUnitBJ())) == true ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Player_6_Func003Func003C takes nothing returns boolean
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'uaco' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'opeo' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'ncpn' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'hpea' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'h00G' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_UDCircle_Player_6_Func003C takes nothing returns boolean
+    if ( not ( IsUnitEnemy(GetTriggerUnit(), GetOwningPlayer(GetTransportUnitBJ())) == true ) ) then
+        return false
+    endif
+    if ( not Trig_UDCircle_Player_6_Func003Func003C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Player_6_Func004Func003C takes nothing returns boolean
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'nzom' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'ospw' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'hspt' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'edry' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_UDCircle_Player_6_Func004C takes nothing returns boolean
+    if ( not ( IsUnitEnemy(GetTriggerUnit(), GetOwningPlayer(GetTransportUnitBJ())) == true ) ) then
+        return false
+    endif
+    if ( not Trig_UDCircle_Player_6_Func004Func003C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Player_6_Func005Func003C takes nothing returns boolean
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'n00M' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'orai' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'nchr' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'hmtm' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'edoc' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'edcm' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_UDCircle_Player_6_Func005C takes nothing returns boolean
+    if ( not ( IsUnitEnemy(GetTriggerUnit(), GetOwningPlayer(GetTransportUnitBJ())) == true ) ) then
+        return false
+    endif
+    if ( not Trig_UDCircle_Player_6_Func005Func003C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Player_6_Func006Func002C takes nothing returns boolean
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'unec' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'n00O' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'oshm' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'nchw' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'odoc' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'hmpr' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'hsor' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'edot' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'n00S' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_UDCircle_Player_6_Func006C takes nothing returns boolean
+    if ( not ( IsUnitEnemy(GetTriggerUnit(), GetOwningPlayer(GetTransportUnitBJ())) == true ) ) then
+        return false
+    endif
+    if ( not Trig_UDCircle_Player_6_Func006Func002C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Player_6_Func007Func003C takes nothing returns boolean
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'ucry' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'ohun' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'hrif' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'n00Z' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'esen' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_UDCircle_Player_6_Func007C takes nothing returns boolean
+    if ( not ( IsUnitEnemy(GetTriggerUnit(), GetOwningPlayer(GetTransportUnitBJ())) == true ) ) then
+        return false
+    endif
+    if ( not Trig_UDCircle_Player_6_Func007Func003C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Player_6_Func008Func003C takes nothing returns boolean
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'uabo' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'otau' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'okod' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'nckb' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'hkni' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'n00T' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_UDCircle_Player_6_Func008C takes nothing returns boolean
+    if ( not ( IsUnitEnemy(GetTriggerUnit(), GetOwningPlayer(GetTransportUnitBJ())) == true ) ) then
+        return false
+    endif
+    if ( not Trig_UDCircle_Player_6_Func008Func003C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Player_6_Func009Func003C takes nothing returns boolean
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'ugho' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'ogru' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'nchg' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'hfoo' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'earc' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_UDCircle_Player_6_Func009C takes nothing returns boolean
+    if ( not ( IsUnitEnemy(GetTriggerUnit(), GetOwningPlayer(GetTransportUnitBJ())) == true ) ) then
+        return false
+    endif
+    if ( not Trig_UDCircle_Player_6_Func009Func003C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDCircle_Player_6_Actions takes nothing returns nothing
+    if ( Trig_UDCircle_Player_6_Func001C() ) then
+        if ( Trig_UDCircle_Player_6_Func001Func001C() ) then
+            set udg_UDQuestCorpseCount[6]=( udg_UDQuestCorpseCount[6] + 500 )
+            call RemoveUnit(GetLoadedUnitBJ())
+        else
+            call DoNothing()
+        endif
+        if ( Trig_UDCircle_Player_6_Func001Func002C() ) then
+            set udg_UDQuestCorpseCount[6]=( udg_UDQuestCorpseCount[6] + 350 )
+            call RemoveUnit(GetLoadedUnitBJ())
+        else
+            call DoNothing()
+        endif
+        if ( Trig_UDCircle_Player_6_Func001Func003C() ) then
+            set udg_UDQuestCorpseCount[6]=( udg_UDQuestCorpseCount[6] + 100 )
+            call RemoveUnit(GetLoadedUnitBJ())
+        else
+            call DoNothing()
+        endif
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDCircle_Player_6_Func002C() ) then
+        call RemoveUnit(GetLoadedUnitBJ())
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDCircle_Player_6_Func003C() ) then
+        set udg_UDQuestCorpseCount[6]=( udg_UDQuestCorpseCount[6] + 200 )
+        call RemoveUnit(GetLoadedUnitBJ())
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDCircle_Player_6_Func004C() ) then
+        set udg_UDQuestCorpseCount[6]=( udg_UDQuestCorpseCount[6] + 110 )
+        call RemoveUnit(GetLoadedUnitBJ())
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDCircle_Player_6_Func005C() ) then
+        set udg_UDQuestCorpseCount[6]=( udg_UDQuestCorpseCount[6] + 180 )
+        call RemoveUnit(GetLoadedUnitBJ())
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDCircle_Player_6_Func006C() ) then
+        set udg_UDQuestCorpseCount[6]=( udg_UDQuestCorpseCount[6] + 120 )
+        call RemoveUnit(GetLoadedUnitBJ())
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDCircle_Player_6_Func007C() ) then
+        set udg_UDQuestCorpseCount[6]=( udg_UDQuestCorpseCount[6] + 100 )
+        call RemoveUnit(GetLoadedUnitBJ())
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDCircle_Player_6_Func008C() ) then
+        set udg_UDQuestCorpseCount[6]=( udg_UDQuestCorpseCount[6] + 150 )
+        call RemoveUnit(GetLoadedUnitBJ())
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDCircle_Player_6_Func009C() ) then
+        set udg_UDQuestCorpseCount[6]=( udg_UDQuestCorpseCount[6] + 80 )
+        call RemoveUnit(GetLoadedUnitBJ())
+    else
+        call DoNothing()
+    endif
+endfunction
+
+//===========================================================================
+function InitTrig_UDCircle_Player_6 takes nothing returns nothing
+    set gg_trg_UDCircle_Player_6=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_UDCircle_Player_6, EVENT_PLAYER_UNIT_LOADED)
+    call TriggerAddCondition(gg_trg_UDCircle_Player_6, Condition(function Trig_UDCircle_Player_6_Conditions))
+    call TriggerAddAction(gg_trg_UDCircle_Player_6, function Trig_UDCircle_Player_6_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: UDQuestAchievement
+//===========================================================================
+function Trig_UDQuestAchievement_Conditions takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetTransportUnitBJ()) == 'u00I' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDQuestAchievement_Func001C takes nothing returns boolean
+    if ( not ( GetOwningPlayer(GetTransportUnitBJ()) == Player(5) ) ) then
+        return false
+    endif
+    if ( not ( udg_QuestUndead1[6] < 4 ) ) then
+        return false
+    endif
+    if ( not ( udg_UDQuestCorpseCount[6] >= 10000 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDQuestAchievement_Func002C takes nothing returns boolean
+    if ( not ( GetOwningPlayer(GetTransportUnitBJ()) == Player(4) ) ) then
+        return false
+    endif
+    if ( not ( udg_QuestUndead1[5] < 4 ) ) then
+        return false
+    endif
+    if ( not ( udg_UDQuestCorpseCount[5] >= 10000 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDQuestAchievement_Func003C takes nothing returns boolean
+    if ( not ( GetOwningPlayer(GetTransportUnitBJ()) == Player(3) ) ) then
+        return false
+    endif
+    if ( not ( udg_UDQuestCorpseCount[4] >= 10000 ) ) then
+        return false
+    endif
+    if ( not ( udg_QuestUndead1[4] < 4 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDQuestAchievement_Func004C takes nothing returns boolean
+    if ( not ( GetOwningPlayer(GetTransportUnitBJ()) == Player(2) ) ) then
+        return false
+    endif
+    if ( not ( udg_UDQuestCorpseCount[3] >= 10000 ) ) then
+        return false
+    endif
+    if ( not ( udg_QuestUndead1[3] < 4 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDQuestAchievement_Func005C takes nothing returns boolean
+    if ( not ( GetOwningPlayer(GetTransportUnitBJ()) == Player(1) ) ) then
+        return false
+    endif
+    if ( not ( udg_UDQuestCorpseCount[2] >= 10000 ) ) then
+        return false
+    endif
+    if ( not ( udg_QuestUndead1[2] < 4 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDQuestAchievement_Func006C takes nothing returns boolean
+    if ( not ( GetOwningPlayer(GetTransportUnitBJ()) == Player(0) ) ) then
+        return false
+    endif
+    if ( not ( udg_UDQuestCorpseCount[1] >= 10000 ) ) then
+        return false
+    endif
+    if ( not ( udg_QuestUndead1[1] < 4 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDQuestAchievement_Func007C takes nothing returns boolean
+    if ( not ( GetOwningPlayer(GetTransportUnitBJ()) == Player(5) ) ) then
+        return false
+    endif
+    if ( not ( udg_UDQuestCorpseCount[6] >= 7000 ) ) then
+        return false
+    endif
+    if ( not ( udg_QuestUndead1[6] < 3 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDQuestAchievement_Func008C takes nothing returns boolean
+    if ( not ( GetOwningPlayer(GetTransportUnitBJ()) == Player(4) ) ) then
+        return false
+    endif
+    if ( not ( udg_UDQuestCorpseCount[5] >= 7000 ) ) then
+        return false
+    endif
+    if ( not ( udg_QuestUndead1[5] < 3 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDQuestAchievement_Func009C takes nothing returns boolean
+    if ( not ( GetOwningPlayer(GetTransportUnitBJ()) == Player(3) ) ) then
+        return false
+    endif
+    if ( not ( udg_UDQuestCorpseCount[4] >= 7000 ) ) then
+        return false
+    endif
+    if ( not ( udg_QuestUndead1[4] < 3 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDQuestAchievement_Func010C takes nothing returns boolean
+    if ( not ( GetOwningPlayer(GetTransportUnitBJ()) == Player(2) ) ) then
+        return false
+    endif
+    if ( not ( udg_UDQuestCorpseCount[3] >= 7000 ) ) then
+        return false
+    endif
+    if ( not ( udg_QuestUndead1[3] < 3 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDQuestAchievement_Func011C takes nothing returns boolean
+    if ( not ( GetOwningPlayer(GetTransportUnitBJ()) == Player(1) ) ) then
+        return false
+    endif
+    if ( not ( udg_UDQuestCorpseCount[2] >= 7000 ) ) then
+        return false
+    endif
+    if ( not ( udg_QuestUndead1[2] < 3 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDQuestAchievement_Func012C takes nothing returns boolean
+    if ( not ( GetOwningPlayer(GetTransportUnitBJ()) == Player(0) ) ) then
+        return false
+    endif
+    if ( not ( udg_UDQuestCorpseCount[1] >= 7000 ) ) then
+        return false
+    endif
+    if ( not ( udg_QuestUndead1[1] < 3 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDQuestAchievement_Func013C takes nothing returns boolean
+    if ( not ( GetOwningPlayer(GetTransportUnitBJ()) == Player(5) ) ) then
+        return false
+    endif
+    if ( not ( udg_UDQuestCorpseCount[6] >= 5000 ) ) then
+        return false
+    endif
+    if ( not ( udg_QuestUndead1[6] < 2 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDQuestAchievement_Func014C takes nothing returns boolean
+    if ( not ( GetOwningPlayer(GetTransportUnitBJ()) == Player(4) ) ) then
+        return false
+    endif
+    if ( not ( udg_UDQuestCorpseCount[5] >= 5000 ) ) then
+        return false
+    endif
+    if ( not ( udg_QuestUndead1[5] < 2 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDQuestAchievement_Func015C takes nothing returns boolean
+    if ( not ( GetOwningPlayer(GetTransportUnitBJ()) == Player(3) ) ) then
+        return false
+    endif
+    if ( not ( udg_UDQuestCorpseCount[4] >= 5000 ) ) then
+        return false
+    endif
+    if ( not ( udg_QuestUndead1[4] < 2 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDQuestAchievement_Func016C takes nothing returns boolean
+    if ( not ( GetOwningPlayer(GetTransportUnitBJ()) == Player(2) ) ) then
+        return false
+    endif
+    if ( not ( udg_UDQuestCorpseCount[3] >= 5000 ) ) then
+        return false
+    endif
+    if ( not ( udg_QuestUndead1[3] < 2 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDQuestAchievement_Func017C takes nothing returns boolean
+    if ( not ( GetOwningPlayer(GetTransportUnitBJ()) == Player(1) ) ) then
+        return false
+    endif
+    if ( not ( udg_UDQuestCorpseCount[2] >= 5000 ) ) then
+        return false
+    endif
+    if ( not ( udg_QuestUndead1[2] < 2 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDQuestAchievement_Func018C takes nothing returns boolean
+    if ( not ( GetOwningPlayer(GetTransportUnitBJ()) == Player(0) ) ) then
+        return false
+    endif
+    if ( not ( udg_UDQuestCorpseCount[1] >= 5000 ) ) then
+        return false
+    endif
+    if ( not ( udg_QuestUndead1[1] < 2 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDQuestAchievement_Func019C takes nothing returns boolean
+    if ( not ( GetOwningPlayer(GetTransportUnitBJ()) == Player(5) ) ) then
+        return false
+    endif
+    if ( not ( udg_UDQuestCorpseCount[6] >= 2000 ) ) then
+        return false
+    endif
+    if ( not ( udg_QuestUndead1[6] < 1 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDQuestAchievement_Func020C takes nothing returns boolean
+    if ( not ( GetOwningPlayer(GetTransportUnitBJ()) == Player(4) ) ) then
+        return false
+    endif
+    if ( not ( udg_UDQuestCorpseCount[5] >= 2000 ) ) then
+        return false
+    endif
+    if ( not ( udg_QuestUndead1[5] < 1 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDQuestAchievement_Func021C takes nothing returns boolean
+    if ( not ( GetOwningPlayer(GetTransportUnitBJ()) == Player(3) ) ) then
+        return false
+    endif
+    if ( not ( udg_UDQuestCorpseCount[4] >= 2000 ) ) then
+        return false
+    endif
+    if ( not ( udg_QuestUndead1[4] < 1 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDQuestAchievement_Func022C takes nothing returns boolean
+    if ( not ( GetOwningPlayer(GetTransportUnitBJ()) == Player(2) ) ) then
+        return false
+    endif
+    if ( not ( udg_UDQuestCorpseCount[3] >= 2000 ) ) then
+        return false
+    endif
+    if ( not ( udg_QuestUndead1[3] < 1 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDQuestAchievement_Func023C takes nothing returns boolean
+    if ( not ( GetOwningPlayer(GetTransportUnitBJ()) == Player(1) ) ) then
+        return false
+    endif
+    if ( not ( udg_UDQuestCorpseCount[2] >= 2000 ) ) then
+        return false
+    endif
+    if ( not ( udg_QuestUndead1[2] < 1 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDQuestAchievement_Func026C takes nothing returns boolean
+    if ( not ( GetOwningPlayer(GetTransportUnitBJ()) == Player(0) ) ) then
+        return false
+    endif
+    if ( not ( udg_UDQuestCorpseCount[1] >= 2000 ) ) then
+        return false
+    endif
+    if ( not ( udg_QuestUndead1[1] < 1 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UDQuestAchievement_Actions takes nothing returns nothing
+    if ( Trig_UDQuestAchievement_Func001C() ) then
+        set udg_QuestUndead1[6]=4
+        call CreateNUnitsAtLoc(1, 'U005', GetOwningPlayer(GetTransportUnitBJ()), GetUnitLoc(GetTransportUnitBJ()), bj_UNIT_FACING)
+        call PlaySoundBJ(gg_snd_N07Archimonde28)
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDQuestAchievement_Func002C() ) then
+        set udg_QuestUndead1[5]=4
+        call CreateNUnitsAtLoc(1, 'U005', GetOwningPlayer(GetTransportUnitBJ()), GetUnitLoc(GetTransportUnitBJ()), bj_UNIT_FACING)
+        call PlaySoundBJ(gg_snd_N07Archimonde28)
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDQuestAchievement_Func003C() ) then
+        set udg_QuestUndead1[4]=4
+        call CreateNUnitsAtLoc(1, 'U005', GetOwningPlayer(GetTransportUnitBJ()), GetUnitLoc(GetTransportUnitBJ()), bj_UNIT_FACING)
+        call PlaySoundBJ(gg_snd_N07Archimonde28)
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDQuestAchievement_Func004C() ) then
+        set udg_QuestUndead1[3]=4
+        call CreateNUnitsAtLoc(1, 'U005', GetOwningPlayer(GetTransportUnitBJ()), GetUnitLoc(GetTransportUnitBJ()), bj_UNIT_FACING)
+        call PlaySoundBJ(gg_snd_N07Archimonde28)
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDQuestAchievement_Func005C() ) then
+        set udg_QuestUndead1[2]=4
+        call CreateNUnitsAtLoc(1, 'U005', GetOwningPlayer(GetTransportUnitBJ()), GetUnitLoc(GetTransportUnitBJ()), bj_UNIT_FACING)
+        call PlaySoundBJ(gg_snd_N07Archimonde28)
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDQuestAchievement_Func006C() ) then
+        set udg_QuestUndead1[1]=4
+        call CreateNUnitsAtLoc(1, 'U005', GetOwningPlayer(GetTransportUnitBJ()), GetUnitLoc(GetTransportUnitBJ()), bj_UNIT_FACING)
+        call PlaySoundBJ(gg_snd_N07Archimonde28)
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDQuestAchievement_Func007C() ) then
+        set udg_QuestUndead1[6]=3
+        call QuestMessageBJ(GetForceOfPlayer(GetOwningPlayer(GetTransportUnitBJ())), bj_QUESTMESSAGE_UNITACQUIRED, "TRIGSTR_1051")
+        call SetPlayerAbilityAvailableBJ(true, 'A00X', GetOwningPlayer(GetTransportUnitBJ()))
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDQuestAchievement_Func008C() ) then
+        set udg_QuestUndead1[5]=3
+        call QuestMessageBJ(GetForceOfPlayer(GetOwningPlayer(GetTransportUnitBJ())), bj_QUESTMESSAGE_UNITACQUIRED, "TRIGSTR_1055")
+        call SetPlayerAbilityAvailableBJ(true, 'A00X', GetOwningPlayer(GetTransportUnitBJ()))
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDQuestAchievement_Func009C() ) then
+        set udg_QuestUndead1[4]=3
+        call QuestMessageBJ(GetForceOfPlayer(GetOwningPlayer(GetTransportUnitBJ())), bj_QUESTMESSAGE_UNITACQUIRED, "TRIGSTR_1056")
+        call SetPlayerAbilityAvailableBJ(true, 'A00X', GetOwningPlayer(GetTransportUnitBJ()))
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDQuestAchievement_Func010C() ) then
+        set udg_QuestUndead1[3]=3
+        call QuestMessageBJ(GetForceOfPlayer(GetOwningPlayer(GetTransportUnitBJ())), bj_QUESTMESSAGE_UNITACQUIRED, "TRIGSTR_1057")
+        call SetPlayerAbilityAvailableBJ(true, 'A00X', GetOwningPlayer(GetTransportUnitBJ()))
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDQuestAchievement_Func011C() ) then
+        set udg_QuestUndead1[2]=3
+        call QuestMessageBJ(GetForceOfPlayer(GetOwningPlayer(GetTransportUnitBJ())), bj_QUESTMESSAGE_UNITACQUIRED, "TRIGSTR_1058")
+        call SetPlayerAbilityAvailableBJ(true, 'A00X', GetOwningPlayer(GetTransportUnitBJ()))
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDQuestAchievement_Func012C() ) then
+        set udg_QuestUndead1[1]=3
+        call QuestMessageBJ(GetForceOfPlayer(GetOwningPlayer(GetTransportUnitBJ())), bj_QUESTMESSAGE_UNITACQUIRED, "TRIGSTR_1059")
+        call SetPlayerAbilityAvailableBJ(true, 'A00X', GetOwningPlayer(GetTransportUnitBJ()))
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDQuestAchievement_Func013C() ) then
+        set udg_QuestUndead1[6]=2
+        call QuestMessageBJ(GetForceOfPlayer(GetOwningPlayer(GetTransportUnitBJ())), bj_QUESTMESSAGE_UNITACQUIRED, "TRIGSTR_1045")
+        call CreateItemLoc('I007', GetUnitLoc(GetTransportUnitBJ()))
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDQuestAchievement_Func014C() ) then
+        set udg_QuestUndead1[5]=2
+        call QuestMessageBJ(GetForceOfPlayer(GetOwningPlayer(GetTransportUnitBJ())), bj_QUESTMESSAGE_UNITACQUIRED, "TRIGSTR_1060")
+        call CreateItemLoc('I007', GetUnitLoc(GetTransportUnitBJ()))
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDQuestAchievement_Func015C() ) then
+        set udg_QuestUndead1[4]=2
+        call QuestMessageBJ(GetForceOfPlayer(GetOwningPlayer(GetTransportUnitBJ())), bj_QUESTMESSAGE_UNITACQUIRED, "TRIGSTR_1061")
+        call CreateItemLoc('I007', GetUnitLoc(GetTransportUnitBJ()))
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDQuestAchievement_Func016C() ) then
+        set udg_QuestUndead1[3]=2
+        call QuestMessageBJ(GetForceOfPlayer(GetOwningPlayer(GetTransportUnitBJ())), bj_QUESTMESSAGE_UNITACQUIRED, "TRIGSTR_1062")
+        call CreateItemLoc('I007', GetUnitLoc(GetTransportUnitBJ()))
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDQuestAchievement_Func017C() ) then
+        set udg_QuestUndead1[2]=2
+        call QuestMessageBJ(GetForceOfPlayer(GetOwningPlayer(GetTransportUnitBJ())), bj_QUESTMESSAGE_UNITACQUIRED, "TRIGSTR_1032")
+        call CreateItemLoc('I007', GetUnitLoc(GetTransportUnitBJ()))
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDQuestAchievement_Func018C() ) then
+        set udg_QuestUndead1[1]=2
+        call QuestMessageBJ(GetForceOfPlayer(GetOwningPlayer(GetTransportUnitBJ())), bj_QUESTMESSAGE_UNITACQUIRED, "TRIGSTR_1029")
+        call CreateItemLoc('I007', GetUnitLoc(GetTransportUnitBJ()))
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDQuestAchievement_Func019C() ) then
+        set udg_QuestUndead1[6]=1
+        call QuestMessageBJ(GetForceOfPlayer(GetOwningPlayer(GetTransportUnitBJ())), bj_QUESTMESSAGE_UNITACQUIRED, "TRIGSTR_1028")
+        call CreateNUnitsAtLoc(1, 'n00P', GetOwningPlayer(GetTransportUnitBJ()), GetUnitLoc(GetTransportUnitBJ()), bj_UNIT_FACING)
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDQuestAchievement_Func020C() ) then
+        set udg_QuestUndead1[5]=1
+        call QuestMessageBJ(GetForceOfPlayer(GetOwningPlayer(GetTransportUnitBJ())), bj_QUESTMESSAGE_UNITACQUIRED, "TRIGSTR_1063")
+        call CreateNUnitsAtLoc(1, 'n00P', GetOwningPlayer(GetTransportUnitBJ()), GetUnitLoc(GetTransportUnitBJ()), bj_UNIT_FACING)
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDQuestAchievement_Func021C() ) then
+        set udg_QuestUndead1[4]=1
+        call QuestMessageBJ(GetForceOfPlayer(GetOwningPlayer(GetTransportUnitBJ())), bj_QUESTMESSAGE_UNITACQUIRED, "TRIGSTR_1064")
+        call CreateNUnitsAtLoc(1, 'n00P', GetOwningPlayer(GetTransportUnitBJ()), GetUnitLoc(GetTransportUnitBJ()), bj_UNIT_FACING)
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDQuestAchievement_Func022C() ) then
+        set udg_QuestUndead1[3]=1
+        call QuestMessageBJ(GetForceOfPlayer(GetOwningPlayer(GetTransportUnitBJ())), bj_QUESTMESSAGE_UNITACQUIRED, "TRIGSTR_1065")
+        call CreateNUnitsAtLoc(1, 'n00P', GetOwningPlayer(GetTransportUnitBJ()), GetUnitLoc(GetTransportUnitBJ()), bj_UNIT_FACING)
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDQuestAchievement_Func023C() ) then
+        set udg_QuestUndead1[2]=1
+        call QuestMessageBJ(GetForceOfPlayer(GetOwningPlayer(GetTransportUnitBJ())), bj_QUESTMESSAGE_UNITACQUIRED, "TRIGSTR_1066")
+        call CreateNUnitsAtLoc(1, 'n00P', GetOwningPlayer(GetTransportUnitBJ()), GetUnitLoc(GetTransportUnitBJ()), bj_UNIT_FACING)
+    else
+        call DoNothing()
+    endif
+    if ( Trig_UDQuestAchievement_Func026C() ) then
+        set udg_QuestUndead1[1]=1
+        call QuestMessageBJ(GetForceOfPlayer(GetOwningPlayer(GetTransportUnitBJ())), bj_QUESTMESSAGE_UNITACQUIRED, "TRIGSTR_1067")
+        call CreateNUnitsAtLoc(1, 'n00P', GetOwningPlayer(GetTransportUnitBJ()), GetUnitLoc(GetTransportUnitBJ()), bj_UNIT_FACING)
+    else
+        call DoNothing()
+    endif
+    call DisableTrigger(GetTriggeringTrigger())
+endfunction
+
+//===========================================================================
+function InitTrig_UDQuestAchievement takes nothing returns nothing
+    set gg_trg_UDQuestAchievement=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_UDQuestAchievement, EVENT_PLAYER_UNIT_LOADED)
+    call TriggerAddCondition(gg_trg_UDQuestAchievement, Condition(function Trig_UDQuestAchievement_Conditions))
+    call TriggerAddAction(gg_trg_UDQuestAchievement, function Trig_UDQuestAchievement_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: OrcQuestItem
+//===========================================================================
+function Trig_OrcQuestItem_Conditions takes nothing returns boolean
+    if ( not ( UnitHasItemOfTypeBJ(GetTriggerUnit(), 'axas') == true ) ) then
+        return false
+    endif
+    if ( not ( UnitHasItemOfTypeBJ(GetTriggerUnit(), 'afac') == true ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_OrcQuestItem_Actions takes nothing returns nothing
+    call RemoveItem(GetItemOfTypeFromUnitBJ(GetTriggerUnit(), 'axas'))
+    call RemoveItem(GetItemOfTypeFromUnitBJ(GetTriggerUnit(), 'afac'))
+    call AddSpecialEffectTargetUnitBJ("origin", GetTriggerUnit(), "Abilities\\Spells\\Items\\AIlm\\AIlmTarget.mdl")
+    call UnitAddItemByIdSwapped('I006', GetTriggerUnit())
+    call DestroyEffectBJ(GetLastCreatedEffectBJ())
+endfunction
+
+//===========================================================================
+function InitTrig_OrcQuestItem takes nothing returns nothing
+    set gg_trg_OrcQuestItem=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_OrcQuestItem, EVENT_PLAYER_UNIT_PICKUP_ITEM)
+    call TriggerAddCondition(gg_trg_OrcQuestItem, Condition(function Trig_OrcQuestItem_Conditions))
+    call TriggerAddAction(gg_trg_OrcQuestItem, function Trig_OrcQuestItem_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: OrcQuest
+//===========================================================================
+function Trig_OrcQuest_Func001Func001C takes nothing returns boolean
+    if ( not ( GetPlayerRace(GetEnumPlayer()) == RACE_ORC ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_OrcQuest_Func001A takes nothing returns nothing
+    if ( Trig_OrcQuest_Func001Func001C() ) then
+        call CreateQuestBJ(bj_QUESTTYPE_REQ_DISCOVERED, "TRIGSTR_874", "TRIGSTR_875", "ReplaceableTextures\\CommandButtons\\BTNForge.blp")
+        set udg_LumberQuest=GetLastCreatedQuestBJ()
+        call CreateQuestItemBJ(udg_LumberQuest, "TRIGSTR_876")
+        set udg_LumberQuestRequirement=GetLastCreatedQuestItemBJ()
+    else
+        call DoNothing()
+    endif
+endfunction
+
+function Trig_OrcQuest_Actions takes nothing returns nothing
+    call ForForce(GetPlayersAll(), function Trig_OrcQuest_Func001A)
+endfunction
+
+//===========================================================================
+function InitTrig_OrcQuest takes nothing returns nothing
+    set gg_trg_OrcQuest=CreateTrigger()
+    call TriggerAddAction(gg_trg_OrcQuest, function Trig_OrcQuest_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: OrcQuestStart
+//===========================================================================
+function Trig_OrcQuestStart_Func001Func001Func003001001 takes nothing returns boolean
+    return ( GetPlayerRace(GetFilterPlayer()) == RACE_ORC )
+endfunction
+
+function Trig_OrcQuestStart_Func001Func001C takes nothing returns boolean
+    if ( not ( GetPlayerController(GetEnumPlayer()) == MAP_CONTROL_USER ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_OrcQuestStart_Func001A takes nothing returns nothing
+    if ( Trig_OrcQuestStart_Func001Func001C() ) then
+        call QuestMessageBJ(GetPlayersMatching(Condition(function Trig_OrcQuestStart_Func001Func001Func003001001)), bj_QUESTMESSAGE_DISCOVERED, "TRIGSTR_877")
+        call EnableTrigger(gg_trg_OrcQuestLeaderboard_Player_1)
+    else
+        call DoNothing()
+    endif
+endfunction
+
+function Trig_OrcQuestStart_Actions takes nothing returns nothing
+    call ForForce(GetPlayersAll(), function Trig_OrcQuestStart_Func001A)
+endfunction
+
+//===========================================================================
+function InitTrig_OrcQuestStart takes nothing returns nothing
+    set gg_trg_OrcQuestStart=CreateTrigger()
+    call TriggerAddAction(gg_trg_OrcQuestStart, function Trig_OrcQuestStart_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: OrcQuestLeaderboard Player 1
+//===========================================================================
+function Trig_OrcQuestLeaderboard_Player_1_Conditions takes nothing returns boolean
+    if ( not ( GetPlayerRace(Player(0)) == RACE_ORC ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_OrcQuestLeaderboard_Player_1_Actions takes nothing returns nothing
+    call CreateLeaderboardBJ(bj_FORCE_PLAYER[0], "TRIGSTR_880")
+    call LeaderboardDisplayBJ(false, GetLastCreatedLeaderboard())
+    set udg_LeaderboardLumber[1]=GetLastCreatedLeaderboard()
+    if GetLocalPlayer() == Player(0) then
+    call LeaderboardDisplayBJ(true, GetLastCreatedLeaderboard())
+    endif
+    call LeaderboardAddItemBJ(Player(0), GetLastCreatedLeaderboard(), "TRIGSTR_879", 0)
+    call LeaderboardSetStyleBJ(GetLastCreatedLeaderboard(), false, true, true, false)
+    call LeaderboardSetPlayerItemLabelColorBJ(Player(0), GetLastCreatedLeaderboard(), 100, 80, 0.00, 0)
+    call LeaderboardSetPlayerItemValueColorBJ(Player(0), GetLastCreatedLeaderboard(), 100, 100.00, 100.00, 0)
+endfunction
+
+//===========================================================================
+function InitTrig_OrcQuestLeaderboard_Player_1 takes nothing returns nothing
+    set gg_trg_OrcQuestLeaderboard_Player_1=CreateTrigger()
+    call TriggerRegisterTimerEventSingle(gg_trg_OrcQuestLeaderboard_Player_1, 1.00)
+    call TriggerAddCondition(gg_trg_OrcQuestLeaderboard_Player_1, Condition(function Trig_OrcQuestLeaderboard_Player_1_Conditions))
+    call TriggerAddAction(gg_trg_OrcQuestLeaderboard_Player_1, function Trig_OrcQuestLeaderboard_Player_1_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: OrcQuestLeaderboard Player 2
+//===========================================================================
+function Trig_OrcQuestLeaderboard_Player_2_Conditions takes nothing returns boolean
+    if ( not ( GetPlayerRace(Player(1)) == RACE_ORC ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_OrcQuestLeaderboard_Player_2_Actions takes nothing returns nothing
+    call CreateLeaderboardBJ(bj_FORCE_PLAYER[1], "TRIGSTR_960")
+    call LeaderboardDisplayBJ(false, GetLastCreatedLeaderboard())
+    set udg_LeaderboardLumber[2]=GetLastCreatedLeaderboard()
+    if GetLocalPlayer() == Player(1) then
+    call LeaderboardDisplayBJ(true, GetLastCreatedLeaderboard())
+    endif
+    call LeaderboardAddItemBJ(Player(1), GetLastCreatedLeaderboard(), "TRIGSTR_961", 0)
+    call LeaderboardSetStyleBJ(GetLastCreatedLeaderboard(), false, true, true, false)
+    call LeaderboardSetPlayerItemLabelColorBJ(Player(1), GetLastCreatedLeaderboard(), 100, 80, 0.00, 0)
+    call LeaderboardSetPlayerItemValueColorBJ(Player(1), GetLastCreatedLeaderboard(), 100, 100.00, 100.00, 0)
+endfunction
+
+//===========================================================================
+function InitTrig_OrcQuestLeaderboard_Player_2 takes nothing returns nothing
+    set gg_trg_OrcQuestLeaderboard_Player_2=CreateTrigger()
+    call TriggerRegisterTimerEventSingle(gg_trg_OrcQuestLeaderboard_Player_2, 2.00)
+    call TriggerAddCondition(gg_trg_OrcQuestLeaderboard_Player_2, Condition(function Trig_OrcQuestLeaderboard_Player_2_Conditions))
+    call TriggerAddAction(gg_trg_OrcQuestLeaderboard_Player_2, function Trig_OrcQuestLeaderboard_Player_2_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: OrcQuestLeaderboard Player 3
+//===========================================================================
+function Trig_OrcQuestLeaderboard_Player_3_Conditions takes nothing returns boolean
+    if ( not ( GetPlayerRace(Player(2)) == RACE_ORC ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_OrcQuestLeaderboard_Player_3_Actions takes nothing returns nothing
+    call CreateLeaderboardBJ(bj_FORCE_PLAYER[2], "TRIGSTR_962")
+    call LeaderboardDisplayBJ(false, GetLastCreatedLeaderboard())
+    set udg_LeaderboardLumber[3]=GetLastCreatedLeaderboard()
+    if GetLocalPlayer() == Player(2) then
+    call LeaderboardDisplayBJ(true, GetLastCreatedLeaderboard())
+    endif
+    call LeaderboardAddItemBJ(Player(2), GetLastCreatedLeaderboard(), "TRIGSTR_963", 0)
+    call LeaderboardSetStyleBJ(GetLastCreatedLeaderboard(), false, true, true, false)
+    call LeaderboardSetPlayerItemLabelColorBJ(Player(2), GetLastCreatedLeaderboard(), 100, 80, 0.00, 0)
+    call LeaderboardSetPlayerItemValueColorBJ(Player(2), GetLastCreatedLeaderboard(), 100, 100.00, 100.00, 0)
+endfunction
+
+//===========================================================================
+function InitTrig_OrcQuestLeaderboard_Player_3 takes nothing returns nothing
+    set gg_trg_OrcQuestLeaderboard_Player_3=CreateTrigger()
+    call TriggerRegisterTimerEventSingle(gg_trg_OrcQuestLeaderboard_Player_3, 3.00)
+    call TriggerAddCondition(gg_trg_OrcQuestLeaderboard_Player_3, Condition(function Trig_OrcQuestLeaderboard_Player_3_Conditions))
+    call TriggerAddAction(gg_trg_OrcQuestLeaderboard_Player_3, function Trig_OrcQuestLeaderboard_Player_3_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: OrcQuestLeaderboard Player 4
+//===========================================================================
+function Trig_OrcQuestLeaderboard_Player_4_Conditions takes nothing returns boolean
+    if ( not ( GetPlayerRace(Player(3)) == RACE_ORC ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_OrcQuestLeaderboard_Player_4_Actions takes nothing returns nothing
+    call CreateLeaderboardBJ(bj_FORCE_PLAYER[3], "TRIGSTR_964")
+    call LeaderboardDisplayBJ(false, GetLastCreatedLeaderboard())
+    set udg_LeaderboardLumber[4]=GetLastCreatedLeaderboard()
+    if GetLocalPlayer() == Player(3) then
+    call LeaderboardDisplayBJ(true, GetLastCreatedLeaderboard())
+    endif
+    call LeaderboardAddItemBJ(Player(3), GetLastCreatedLeaderboard(), "TRIGSTR_965", 0)
+    call LeaderboardSetStyleBJ(GetLastCreatedLeaderboard(), false, true, true, false)
+    call LeaderboardSetPlayerItemLabelColorBJ(Player(3), GetLastCreatedLeaderboard(), 100, 80, 0.00, 0)
+    call LeaderboardSetPlayerItemValueColorBJ(Player(3), GetLastCreatedLeaderboard(), 100, 100.00, 100.00, 0)
+endfunction
+
+//===========================================================================
+function InitTrig_OrcQuestLeaderboard_Player_4 takes nothing returns nothing
+    set gg_trg_OrcQuestLeaderboard_Player_4=CreateTrigger()
+    call TriggerRegisterTimerEventSingle(gg_trg_OrcQuestLeaderboard_Player_4, 4.00)
+    call TriggerAddCondition(gg_trg_OrcQuestLeaderboard_Player_4, Condition(function Trig_OrcQuestLeaderboard_Player_4_Conditions))
+    call TriggerAddAction(gg_trg_OrcQuestLeaderboard_Player_4, function Trig_OrcQuestLeaderboard_Player_4_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: OrcQuestLeaderboard Player 5
+//===========================================================================
+function Trig_OrcQuestLeaderboard_Player_5_Conditions takes nothing returns boolean
+    if ( not ( GetPlayerRace(Player(4)) == RACE_ORC ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_OrcQuestLeaderboard_Player_5_Actions takes nothing returns nothing
+    call CreateLeaderboardBJ(bj_FORCE_PLAYER[4], "TRIGSTR_966")
+    call LeaderboardDisplayBJ(false, GetLastCreatedLeaderboard())
+    set udg_LeaderboardLumber[5]=GetLastCreatedLeaderboard()
+    if GetLocalPlayer() == Player(4) then
+    call LeaderboardDisplayBJ(true, GetLastCreatedLeaderboard())
+    endif
+    call LeaderboardAddItemBJ(Player(4), GetLastCreatedLeaderboard(), "TRIGSTR_967", 0)
+    call LeaderboardSetStyleBJ(GetLastCreatedLeaderboard(), false, true, true, false)
+    call LeaderboardSetPlayerItemLabelColorBJ(Player(4), GetLastCreatedLeaderboard(), 100, 80, 0.00, 0)
+    call LeaderboardSetPlayerItemValueColorBJ(Player(4), GetLastCreatedLeaderboard(), 100, 100.00, 100.00, 0)
+endfunction
+
+//===========================================================================
+function InitTrig_OrcQuestLeaderboard_Player_5 takes nothing returns nothing
+    set gg_trg_OrcQuestLeaderboard_Player_5=CreateTrigger()
+    call TriggerRegisterTimerEventSingle(gg_trg_OrcQuestLeaderboard_Player_5, 5.00)
+    call TriggerAddCondition(gg_trg_OrcQuestLeaderboard_Player_5, Condition(function Trig_OrcQuestLeaderboard_Player_5_Conditions))
+    call TriggerAddAction(gg_trg_OrcQuestLeaderboard_Player_5, function Trig_OrcQuestLeaderboard_Player_5_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: OrcQuestLeaderboard Player 6
+//===========================================================================
+function Trig_OrcQuestLeaderboard_Player_6_Conditions takes nothing returns boolean
+    if ( not ( GetPlayerRace(Player(5)) == RACE_ORC ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_OrcQuestLeaderboard_Player_6_Actions takes nothing returns nothing
+    call CreateLeaderboardBJ(bj_FORCE_PLAYER[5], "TRIGSTR_968")
+    call LeaderboardDisplayBJ(false, GetLastCreatedLeaderboard())
+    set udg_LeaderboardLumber[6]=GetLastCreatedLeaderboard()
+    if GetLocalPlayer() == Player(5) then
+    call LeaderboardDisplayBJ(true, GetLastCreatedLeaderboard())
+    endif
+    call LeaderboardAddItemBJ(Player(5), GetLastCreatedLeaderboard(), "TRIGSTR_969", 0)
+    call LeaderboardSetStyleBJ(GetLastCreatedLeaderboard(), false, true, true, false)
+    call LeaderboardSetPlayerItemLabelColorBJ(Player(5), GetLastCreatedLeaderboard(), 100, 80, 0.00, 0)
+    call LeaderboardSetPlayerItemValueColorBJ(Player(5), GetLastCreatedLeaderboard(), 100, 100.00, 100.00, 0)
+endfunction
+
+//===========================================================================
+function InitTrig_OrcQuestLeaderboard_Player_6 takes nothing returns nothing
+    set gg_trg_OrcQuestLeaderboard_Player_6=CreateTrigger()
+    call TriggerRegisterTimerEventSingle(gg_trg_OrcQuestLeaderboard_Player_6, 6.00)
+    call TriggerAddCondition(gg_trg_OrcQuestLeaderboard_Player_6, Condition(function Trig_OrcQuestLeaderboard_Player_6_Conditions))
+    call TriggerAddAction(gg_trg_OrcQuestLeaderboard_Player_6, function Trig_OrcQuestLeaderboard_Player_6_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: OrcQuestLeaderboardUpdate
+//===========================================================================
+function Trig_OrcQuestLeaderboardUpdate_Func001Func001C takes nothing returns boolean
+    if ( not ( GetPlayerRace(ConvertedPlayer(GetForLoopIndexB())) == RACE_ORC ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_OrcQuestLeaderboardUpdate_Actions takes nothing returns nothing
+    set bj_forLoopBIndex=1
+    set bj_forLoopBIndexEnd=6
+    loop
+        exitwhen bj_forLoopBIndex > bj_forLoopBIndexEnd
+        if ( Trig_OrcQuestLeaderboardUpdate_Func001Func001C() ) then
+            set udg_OrcQuestPlayer[GetForLoopIndexB()]=ConvertedPlayer(GetForLoopIndexB())
+            call LeaderboardSetPlayerItemValueBJ(udg_OrcQuestPlayer[GetForLoopIndexB()], udg_LeaderboardLumber[GetForLoopIndexB()], GetPlayerState(udg_OrcQuestPlayer[GetForLoopIndexB()], PLAYER_STATE_RESOURCE_LUMBER))
+        else
+            call DoNothing()
+        endif
+        set bj_forLoopBIndex=bj_forLoopBIndex + 1
+    endloop
+endfunction
+
+//===========================================================================
+function InitTrig_OrcQuestLeaderboardUpdate takes nothing returns nothing
+    set gg_trg_OrcQuestLeaderboardUpdate=CreateTrigger()
+    call TriggerRegisterTimerEventPeriodic(gg_trg_OrcQuestLeaderboardUpdate, 1.00)
+    call TriggerAddAction(gg_trg_OrcQuestLeaderboardUpdate, function Trig_OrcQuestLeaderboardUpdate_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Penatly
+//===========================================================================
+function Trig_Penatly_Conditions takes nothing returns boolean
+    if ( not ( GetPlayerRace(GetOwningPlayer(GetTriggerUnit())) == RACE_ORC ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Penatly_Func001Func003C takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetTriggerUnit()) == 'hlum' ) ) then
+        return false
+    endif
+    if ( not ( GetUnitTypeId(GetTriggerUnit()) == 'ofor' ) ) then
+        return false
+    endif
+    if ( not ( GetUnitTypeId(GetTriggerUnit()) == 'ugrv' ) ) then
+        return false
+    endif
+    if ( not ( GetUnitTypeId(GetTriggerUnit()) == 'edob' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Penatly_Func001C takes nothing returns boolean
+    if ( not Trig_Penatly_Func001Func003C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Penatly_Actions takes nothing returns nothing
+    if ( Trig_Penatly_Func001C() ) then
+        call AdjustPlayerStateBJ(- 500, GetOwningPlayer(GetTriggerUnit()), PLAYER_STATE_RESOURCE_LUMBER)
+    else
+        call DoNothing()
+    endif
+endfunction
+
+//===========================================================================
+function InitTrig_Penatly takes nothing returns nothing
+    set gg_trg_Penatly=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Penatly, EVENT_PLAYER_UNIT_DEATH)
+    call TriggerAddCondition(gg_trg_Penatly, Condition(function Trig_Penatly_Conditions))
+    call TriggerAddAction(gg_trg_Penatly, function Trig_Penatly_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Bonus
+//===========================================================================
+function Trig_Bonus_Conditions takes nothing returns boolean
+    if ( not ( GetPlayerRace(GetOwningPlayer(GetKillingUnitBJ())) == RACE_ORC ) ) then
+        return false
+    endif
+    if ( not ( IsUnitEnemy(GetTriggerUnit(), GetOwningPlayer(GetKillingUnitBJ())) == true ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Bonus_Func003Func003C takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetTriggerUnit()) == 'hlum' ) ) then
+        return false
+    endif
+    if ( not ( GetUnitTypeId(GetTriggerUnit()) == 'ofor' ) ) then
+        return false
+    endif
+    if ( not ( GetUnitTypeId(GetTriggerUnit()) == 'ugrv' ) ) then
+        return false
+    endif
+    if ( not ( GetUnitTypeId(GetTriggerUnit()) == 'edob' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Bonus_Func003C takes nothing returns boolean
+    if ( not Trig_Bonus_Func003Func003C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Bonus_Actions takes nothing returns nothing
+    if ( Trig_Bonus_Func003C() ) then
+        call AdjustPlayerStateBJ(1000, GetOwningPlayer(GetKillingUnitBJ()), PLAYER_STATE_RESOURCE_LUMBER)
+    else
+        call DoNothing()
+    endif
+endfunction
+
+//===========================================================================
+function InitTrig_Bonus takes nothing returns nothing
+    set gg_trg_Bonus=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Bonus, EVENT_PLAYER_UNIT_DEATH)
+    call TriggerAddCondition(gg_trg_Bonus, Condition(function Trig_Bonus_Conditions))
+    call TriggerAddAction(gg_trg_Bonus, function Trig_Bonus_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Penalty 2
+//===========================================================================
+function Trig_Penalty_2_Conditions takes nothing returns boolean
+    if ( not ( GetPlayerRace(GetOwningPlayer(GetTriggerUnit())) == RACE_ORC ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Penalty_2_Func002Func003C takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetTriggerUnit()) == 'htow' ) ) then
+        return false
+    endif
+    if ( not ( GetUnitTypeId(GetTriggerUnit()) == 'ogre' ) ) then
+        return false
+    endif
+    if ( not ( GetUnitTypeId(GetTriggerUnit()) == 'unpl' ) ) then
+        return false
+    endif
+    if ( not ( GetUnitTypeId(GetTriggerUnit()) == 'etol' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Penalty_2_Func002C takes nothing returns boolean
+    if ( not Trig_Penalty_2_Func002Func003C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Penalty_2_Actions takes nothing returns nothing
+    if ( Trig_Penalty_2_Func002C() ) then
+        call AdjustPlayerStateBJ(- 1000, GetOwningPlayer(GetTriggerUnit()), PLAYER_STATE_RESOURCE_LUMBER)
+    else
+        call DoNothing()
+    endif
+endfunction
+
+//===========================================================================
+function InitTrig_Penalty_2 takes nothing returns nothing
+    set gg_trg_Penalty_2=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Penalty_2, EVENT_PLAYER_UNIT_DEATH)
+    call TriggerAddCondition(gg_trg_Penalty_2, Condition(function Trig_Penalty_2_Conditions))
+    call TriggerAddAction(gg_trg_Penalty_2, function Trig_Penalty_2_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Bonus 2
+//===========================================================================
+function Trig_Bonus_2_Conditions takes nothing returns boolean
+    if ( not ( GetPlayerRace(GetOwningPlayer(GetKillingUnitBJ())) == RACE_ORC ) ) then
+        return false
+    endif
+    if ( not ( IsUnitEnemy(GetTriggerUnit(), GetOwningPlayer(GetKillingUnitBJ())) == true ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Bonus_2_Func003Func003C takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetTriggerUnit()) == 'htow' ) ) then
+        return false
+    endif
+    if ( not ( GetUnitTypeId(GetTriggerUnit()) == 'ogre' ) ) then
+        return false
+    endif
+    if ( not ( GetUnitTypeId(GetTriggerUnit()) == 'unpl' ) ) then
+        return false
+    endif
+    if ( not ( GetUnitTypeId(GetTriggerUnit()) == 'etol' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Bonus_2_Func003C takes nothing returns boolean
+    if ( not Trig_Bonus_2_Func003Func003C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Bonus_2_Actions takes nothing returns nothing
+    if ( Trig_Bonus_2_Func003C() ) then
+        call AdjustPlayerStateBJ(1500, GetOwningPlayer(GetKillingUnitBJ()), PLAYER_STATE_RESOURCE_LUMBER)
+    else
+        call DoNothing()
+    endif
+endfunction
+
+//===========================================================================
+function InitTrig_Bonus_2 takes nothing returns nothing
+    set gg_trg_Bonus_2=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Bonus_2, EVENT_PLAYER_UNIT_DEATH)
+    call TriggerAddCondition(gg_trg_Bonus_2, Condition(function Trig_Bonus_2_Conditions))
+    call TriggerAddAction(gg_trg_Bonus_2, function Trig_Bonus_2_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Penatly 3
+//===========================================================================
+function Trig_Penatly_3_Conditions takes nothing returns boolean
+    if ( not ( GetPlayerRace(GetOwningPlayer(GetTriggerUnit())) == RACE_ORC ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Penatly_3_Func002Func003C takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetTriggerUnit()) == 'hkee' ) ) then
+        return false
+    endif
+    if ( not ( GetUnitTypeId(GetTriggerUnit()) == 'ostr' ) ) then
+        return false
+    endif
+    if ( not ( GetUnitTypeId(GetTriggerUnit()) == 'unp1' ) ) then
+        return false
+    endif
+    if ( not ( GetUnitTypeId(GetTriggerUnit()) == 'etoa' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Penatly_3_Func002C takes nothing returns boolean
+    if ( not Trig_Penatly_3_Func002Func003C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Penatly_3_Actions takes nothing returns nothing
+    if ( Trig_Penatly_3_Func002C() ) then
+        call AdjustPlayerStateBJ(- 1200, GetOwningPlayer(GetTriggerUnit()), PLAYER_STATE_RESOURCE_LUMBER)
+    else
+        call DoNothing()
+    endif
+endfunction
+
+//===========================================================================
+function InitTrig_Penatly_3 takes nothing returns nothing
+    set gg_trg_Penatly_3=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Penatly_3, EVENT_PLAYER_UNIT_DEATH)
+    call TriggerAddCondition(gg_trg_Penatly_3, Condition(function Trig_Penatly_3_Conditions))
+    call TriggerAddAction(gg_trg_Penatly_3, function Trig_Penatly_3_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Bonus 3
+//===========================================================================
+function Trig_Bonus_3_Conditions takes nothing returns boolean
+    if ( not ( GetPlayerRace(GetOwningPlayer(GetKillingUnitBJ())) == RACE_ORC ) ) then
+        return false
+    endif
+    if ( not ( IsUnitEnemy(GetTriggerUnit(), GetOwningPlayer(GetKillingUnitBJ())) == true ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Bonus_3_Func003Func003C takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetTriggerUnit()) == 'hkee' ) ) then
+        return false
+    endif
+    if ( not ( GetUnitTypeId(GetTriggerUnit()) == 'ostr' ) ) then
+        return false
+    endif
+    if ( not ( GetUnitTypeId(GetTriggerUnit()) == 'unp1' ) ) then
+        return false
+    endif
+    if ( not ( GetUnitTypeId(GetTriggerUnit()) == 'etoa' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Bonus_3_Func003C takes nothing returns boolean
+    if ( not Trig_Bonus_3_Func003Func003C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Bonus_3_Actions takes nothing returns nothing
+    if ( Trig_Bonus_3_Func003C() ) then
+        call AdjustPlayerStateBJ(2000, GetOwningPlayer(GetKillingUnitBJ()), PLAYER_STATE_RESOURCE_LUMBER)
+    else
+        call DoNothing()
+    endif
+endfunction
+
+//===========================================================================
+function InitTrig_Bonus_3 takes nothing returns nothing
+    set gg_trg_Bonus_3=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Bonus_3, EVENT_PLAYER_UNIT_DEATH)
+    call TriggerAddCondition(gg_trg_Bonus_3, Condition(function Trig_Bonus_3_Conditions))
+    call TriggerAddAction(gg_trg_Bonus_3, function Trig_Bonus_3_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Penatly 4
+//===========================================================================
+function Trig_Penatly_4_Conditions takes nothing returns boolean
+    if ( not ( GetPlayerRace(GetOwningPlayer(GetTriggerUnit())) == RACE_ORC ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Penatly_4_Func002Func003C takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetTriggerUnit()) == 'hcas' ) ) then
+        return false
+    endif
+    if ( not ( GetUnitTypeId(GetTriggerUnit()) == 'ofrt' ) ) then
+        return false
+    endif
+    if ( not ( GetUnitTypeId(GetTriggerUnit()) == 'unp2' ) ) then
+        return false
+    endif
+    if ( not ( GetUnitTypeId(GetTriggerUnit()) == 'etoe' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Penatly_4_Func002C takes nothing returns boolean
+    if ( not Trig_Penatly_4_Func002Func003C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Penatly_4_Actions takes nothing returns nothing
+    if ( Trig_Penatly_4_Func002C() ) then
+        call AdjustPlayerStateBJ(- 2000, GetOwningPlayer(GetTriggerUnit()), PLAYER_STATE_RESOURCE_LUMBER)
+    else
+        call DoNothing()
+    endif
+endfunction
+
+//===========================================================================
+function InitTrig_Penatly_4 takes nothing returns nothing
+    set gg_trg_Penatly_4=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Penatly_4, EVENT_PLAYER_UNIT_DEATH)
+    call TriggerAddCondition(gg_trg_Penatly_4, Condition(function Trig_Penatly_4_Conditions))
+    call TriggerAddAction(gg_trg_Penatly_4, function Trig_Penatly_4_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Bonus 4
+//===========================================================================
+function Trig_Bonus_4_Conditions takes nothing returns boolean
+    if ( not ( GetPlayerRace(GetOwningPlayer(GetKillingUnitBJ())) == RACE_ORC ) ) then
+        return false
+    endif
+    if ( not ( IsUnitEnemy(GetTriggerUnit(), GetOwningPlayer(GetKillingUnitBJ())) == true ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Bonus_4_Func003Func003C takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetTriggerUnit()) == 'hcas' ) ) then
+        return false
+    endif
+    if ( not ( GetUnitTypeId(GetTriggerUnit()) == 'ofrt' ) ) then
+        return false
+    endif
+    if ( not ( GetUnitTypeId(GetTriggerUnit()) == 'unp2' ) ) then
+        return false
+    endif
+    if ( not ( GetUnitTypeId(GetTriggerUnit()) == 'etoe' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Bonus_4_Func003C takes nothing returns boolean
+    if ( not Trig_Bonus_4_Func003Func003C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Bonus_4_Actions takes nothing returns nothing
+    if ( Trig_Bonus_4_Func003C() ) then
+        call AdjustPlayerStateBJ(4000, GetOwningPlayer(GetKillingUnitBJ()), PLAYER_STATE_RESOURCE_LUMBER)
+    else
+        call DoNothing()
+    endif
+endfunction
+
+//===========================================================================
+function InitTrig_Bonus_4 takes nothing returns nothing
+    set gg_trg_Bonus_4=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Bonus_4, EVENT_PLAYER_UNIT_DEATH)
+    call TriggerAddCondition(gg_trg_Bonus_4, Condition(function Trig_Bonus_4_Conditions))
+    call TriggerAddAction(gg_trg_Bonus_4, function Trig_Bonus_4_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: OrcQuestDone Player 1
+//===========================================================================
+function Trig_OrcQuestDone_Player_1_Conditions takes nothing returns boolean
+    if ( not ( GetPlayerRace(GetTriggerPlayer()) == RACE_ORC ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_OrcQuestDone_Player_1_Actions takes nothing returns nothing
+    call QuestMessageBJ(GetForceOfPlayer(GetTriggerPlayer()), bj_QUESTMESSAGE_WARNING, "TRIGSTR_884")
+    call CreateNUnitsAtLoc(1, 'n003', GetTriggerPlayer(), GetUnitLoc(GroupPickRandomUnit(GetUnitsInRectOfPlayer(GetPlayableMapRect(), GetTriggerPlayer()))), bj_UNIT_FACING)
+    call DisableTrigger(GetTriggeringTrigger())
+endfunction
+
+//===========================================================================
+function InitTrig_OrcQuestDone_Player_1 takes nothing returns nothing
+    set gg_trg_OrcQuestDone_Player_1=CreateTrigger()
+    call TriggerRegisterPlayerStateEvent(gg_trg_OrcQuestDone_Player_1, Player(0), PLAYER_STATE_RESOURCE_LUMBER, GREATER_THAN_OR_EQUAL, 2000.00)
+    call TriggerAddCondition(gg_trg_OrcQuestDone_Player_1, Condition(function Trig_OrcQuestDone_Player_1_Conditions))
+    call TriggerAddAction(gg_trg_OrcQuestDone_Player_1, function Trig_OrcQuestDone_Player_1_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Quest 5k player 1
+//===========================================================================
+function Trig_Quest_5k_player_1_Conditions takes nothing returns boolean
+    if ( not ( GetPlayerRace(GetTriggerPlayer()) == RACE_ORC ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Quest_5k_player_1_Func001002001002001 takes nothing returns boolean
+    return ( IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) == true )
+endfunction
+
+function Trig_Quest_5k_player_1_Func001002001002002 takes nothing returns boolean
+    return ( UnitInventoryCount(GetTriggerUnit()) != 6 )
+endfunction
+
+function Trig_Quest_5k_player_1_Func001002001002 takes nothing returns boolean
+    return GetBooleanAnd(Trig_Quest_5k_player_1_Func001002001002001(), Trig_Quest_5k_player_1_Func001002001002002())
+endfunction
+
+function Trig_Quest_5k_player_1_Actions takes nothing returns nothing
+    set udg_Itemposition=GroupPickRandomUnit(GetUnitsOfPlayerMatching(GetTriggerPlayer(), Condition(function Trig_Quest_5k_player_1_Func001002001002)))
+    call QuestMessageBJ(GetForceOfPlayer(GetTriggerPlayer()), bj_QUESTMESSAGE_WARNING, "TRIGSTR_977")
+    call UnitAddItemByIdSwapped('axas', udg_Itemposition)
+    call DisableTrigger(GetTriggeringTrigger())
+endfunction
+
+//===========================================================================
+function InitTrig_Quest_5k_player_1 takes nothing returns nothing
+    set gg_trg_Quest_5k_player_1=CreateTrigger()
+    call TriggerRegisterPlayerStateEvent(gg_trg_Quest_5k_player_1, Player(0), PLAYER_STATE_RESOURCE_LUMBER, GREATER_THAN_OR_EQUAL, 5000.00)
+    call TriggerAddCondition(gg_trg_Quest_5k_player_1, Condition(function Trig_Quest_5k_player_1_Conditions))
+    call TriggerAddAction(gg_trg_Quest_5k_player_1, function Trig_Quest_5k_player_1_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Quest15000 player 1
+//===========================================================================
+function Trig_Quest15000_player_1_Conditions takes nothing returns boolean
+    if ( not ( GetPlayerRace(GetTriggerPlayer()) == RACE_ORC ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Quest15000_player_1_Actions takes nothing returns nothing
+    call QuestMessageBJ(GetForceOfPlayer(GetTriggerPlayer()), bj_QUESTMESSAGE_WARNING, "TRIGSTR_978")
+    call SetPlayerTechMaxAllowedSwap('R009', 1, GetTriggerPlayer())
+    call CreateNUnitsAtLoc(3, 'o009', GetTriggerPlayer(), GetUnitLoc(GroupPickRandomUnit(GetUnitsInRectOfPlayer(GetPlayableMapRect(), GetTriggerPlayer()))), bj_UNIT_FACING)
+    call DisableTrigger(GetTriggeringTrigger())
+endfunction
+
+//===========================================================================
+function InitTrig_Quest15000_player_1 takes nothing returns nothing
+    set gg_trg_Quest15000_player_1=CreateTrigger()
+    call TriggerRegisterPlayerStateEvent(gg_trg_Quest15000_player_1, Player(0), PLAYER_STATE_RESOURCE_LUMBER, GREATER_THAN_OR_EQUAL, 15000.00)
+    call TriggerAddCondition(gg_trg_Quest15000_player_1, Condition(function Trig_Quest15000_player_1_Conditions))
+    call TriggerAddAction(gg_trg_Quest15000_player_1, function Trig_Quest15000_player_1_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: QuestComplete Player 1
+//===========================================================================
+function Trig_QuestComplete_Player_1_Conditions takes nothing returns boolean
+    if ( not ( GetPlayerRace(GetTriggerPlayer()) == RACE_ORC ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_QuestComplete_Player_1_Actions takes nothing returns nothing
+    call QuestMessageBJ(GetForceOfPlayer(GetTriggerPlayer()), bj_QUESTMESSAGE_WARNING, "TRIGSTR_980")
+    call SetPlayerTechMaxAllowedSwap('R00A', 1, GetTriggerPlayer())
+    call DisableTrigger(GetTriggeringTrigger())
+endfunction
+
+//===========================================================================
+function InitTrig_QuestComplete_Player_1 takes nothing returns nothing
+    set gg_trg_QuestComplete_Player_1=CreateTrigger()
+    call TriggerRegisterPlayerStateEvent(gg_trg_QuestComplete_Player_1, Player(0), PLAYER_STATE_RESOURCE_LUMBER, GREATER_THAN_OR_EQUAL, 20000.00)
+    call TriggerAddCondition(gg_trg_QuestComplete_Player_1, Condition(function Trig_QuestComplete_Player_1_Conditions))
+    call TriggerAddAction(gg_trg_QuestComplete_Player_1, function Trig_QuestComplete_Player_1_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: OrcQuestDone Player 2
+//===========================================================================
+function Trig_OrcQuestDone_Player_2_Conditions takes nothing returns boolean
+    if ( not ( GetPlayerRace(GetTriggerPlayer()) == RACE_ORC ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_OrcQuestDone_Player_2_Actions takes nothing returns nothing
+    call QuestMessageBJ(GetForceOfPlayer(GetTriggerPlayer()), bj_QUESTMESSAGE_WARNING, "TRIGSTR_1003")
+    call CreateNUnitsAtLoc(1, 'n003', GetTriggerPlayer(), GetUnitLoc(GroupPickRandomUnit(GetUnitsInRectOfPlayer(GetPlayableMapRect(), GetTriggerPlayer()))), bj_UNIT_FACING)
+    call DisableTrigger(GetTriggeringTrigger())
+endfunction
+
+//===========================================================================
+function InitTrig_OrcQuestDone_Player_2 takes nothing returns nothing
+    set gg_trg_OrcQuestDone_Player_2=CreateTrigger()
+    call TriggerRegisterPlayerStateEvent(gg_trg_OrcQuestDone_Player_2, Player(1), PLAYER_STATE_RESOURCE_LUMBER, GREATER_THAN_OR_EQUAL, 2000.00)
+    call TriggerAddCondition(gg_trg_OrcQuestDone_Player_2, Condition(function Trig_OrcQuestDone_Player_2_Conditions))
+    call TriggerAddAction(gg_trg_OrcQuestDone_Player_2, function Trig_OrcQuestDone_Player_2_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Quest 5k player 2
+//===========================================================================
+function Trig_Quest_5k_player_2_Conditions takes nothing returns boolean
+    if ( not ( GetPlayerRace(GetTriggerPlayer()) == RACE_ORC ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Quest_5k_player_2_Func001002001002001 takes nothing returns boolean
+    return ( IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) == true )
+endfunction
+
+function Trig_Quest_5k_player_2_Func001002001002002 takes nothing returns boolean
+    return ( UnitInventoryCount(GetTriggerUnit()) != 6 )
+endfunction
+
+function Trig_Quest_5k_player_2_Func001002001002 takes nothing returns boolean
+    return GetBooleanAnd(Trig_Quest_5k_player_2_Func001002001002001(), Trig_Quest_5k_player_2_Func001002001002002())
+endfunction
+
+function Trig_Quest_5k_player_2_Actions takes nothing returns nothing
+    set udg_Itemposition=GroupPickRandomUnit(GetUnitsOfPlayerMatching(GetTriggerPlayer(), Condition(function Trig_Quest_5k_player_2_Func001002001002)))
+    call QuestMessageBJ(GetForceOfPlayer(GetTriggerPlayer()), bj_QUESTMESSAGE_WARNING, "TRIGSTR_1004")
+    call UnitAddItemByIdSwapped('axas', udg_Itemposition)
+    call DisableTrigger(GetTriggeringTrigger())
+endfunction
+
+//===========================================================================
+function InitTrig_Quest_5k_player_2 takes nothing returns nothing
+    set gg_trg_Quest_5k_player_2=CreateTrigger()
+    call TriggerRegisterPlayerStateEvent(gg_trg_Quest_5k_player_2, Player(1), PLAYER_STATE_RESOURCE_LUMBER, GREATER_THAN_OR_EQUAL, 5000.00)
+    call TriggerAddCondition(gg_trg_Quest_5k_player_2, Condition(function Trig_Quest_5k_player_2_Conditions))
+    call TriggerAddAction(gg_trg_Quest_5k_player_2, function Trig_Quest_5k_player_2_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Quest15000 player 2
+//===========================================================================
+function Trig_Quest15000_player_2_Conditions takes nothing returns boolean
+    if ( not ( GetPlayerRace(GetTriggerPlayer()) == RACE_ORC ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Quest15000_player_2_Actions takes nothing returns nothing
+    call QuestMessageBJ(GetForceOfPlayer(GetTriggerPlayer()), bj_QUESTMESSAGE_WARNING, "TRIGSTR_1005")
+    call SetPlayerTechMaxAllowedSwap('R009', 1, GetTriggerPlayer())
+    call CreateNUnitsAtLoc(3, 'o009', GetTriggerPlayer(), GetUnitLoc(GroupPickRandomUnit(GetUnitsInRectOfPlayer(GetPlayableMapRect(), GetTriggerPlayer()))), bj_UNIT_FACING)
+    call DisableTrigger(GetTriggeringTrigger())
+endfunction
+
+//===========================================================================
+function InitTrig_Quest15000_player_2 takes nothing returns nothing
+    set gg_trg_Quest15000_player_2=CreateTrigger()
+    call TriggerRegisterPlayerStateEvent(gg_trg_Quest15000_player_2, Player(1), PLAYER_STATE_RESOURCE_LUMBER, GREATER_THAN_OR_EQUAL, 15000.00)
+    call TriggerAddCondition(gg_trg_Quest15000_player_2, Condition(function Trig_Quest15000_player_2_Conditions))
+    call TriggerAddAction(gg_trg_Quest15000_player_2, function Trig_Quest15000_player_2_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: QuestComplete Player 2
+//===========================================================================
+function Trig_QuestComplete_Player_2_Conditions takes nothing returns boolean
+    if ( not ( GetPlayerRace(GetTriggerPlayer()) == RACE_ORC ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_QuestComplete_Player_2_Actions takes nothing returns nothing
+    call QuestMessageBJ(GetForceOfPlayer(GetTriggerPlayer()), bj_QUESTMESSAGE_WARNING, "TRIGSTR_1006")
+    call SetPlayerTechMaxAllowedSwap('R00A', 1, GetTriggerPlayer())
+    call DisableTrigger(GetTriggeringTrigger())
+endfunction
+
+//===========================================================================
+function InitTrig_QuestComplete_Player_2 takes nothing returns nothing
+    set gg_trg_QuestComplete_Player_2=CreateTrigger()
+    call TriggerRegisterPlayerStateEvent(gg_trg_QuestComplete_Player_2, Player(1), PLAYER_STATE_RESOURCE_LUMBER, GREATER_THAN_OR_EQUAL, 20000.00)
+    call TriggerAddCondition(gg_trg_QuestComplete_Player_2, Condition(function Trig_QuestComplete_Player_2_Conditions))
+    call TriggerAddAction(gg_trg_QuestComplete_Player_2, function Trig_QuestComplete_Player_2_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: OrcQuestDone Player 2 Копировать
+//===========================================================================
+function Trig_OrcQuestDone_Player_2_____________________u_Conditions takes nothing returns boolean
+    if ( not ( GetPlayerRace(GetTriggerPlayer()) == RACE_ORC ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_OrcQuestDone_Player_2_____________________u_Actions takes nothing returns nothing
+    call QuestMessageBJ(GetForceOfPlayer(GetTriggerPlayer()), bj_QUESTMESSAGE_WARNING, "TRIGSTR_1007")
+    call CreateNUnitsAtLoc(1, 'n003', GetTriggerPlayer(), GetUnitLoc(GroupPickRandomUnit(GetUnitsInRectOfPlayer(GetPlayableMapRect(), GetTriggerPlayer()))), bj_UNIT_FACING)
+    call DisableTrigger(GetTriggeringTrigger())
+endfunction
+
+//===========================================================================
+function InitTrig_OrcQuestDone_Player_2_____________________u takes nothing returns nothing
+    set gg_trg_OrcQuestDone_Player_2_____________________u=CreateTrigger()
+    call TriggerRegisterPlayerStateEvent(gg_trg_OrcQuestDone_Player_2_____________________u, Player(2), PLAYER_STATE_RESOURCE_LUMBER, GREATER_THAN_OR_EQUAL, 2000.00)
+    call TriggerAddCondition(gg_trg_OrcQuestDone_Player_2_____________________u, Condition(function Trig_OrcQuestDone_Player_2_____________________u_Conditions))
+    call TriggerAddAction(gg_trg_OrcQuestDone_Player_2_____________________u, function Trig_OrcQuestDone_Player_2_____________________u_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Quest 5k player 2 Копировать
+//===========================================================================
+function Trig_Quest_5k_player_2_____________________u_Conditions takes nothing returns boolean
+    if ( not ( GetPlayerRace(GetTriggerPlayer()) == RACE_ORC ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Quest_5k_player_2_____________________u_Func001002001002001 takes nothing returns boolean
+    return ( IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) == true )
+endfunction
+
+function Trig_Quest_5k_player_2_____________________u_Func001002001002002 takes nothing returns boolean
+    return ( UnitInventoryCount(GetTriggerUnit()) != 6 )
+endfunction
+
+function Trig_Quest_5k_player_2_____________________u_Func001002001002 takes nothing returns boolean
+    return GetBooleanAnd(Trig_Quest_5k_player_2_____________________u_Func001002001002001(), Trig_Quest_5k_player_2_____________________u_Func001002001002002())
+endfunction
+
+function Trig_Quest_5k_player_2_____________________u_Actions takes nothing returns nothing
+    set udg_Itemposition=GroupPickRandomUnit(GetUnitsOfPlayerMatching(GetTriggerPlayer(), Condition(function Trig_Quest_5k_player_2_____________________u_Func001002001002)))
+    call QuestMessageBJ(GetForceOfPlayer(GetTriggerPlayer()), bj_QUESTMESSAGE_WARNING, "TRIGSTR_1008")
+    call UnitAddItemByIdSwapped('axas', udg_Itemposition)
+    call DisableTrigger(GetTriggeringTrigger())
+endfunction
+
+//===========================================================================
+function InitTrig_Quest_5k_player_2_____________________u takes nothing returns nothing
+    set gg_trg_Quest_5k_player_2_____________________u=CreateTrigger()
+    call TriggerRegisterPlayerStateEvent(gg_trg_Quest_5k_player_2_____________________u, Player(2), PLAYER_STATE_RESOURCE_LUMBER, GREATER_THAN_OR_EQUAL, 5000.00)
+    call TriggerAddCondition(gg_trg_Quest_5k_player_2_____________________u, Condition(function Trig_Quest_5k_player_2_____________________u_Conditions))
+    call TriggerAddAction(gg_trg_Quest_5k_player_2_____________________u, function Trig_Quest_5k_player_2_____________________u_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Quest15000 player 2 Копировать
+//===========================================================================
+function Trig_Quest15000_player_2_____________________u_Conditions takes nothing returns boolean
+    if ( not ( GetPlayerRace(GetTriggerPlayer()) == RACE_ORC ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Quest15000_player_2_____________________u_Actions takes nothing returns nothing
+    call QuestMessageBJ(GetForceOfPlayer(GetTriggerPlayer()), bj_QUESTMESSAGE_WARNING, "TRIGSTR_1009")
+    call SetPlayerTechMaxAllowedSwap('R009', 1, GetTriggerPlayer())
+    call CreateNUnitsAtLoc(3, 'o009', GetTriggerPlayer(), GetUnitLoc(GroupPickRandomUnit(GetUnitsInRectOfPlayer(GetPlayableMapRect(), GetTriggerPlayer()))), bj_UNIT_FACING)
+    call DisableTrigger(GetTriggeringTrigger())
+endfunction
+
+//===========================================================================
+function InitTrig_Quest15000_player_2_____________________u takes nothing returns nothing
+    set gg_trg_Quest15000_player_2_____________________u=CreateTrigger()
+    call TriggerRegisterPlayerStateEvent(gg_trg_Quest15000_player_2_____________________u, Player(2), PLAYER_STATE_RESOURCE_LUMBER, GREATER_THAN_OR_EQUAL, 15000.00)
+    call TriggerAddCondition(gg_trg_Quest15000_player_2_____________________u, Condition(function Trig_Quest15000_player_2_____________________u_Conditions))
+    call TriggerAddAction(gg_trg_Quest15000_player_2_____________________u, function Trig_Quest15000_player_2_____________________u_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: QuestComplete Player 2 Копировать
+//===========================================================================
+function Trig_QuestComplete_Player_2_____________________u_Conditions takes nothing returns boolean
+    if ( not ( GetPlayerRace(GetTriggerPlayer()) == RACE_ORC ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_QuestComplete_Player_2_____________________u_Actions takes nothing returns nothing
+    call QuestMessageBJ(GetForceOfPlayer(GetTriggerPlayer()), bj_QUESTMESSAGE_WARNING, "TRIGSTR_1010")
+    call SetPlayerTechMaxAllowedSwap('R00A', 1, GetTriggerPlayer())
+    call DisableTrigger(GetTriggeringTrigger())
+endfunction
+
+//===========================================================================
+function InitTrig_QuestComplete_Player_2_____________________u takes nothing returns nothing
+    set gg_trg_QuestComplete_Player_2_____________________u=CreateTrigger()
+    call TriggerRegisterPlayerStateEvent(gg_trg_QuestComplete_Player_2_____________________u, Player(2), PLAYER_STATE_RESOURCE_LUMBER, GREATER_THAN_OR_EQUAL, 20000.00)
+    call TriggerAddCondition(gg_trg_QuestComplete_Player_2_____________________u, Condition(function Trig_QuestComplete_Player_2_____________________u_Conditions))
+    call TriggerAddAction(gg_trg_QuestComplete_Player_2_____________________u, function Trig_QuestComplete_Player_2_____________________u_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: OrcQuestDone Player 2 Копировать Копировать
+//===========================================================================
+function Trig_OrcQuestDone_Player_2__________________________________________u_Conditions takes nothing returns boolean
+    if ( not ( GetPlayerRace(GetTriggerPlayer()) == RACE_ORC ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_OrcQuestDone_Player_2__________________________________________u_Actions takes nothing returns nothing
+    call QuestMessageBJ(GetForceOfPlayer(GetTriggerPlayer()), bj_QUESTMESSAGE_WARNING, "TRIGSTR_1011")
+    call CreateNUnitsAtLoc(1, 'n003', GetTriggerPlayer(), GetUnitLoc(GroupPickRandomUnit(GetUnitsInRectOfPlayer(GetPlayableMapRect(), GetTriggerPlayer()))), bj_UNIT_FACING)
+    call DisableTrigger(GetTriggeringTrigger())
+endfunction
+
+//===========================================================================
+function InitTrig_OrcQuestDone_Player_2__________________________________________u takes nothing returns nothing
+    set gg_trg_OrcQuestDone_Player_2__________________________________________u=CreateTrigger()
+    call TriggerRegisterPlayerStateEvent(gg_trg_OrcQuestDone_Player_2__________________________________________u, Player(3), PLAYER_STATE_RESOURCE_LUMBER, GREATER_THAN_OR_EQUAL, 2000.00)
+    call TriggerAddCondition(gg_trg_OrcQuestDone_Player_2__________________________________________u, Condition(function Trig_OrcQuestDone_Player_2__________________________________________u_Conditions))
+    call TriggerAddAction(gg_trg_OrcQuestDone_Player_2__________________________________________u, function Trig_OrcQuestDone_Player_2__________________________________________u_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Quest 5k player 2 Копировать Копировать
+//===========================================================================
+function Trig_Quest_5k_player_2__________________________________________u_Conditions takes nothing returns boolean
+    if ( not ( GetPlayerRace(GetTriggerPlayer()) == RACE_ORC ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Quest_5k_player_2__________________________________________u_Func001002001002001 takes nothing returns boolean
+    return ( IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) == true )
+endfunction
+
+function Trig_Quest_5k_player_2__________________________________________u_Func001002001002002 takes nothing returns boolean
+    return ( UnitInventoryCount(GetTriggerUnit()) != 6 )
+endfunction
+
+function Trig_Quest_5k_player_2__________________________________________u_Func001002001002 takes nothing returns boolean
+    return GetBooleanAnd(Trig_Quest_5k_player_2__________________________________________u_Func001002001002001(), Trig_Quest_5k_player_2__________________________________________u_Func001002001002002())
+endfunction
+
+function Trig_Quest_5k_player_2__________________________________________u_Actions takes nothing returns nothing
+    set udg_Itemposition=GroupPickRandomUnit(GetUnitsOfPlayerMatching(GetTriggerPlayer(), Condition(function Trig_Quest_5k_player_2__________________________________________u_Func001002001002)))
+    call QuestMessageBJ(GetForceOfPlayer(GetTriggerPlayer()), bj_QUESTMESSAGE_WARNING, "TRIGSTR_1012")
+    call UnitAddItemByIdSwapped('axas', udg_Itemposition)
+    call DisableTrigger(GetTriggeringTrigger())
+endfunction
+
+//===========================================================================
+function InitTrig_Quest_5k_player_2__________________________________________u takes nothing returns nothing
+    set gg_trg_Quest_5k_player_2__________________________________________u=CreateTrigger()
+    call TriggerRegisterPlayerStateEvent(gg_trg_Quest_5k_player_2__________________________________________u, Player(3), PLAYER_STATE_RESOURCE_LUMBER, GREATER_THAN_OR_EQUAL, 5000.00)
+    call TriggerAddCondition(gg_trg_Quest_5k_player_2__________________________________________u, Condition(function Trig_Quest_5k_player_2__________________________________________u_Conditions))
+    call TriggerAddAction(gg_trg_Quest_5k_player_2__________________________________________u, function Trig_Quest_5k_player_2__________________________________________u_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Quest15000 player 2 Копировать Копировать
+//===========================================================================
+function Trig_Quest15000_player_2__________________________________________u_Conditions takes nothing returns boolean
+    if ( not ( GetPlayerRace(GetTriggerPlayer()) == RACE_ORC ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Quest15000_player_2__________________________________________u_Actions takes nothing returns nothing
+    call QuestMessageBJ(GetForceOfPlayer(GetTriggerPlayer()), bj_QUESTMESSAGE_WARNING, "TRIGSTR_1013")
+    call SetPlayerTechMaxAllowedSwap('R009', 1, GetTriggerPlayer())
+    call CreateNUnitsAtLoc(3, 'o009', GetTriggerPlayer(), GetUnitLoc(GroupPickRandomUnit(GetUnitsInRectOfPlayer(GetPlayableMapRect(), GetTriggerPlayer()))), bj_UNIT_FACING)
+    call DisableTrigger(GetTriggeringTrigger())
+endfunction
+
+//===========================================================================
+function InitTrig_Quest15000_player_2__________________________________________u takes nothing returns nothing
+    set gg_trg_Quest15000_player_2__________________________________________u=CreateTrigger()
+    call TriggerRegisterPlayerStateEvent(gg_trg_Quest15000_player_2__________________________________________u, Player(3), PLAYER_STATE_RESOURCE_LUMBER, GREATER_THAN_OR_EQUAL, 15000.00)
+    call TriggerAddCondition(gg_trg_Quest15000_player_2__________________________________________u, Condition(function Trig_Quest15000_player_2__________________________________________u_Conditions))
+    call TriggerAddAction(gg_trg_Quest15000_player_2__________________________________________u, function Trig_Quest15000_player_2__________________________________________u_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: QuestComplete Player 2 Копировать Копировать
+//===========================================================================
+function Trig_QuestComplete_Player_2__________________________________________u_Conditions takes nothing returns boolean
+    if ( not ( GetPlayerRace(GetTriggerPlayer()) == RACE_ORC ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_QuestComplete_Player_2__________________________________________u_Actions takes nothing returns nothing
+    call QuestMessageBJ(GetForceOfPlayer(GetTriggerPlayer()), bj_QUESTMESSAGE_WARNING, "TRIGSTR_1014")
+    call SetPlayerTechMaxAllowedSwap('R00A', 1, GetTriggerPlayer())
+    call DisableTrigger(GetTriggeringTrigger())
+endfunction
+
+//===========================================================================
+function InitTrig_QuestComplete_Player_2__________________________________________u takes nothing returns nothing
+    set gg_trg_QuestComplete_Player_2__________________________________________u=CreateTrigger()
+    call TriggerRegisterPlayerStateEvent(gg_trg_QuestComplete_Player_2__________________________________________u, Player(3), PLAYER_STATE_RESOURCE_LUMBER, GREATER_THAN_OR_EQUAL, 20000.00)
+    call TriggerAddCondition(gg_trg_QuestComplete_Player_2__________________________________________u, Condition(function Trig_QuestComplete_Player_2__________________________________________u_Conditions))
+    call TriggerAddAction(gg_trg_QuestComplete_Player_2__________________________________________u, function Trig_QuestComplete_Player_2__________________________________________u_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: OrcQuestDone Player 2 Копировать Копировать Копировать
+//===========================================================================
+function Trig_OrcQuestDone_Player_2_______________________________________________________________u_Conditions takes nothing returns boolean
+    if ( not ( GetPlayerRace(GetTriggerPlayer()) == RACE_ORC ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_OrcQuestDone_Player_2_______________________________________________________________u_Actions takes nothing returns nothing
+    call QuestMessageBJ(GetForceOfPlayer(GetTriggerPlayer()), bj_QUESTMESSAGE_WARNING, "TRIGSTR_1015")
+    call CreateNUnitsAtLoc(1, 'n003', GetTriggerPlayer(), GetUnitLoc(GroupPickRandomUnit(GetUnitsInRectOfPlayer(GetPlayableMapRect(), GetTriggerPlayer()))), bj_UNIT_FACING)
+    call DisableTrigger(GetTriggeringTrigger())
+endfunction
+
+//===========================================================================
+function InitTrig_OrcQuestDone_Player_2_______________________________________________________________u takes nothing returns nothing
+    set gg_trg_OrcQuestDone_Player_2_______________________________________________________________u=CreateTrigger()
+    call TriggerRegisterPlayerStateEvent(gg_trg_OrcQuestDone_Player_2_______________________________________________________________u, Player(4), PLAYER_STATE_RESOURCE_LUMBER, GREATER_THAN_OR_EQUAL, 2000.00)
+    call TriggerAddCondition(gg_trg_OrcQuestDone_Player_2_______________________________________________________________u, Condition(function Trig_OrcQuestDone_Player_2_______________________________________________________________u_Conditions))
+    call TriggerAddAction(gg_trg_OrcQuestDone_Player_2_______________________________________________________________u, function Trig_OrcQuestDone_Player_2_______________________________________________________________u_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Quest 5k player 2 Копировать Копировать Копировать
+//===========================================================================
+function Trig_Quest_5k_player_2_______________________________________________________________u_Conditions takes nothing returns boolean
+    if ( not ( GetPlayerRace(GetTriggerPlayer()) == RACE_ORC ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Quest_5k_player_2_______________________________________________________________u_Func001002001002001 takes nothing returns boolean
+    return ( IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) == true )
+endfunction
+
+function Trig_Quest_5k_player_2_______________________________________________________________u_Func001002001002002 takes nothing returns boolean
+    return ( UnitInventoryCount(GetTriggerUnit()) != 6 )
+endfunction
+
+function Trig_Quest_5k_player_2_______________________________________________________________u_Func001002001002 takes nothing returns boolean
+    return GetBooleanAnd(Trig_Quest_5k_player_2_______________________________________________________________u_Func001002001002001(), Trig_Quest_5k_player_2_______________________________________________________________u_Func001002001002002())
+endfunction
+
+function Trig_Quest_5k_player_2_______________________________________________________________u_Actions takes nothing returns nothing
+    set udg_Itemposition=GroupPickRandomUnit(GetUnitsOfPlayerMatching(GetTriggerPlayer(), Condition(function Trig_Quest_5k_player_2_______________________________________________________________u_Func001002001002)))
+    call QuestMessageBJ(GetForceOfPlayer(GetTriggerPlayer()), bj_QUESTMESSAGE_WARNING, "TRIGSTR_1016")
+    call UnitAddItemByIdSwapped('axas', udg_Itemposition)
+    call DisableTrigger(GetTriggeringTrigger())
+endfunction
+
+//===========================================================================
+function InitTrig_Quest_5k_player_2_______________________________________________________________u takes nothing returns nothing
+    set gg_trg_Quest_5k_player_2_______________________________________________________________u=CreateTrigger()
+    call TriggerRegisterPlayerStateEvent(gg_trg_Quest_5k_player_2_______________________________________________________________u, Player(4), PLAYER_STATE_RESOURCE_LUMBER, GREATER_THAN_OR_EQUAL, 5000.00)
+    call TriggerAddCondition(gg_trg_Quest_5k_player_2_______________________________________________________________u, Condition(function Trig_Quest_5k_player_2_______________________________________________________________u_Conditions))
+    call TriggerAddAction(gg_trg_Quest_5k_player_2_______________________________________________________________u, function Trig_Quest_5k_player_2_______________________________________________________________u_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Quest15000 player 2 Копировать Копировать Копировать
+//===========================================================================
+function Trig_Quest15000_player_2_______________________________________________________________u_Conditions takes nothing returns boolean
+    if ( not ( GetPlayerRace(GetTriggerPlayer()) == RACE_ORC ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Quest15000_player_2_______________________________________________________________u_Actions takes nothing returns nothing
+    call QuestMessageBJ(GetForceOfPlayer(GetTriggerPlayer()), bj_QUESTMESSAGE_WARNING, "TRIGSTR_1017")
+    call SetPlayerTechMaxAllowedSwap('R009', 1, GetTriggerPlayer())
+    call CreateNUnitsAtLoc(3, 'o009', GetTriggerPlayer(), GetUnitLoc(GroupPickRandomUnit(GetUnitsInRectOfPlayer(GetPlayableMapRect(), GetTriggerPlayer()))), bj_UNIT_FACING)
+    call DisableTrigger(GetTriggeringTrigger())
+endfunction
+
+//===========================================================================
+function InitTrig_Quest15000_player_2_______________________________________________________________u takes nothing returns nothing
+    set gg_trg_Quest15000_player_2_______________________________________________________________u=CreateTrigger()
+    call TriggerRegisterPlayerStateEvent(gg_trg_Quest15000_player_2_______________________________________________________________u, Player(4), PLAYER_STATE_RESOURCE_LUMBER, GREATER_THAN_OR_EQUAL, 15000.00)
+    call TriggerAddCondition(gg_trg_Quest15000_player_2_______________________________________________________________u, Condition(function Trig_Quest15000_player_2_______________________________________________________________u_Conditions))
+    call TriggerAddAction(gg_trg_Quest15000_player_2_______________________________________________________________u, function Trig_Quest15000_player_2_______________________________________________________________u_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: QuestComplete Player 2 Копировать Копировать Копировать
+//===========================================================================
+function Trig_QuestComplete_Player_2_______________________________________________________________u_Conditions takes nothing returns boolean
+    if ( not ( GetPlayerRace(GetTriggerPlayer()) == RACE_ORC ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_QuestComplete_Player_2_______________________________________________________________u_Actions takes nothing returns nothing
+    call QuestMessageBJ(GetForceOfPlayer(GetTriggerPlayer()), bj_QUESTMESSAGE_WARNING, "TRIGSTR_1018")
+    call SetPlayerTechMaxAllowedSwap('R00A', 1, GetTriggerPlayer())
+    call DisableTrigger(GetTriggeringTrigger())
+endfunction
+
+//===========================================================================
+function InitTrig_QuestComplete_Player_2_______________________________________________________________u takes nothing returns nothing
+    set gg_trg_QuestComplete_Player_2_______________________________________________________________u=CreateTrigger()
+    call TriggerRegisterPlayerStateEvent(gg_trg_QuestComplete_Player_2_______________________________________________________________u, Player(4), PLAYER_STATE_RESOURCE_LUMBER, GREATER_THAN_OR_EQUAL, 20000.00)
+    call TriggerAddCondition(gg_trg_QuestComplete_Player_2_______________________________________________________________u, Condition(function Trig_QuestComplete_Player_2_______________________________________________________________u_Conditions))
+    call TriggerAddAction(gg_trg_QuestComplete_Player_2_______________________________________________________________u, function Trig_QuestComplete_Player_2_______________________________________________________________u_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: OrcQuestDone Player 2 Копировать Копировать Ко� Копировать
+//===========================================================================
+function Trig_OrcQuestDone_Player_2_____________________________________________________________________u_Conditions takes nothing returns boolean
+    if ( not ( GetPlayerRace(GetTriggerPlayer()) == RACE_ORC ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_OrcQuestDone_Player_2_____________________________________________________________________u_Actions takes nothing returns nothing
+    call QuestMessageBJ(GetForceOfPlayer(GetTriggerPlayer()), bj_QUESTMESSAGE_WARNING, "TRIGSTR_1019")
+    call CreateNUnitsAtLoc(1, 'n003', GetTriggerPlayer(), GetUnitLoc(GroupPickRandomUnit(GetUnitsInRectOfPlayer(GetPlayableMapRect(), GetTriggerPlayer()))), bj_UNIT_FACING)
+    call DisableTrigger(GetTriggeringTrigger())
+endfunction
+
+//===========================================================================
+function InitTrig_OrcQuestDone_Player_2_____________________________________________________________________u takes nothing returns nothing
+    set gg_trg_OrcQuestDone_Player_2_____________________________________________________________________u=CreateTrigger()
+    call TriggerRegisterPlayerStateEvent(gg_trg_OrcQuestDone_Player_2_____________________________________________________________________u, Player(5), PLAYER_STATE_RESOURCE_LUMBER, GREATER_THAN_OR_EQUAL, 2000.00)
+    call TriggerAddCondition(gg_trg_OrcQuestDone_Player_2_____________________________________________________________________u, Condition(function Trig_OrcQuestDone_Player_2_____________________________________________________________________u_Conditions))
+    call TriggerAddAction(gg_trg_OrcQuestDone_Player_2_____________________________________________________________________u, function Trig_OrcQuestDone_Player_2_____________________________________________________________________u_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Quest 5k player 2 Копировать Копировать Копи� Копировать
+//===========================================================================
+function Trig_Quest_5k_player_2_________________________________________________________________________u_Conditions takes nothing returns boolean
+    if ( not ( GetPlayerRace(GetTriggerPlayer()) == RACE_ORC ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Quest_5k_player_2_________________________________________________________________________u_Func001002001002001 takes nothing returns boolean
+    return ( IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) == true )
+endfunction
+
+function Trig_Quest_5k_player_2_________________________________________________________________________u_Func001002001002002 takes nothing returns boolean
+    return ( UnitInventoryCount(GetTriggerUnit()) != 6 )
+endfunction
+
+function Trig_Quest_5k_player_2_________________________________________________________________________u_Func001002001002 takes nothing returns boolean
+    return GetBooleanAnd(Trig_Quest_5k_player_2_________________________________________________________________________u_Func001002001002001(), Trig_Quest_5k_player_2_________________________________________________________________________u_Func001002001002002())
+endfunction
+
+function Trig_Quest_5k_player_2_________________________________________________________________________u_Actions takes nothing returns nothing
+    set udg_Itemposition=GroupPickRandomUnit(GetUnitsOfPlayerMatching(GetTriggerPlayer(), Condition(function Trig_Quest_5k_player_2_________________________________________________________________________u_Func001002001002)))
+    call QuestMessageBJ(GetForceOfPlayer(GetTriggerPlayer()), bj_QUESTMESSAGE_WARNING, "TRIGSTR_1020")
+    call UnitAddItemByIdSwapped('axas', udg_Itemposition)
+    call DisableTrigger(GetTriggeringTrigger())
+endfunction
+
+//===========================================================================
+function InitTrig_Quest_5k_player_2_________________________________________________________________________u takes nothing returns nothing
+    set gg_trg_Quest_5k_player_2_________________________________________________________________________u=CreateTrigger()
+    call TriggerRegisterPlayerStateEvent(gg_trg_Quest_5k_player_2_________________________________________________________________________u, Player(5), PLAYER_STATE_RESOURCE_LUMBER, GREATER_THAN_OR_EQUAL, 5000.00)
+    call TriggerAddCondition(gg_trg_Quest_5k_player_2_________________________________________________________________________u, Condition(function Trig_Quest_5k_player_2_________________________________________________________________________u_Conditions))
+    call TriggerAddAction(gg_trg_Quest_5k_player_2_________________________________________________________________________u, function Trig_Quest_5k_player_2_________________________________________________________________________u_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Quest15000 player 2 Копировать Копировать Коп� Копировать
+//===========================================================================
+function Trig_Quest15000_player_2_______________________________________________________________________u_Conditions takes nothing returns boolean
+    if ( not ( GetPlayerRace(GetTriggerPlayer()) == RACE_ORC ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Quest15000_player_2_______________________________________________________________________u_Actions takes nothing returns nothing
+    call QuestMessageBJ(GetForceOfPlayer(GetTriggerPlayer()), bj_QUESTMESSAGE_WARNING, "TRIGSTR_1021")
+    call SetPlayerTechMaxAllowedSwap('R009', 1, GetTriggerPlayer())
+    call CreateNUnitsAtLoc(3, 'o009', GetTriggerPlayer(), GetUnitLoc(GroupPickRandomUnit(GetUnitsInRectOfPlayer(GetPlayableMapRect(), GetTriggerPlayer()))), bj_UNIT_FACING)
+    call DisableTrigger(GetTriggeringTrigger())
+endfunction
+
+//===========================================================================
+function InitTrig_Quest15000_player_2_______________________________________________________________________u takes nothing returns nothing
+    set gg_trg_Quest15000_player_2_______________________________________________________________________u=CreateTrigger()
+    call TriggerRegisterPlayerStateEvent(gg_trg_Quest15000_player_2_______________________________________________________________________u, Player(5), PLAYER_STATE_RESOURCE_LUMBER, GREATER_THAN_OR_EQUAL, 15000.00)
+    call TriggerAddCondition(gg_trg_Quest15000_player_2_______________________________________________________________________u, Condition(function Trig_Quest15000_player_2_______________________________________________________________________u_Conditions))
+    call TriggerAddAction(gg_trg_Quest15000_player_2_______________________________________________________________________u, function Trig_Quest15000_player_2_______________________________________________________________________u_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: QuestComplete Player 2 Копировать Копировать Ко Копировать
+//===========================================================================
+function Trig_QuestComplete_Player_2____________________________________________________________________u_Conditions takes nothing returns boolean
+    if ( not ( GetPlayerRace(GetTriggerPlayer()) == RACE_ORC ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_QuestComplete_Player_2____________________________________________________________________u_Actions takes nothing returns nothing
+    call QuestMessageBJ(GetForceOfPlayer(GetTriggerPlayer()), bj_QUESTMESSAGE_WARNING, "TRIGSTR_1022")
+    call SetPlayerTechMaxAllowedSwap('R00A', 1, GetTriggerPlayer())
+    call DisableTrigger(GetTriggeringTrigger())
+endfunction
+
+//===========================================================================
+function InitTrig_QuestComplete_Player_2____________________________________________________________________u takes nothing returns nothing
+    set gg_trg_QuestComplete_Player_2____________________________________________________________________u=CreateTrigger()
+    call TriggerRegisterPlayerStateEvent(gg_trg_QuestComplete_Player_2____________________________________________________________________u, Player(5), PLAYER_STATE_RESOURCE_LUMBER, GREATER_THAN_OR_EQUAL, 20000.00)
+    call TriggerAddCondition(gg_trg_QuestComplete_Player_2____________________________________________________________________u, Condition(function Trig_QuestComplete_Player_2____________________________________________________________________u_Conditions))
+    call TriggerAddAction(gg_trg_QuestComplete_Player_2____________________________________________________________________u, function Trig_QuestComplete_Player_2____________________________________________________________________u_Actions)
+endfunction
 
 //===========================================================================
 // Trigger: Settings
@@ -3728,27 +9204,27 @@ endfunction
 //===========================================================================
 // Trigger: Безымянный триггер 002 Копировать
 //===========================================================================
-function Trig_____________________________________002_____________________u_Func007001 takes nothing returns boolean
+function Trig_____________________________________002_____________________u_Func008001 takes nothing returns boolean
     return ( IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) == false )
 endfunction
 
-function Trig_____________________________________002_____________________u_Func007002001 takes nothing returns boolean
+function Trig_____________________________________002_____________________u_Func008002001 takes nothing returns boolean
     return ( IsUnitType(GetTriggerUnit(), UNIT_TYPE_STRUCTURE) == false )
 endfunction
 
-function Trig_____________________________________002_____________________u_Func007002002 takes nothing returns boolean
+function Trig_____________________________________002_____________________u_Func008002002 takes nothing returns boolean
     return ( IsUnitType(GetTriggerUnit(), UNIT_TYPE_MECHANICAL) == false )
 endfunction
 
-function Trig_____________________________________002_____________________u_Func007002 takes nothing returns boolean
-    return GetBooleanAnd(Trig_____________________________________002_____________________u_Func007002001(), Trig_____________________________________002_____________________u_Func007002002())
+function Trig_____________________________________002_____________________u_Func008002 takes nothing returns boolean
+    return GetBooleanAnd(Trig_____________________________________002_____________________u_Func008002001(), Trig_____________________________________002_____________________u_Func008002002())
 endfunction
 
 function Trig_____________________________________002_____________________u_Conditions takes nothing returns boolean
     if ( not ( GetUnitAbilityLevelSwapped('A02I', GetKillingUnitBJ()) == 1 ) ) then
         return false
     endif
-    if ( not GetBooleanAnd(Trig_____________________________________002_____________________u_Func007001(), Trig_____________________________________002_____________________u_Func007002()) ) then
+    if ( not GetBooleanAnd(Trig_____________________________________002_____________________u_Func008001(), Trig_____________________________________002_____________________u_Func008002()) ) then
         return false
     endif
     return true
@@ -3773,16 +9249,26 @@ endfunction
 //===========================================================================
 // Trigger: Безымянный триггер 002
 //===========================================================================
-function Trig_____________________________________002_Func006001 takes nothing returns boolean
+function Trig_____________________________________002_Func007Func002001 takes nothing returns boolean
     return ( GetUnitAbilityLevelSwapped('Apts', GetKillingUnitBJ()) == 1 )
 endfunction
 
-function Trig_____________________________________002_Func006002 takes nothing returns boolean
+function Trig_____________________________________002_Func007Func002002 takes nothing returns boolean
     return ( GetUnitAbilityLevelSwapped('Aap1', GetKillingUnitBJ()) == 1 )
 endfunction
 
+function Trig_____________________________________002_Func007C takes nothing returns boolean
+    if ( not ( GetPlayerTechCountSimple('Rupc', GetOwningPlayer(GetKillingUnitBJ())) == 1 ) ) then
+        return false
+    endif
+    if ( not GetBooleanOr(Trig_____________________________________002_Func007Func002001(), Trig_____________________________________002_Func007Func002002()) ) then
+        return false
+    endif
+    return true
+endfunction
+
 function Trig_____________________________________002_Conditions takes nothing returns boolean
-    if ( not GetBooleanOr(Trig_____________________________________002_Func006001(), Trig_____________________________________002_Func006002()) ) then
+    if ( not Trig_____________________________________002_Func007C() ) then
         return false
     endif
     return true
@@ -4899,7 +10385,7 @@ function Trig_Infernal_Rain_on_the_map_Actions takes nothing returns nothing
     call AddSpecialEffectLocBJ(udg_pointmap, "Units\\Demon\\Infernal\\InfernalBirth.mdl")
     call PlayThematicMusicBJ("Sound\\Music\\mp3Music\\Doom.mp3")
     call DestroyEffectBJ(GetLastCreatedEffectBJ())
-    call DisplayTextToForce(GetPlayersAll(), "TRIGSTR_027")
+    call DisplayTextToForce(GetPlayersAll(), "TRIGSTR_012")
     call TriggerSleepAction(0.70)
     call CreateNUnitsAtLoc(1, 'n00B', Player(PLAYER_NEUTRAL_AGGRESSIVE), udg_pointmap, bj_UNIT_FACING)
     call RemoveLocation(udg_rainpoint)
@@ -4929,34 +10415,16 @@ function Trig_Infernal_Rain_Func001002001 takes nothing returns boolean
     return GetBooleanAnd(Trig_Infernal_Rain_Func001002001001(), Trig_Infernal_Rain_Func001002001002())
 endfunction
 
-function Trig_Infernal_Rain_Func002Func001C takes nothing returns boolean
-    if ( not ( GetUnitAbilityLevelSwapped('A02L', GetEnumUnit()) == 1 ) ) then
-        return false
-    endif
-    if ( not ( IsPlayerInForce(GetOwningPlayer(GetEnumUnit()), udg_playercountgroup) == true ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_Infernal_Rain_Func002A takes nothing returns nothing
-    if ( Trig_Infernal_Rain_Func002Func001C() ) then
-        set udg_rainpoint=GetRandomLocInRect(RectFromCenterSizeBJ(GetUnitLoc(GetEnumUnit()), 1500.00, 1500.00))
-        call AddSpecialEffectLocBJ(udg_rainpoint, "Units\\Demon\\Infernal\\InfernalBirth.mdl")
-        call PlayThematicMusicBJ("Sound\\Music\\mp3Music\\Doom.mp3")
-        call DestroyEffectBJ(GetLastCreatedEffectBJ())
-        call DisplayTextToForce(GetPlayersAll(), "TRIGSTR_028")
-        call CreateNUnitsAtLoc(1, 'n00P', Player(PLAYER_NEUTRAL_AGGRESSIVE), udg_rainpoint, bj_UNIT_FACING)
-        call DestroyForce(udg_playercountgroup)
-        call RemoveLocation(udg_rainpoint)
-    else
-        call DoNothing()
-    endif
-endfunction
-
 function Trig_Infernal_Rain_Actions takes nothing returns nothing
     set udg_playercountgroup=GetPlayersMatching(Condition(function Trig_Infernal_Rain_Func001002001))
-    call ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), function Trig_Infernal_Rain_Func002A)
+    set udg_rainpoint=GetRandomLocInRect(RectFromCenterSizeBJ(GetPlayerStartLocationLoc(ForcePickRandomPlayer(udg_playercountgroup)), 1500.00, 1500.00))
+    call PlayThematicMusicBJ("Sound\\Music\\mp3Music\\Doom.mp3")
+    call DisplayTextToForce(GetPlayersAll(), "TRIGSTR_013")
+    call AddSpecialEffectLocBJ(udg_rainpoint, "Units\\Demon\\Infernal\\InfernalBirth.mdl")
+    call CreateNUnitsAtLoc(1, 'n00P', Player(PLAYER_NEUTRAL_AGGRESSIVE), udg_rainpoint, bj_UNIT_FACING)
+    call DestroyEffectBJ(GetLastCreatedEffectBJ())
+    call DestroyForce(udg_playercountgroup)
+    call RemoveLocation(udg_rainpoint)
 endfunction
 
 //===========================================================================
@@ -5392,7 +10860,7 @@ endfunction
 
 function Trig_Sylvanas_quote_Actions takes nothing returns nothing
     if GetLocalPlayer() == GetOwningPlayer(GetTriggerUnit()) then
-    call PlaySoundOnUnitBJ(gg_snd_Sylvanasrecruited, 100, GetTrainedUnit())
+    call PlaySoundBJ(gg_snd_Sylvanasrecruited)
     call KillSoundWhenDoneBJ(GetLastPlayedSound())
     endif
 endfunction
@@ -5417,7 +10885,7 @@ endfunction
 
 function Trig_Muradin_quote_Actions takes nothing returns nothing
     if GetLocalPlayer() == GetOwningPlayer(GetTriggerUnit()) then
-    call PlaySoundOnUnitBJ(gg_snd_Muradinrecruited, 100, GetTrainedUnit())
+    call PlaySoundBJ(gg_snd_Muradinrecruited)
     call KillSoundWhenDoneBJ(GetLastPlayedSound())
     endif
 endfunction
@@ -5442,7 +10910,7 @@ endfunction
 
 function Trig_Archmage_quote_Actions takes nothing returns nothing
     if GetLocalPlayer() == GetOwningPlayer(GetTriggerUnit()) then
-    call PlaySoundOnUnitBJ(gg_snd_Jainarecruited, 100, GetTrainedUnit())
+    call PlaySoundBJ(gg_snd_Jainarecruited)
     call KillSoundWhenDoneBJ(GetLastPlayedSound())
     endif
 endfunction
@@ -5467,7 +10935,7 @@ endfunction
 
 function Trig_Paladin_quote_Actions takes nothing returns nothing
     if GetLocalPlayer() == GetOwningPlayer(GetTriggerUnit()) then
-    call PlaySoundOnUnitBJ(gg_snd_Utherrecruited, 100, GetTrainedUnit())
+    call PlaySoundBJ(gg_snd_Utherrecruited)
     call KillSoundWhenDoneBJ(GetLastPlayedSound())
     endif
 endfunction
@@ -5492,7 +10960,7 @@ endfunction
 
 function Trig_Cairne_quote_Actions takes nothing returns nothing
     if GetLocalPlayer() == GetOwningPlayer(GetTriggerUnit()) then
-    call PlaySoundOnUnitBJ(gg_snd_Cairnerecruited, 100, GetTrainedUnit())
+    call PlaySoundBJ(gg_snd_Cairnerecruited)
     call KillSoundWhenDoneBJ(GetLastPlayedSound())
     endif
 endfunction
@@ -5517,7 +10985,7 @@ endfunction
 
 function Trig_Thrall_quote_Actions takes nothing returns nothing
     if GetLocalPlayer() == GetOwningPlayer(GetTriggerUnit()) then
-    call PlaySoundOnUnitBJ(gg_snd_ThrallRecruited, 100, GetTrainedUnit())
+    call PlaySoundBJ(gg_snd_ThrallRecruited)
     call KillSoundWhenDoneBJ(GetLastPlayedSound())
     endif
 endfunction
@@ -5542,7 +11010,7 @@ endfunction
 
 function Trig_Grom_quote_Actions takes nothing returns nothing
     if GetLocalPlayer() == GetOwningPlayer(GetTriggerUnit()) then
-    call PlaySoundOnUnitBJ(gg_snd_GromRecruited, 100, GetTrainedUnit())
+    call PlaySoundBJ(gg_snd_GromRecruited)
     call KillSoundWhenDoneBJ(GetLastPlayedSound())
     endif
 endfunction
@@ -5567,7 +11035,7 @@ endfunction
 
 function Trig_Tyrande_quote_Actions takes nothing returns nothing
     if GetLocalPlayer() == GetOwningPlayer(GetTriggerUnit()) then
-    call PlaySoundOnUnitBJ(gg_snd_TyrandeRecruited, 100, GetTrainedUnit())
+    call PlaySoundBJ(gg_snd_TyrandeRecruited)
     call KillSoundWhenDoneBJ(GetLastPlayedSound())
     endif
 endfunction
@@ -5868,7 +11336,7 @@ endfunction
 
 function Trig_Furion_quote_Actions takes nothing returns nothing
     if GetLocalPlayer() == GetOwningPlayer(GetTriggerUnit()) then
-    call PlaySoundOnUnitBJ(gg_snd_FurionRecruited, 100, GetTrainedUnit())
+    call PlaySoundBJ(gg_snd_FurionRecruited)
     call KillSoundWhenDoneBJ(GetLastPlayedSound())
     endif
 endfunction
@@ -5893,7 +11361,7 @@ endfunction
 
 function Trig_KelThuzad_quote_Actions takes nothing returns nothing
     if GetLocalPlayer() == GetOwningPlayer(GetTriggerUnit()) then
-    call PlaySoundOnUnitBJ(gg_snd_KelThuzadrecruited, 100, GetTrainedUnit())
+    call PlaySoundBJ(gg_snd_KelThuzadrecruited)
     call KillSoundWhenDoneBJ(GetLastPlayedSound())
     endif
 endfunction
@@ -5918,7 +11386,7 @@ endfunction
 
 function Trig_Arthas_quote_Actions takes nothing returns nothing
     if GetLocalPlayer() == GetOwningPlayer(GetTriggerUnit()) then
-    call PlaySoundOnUnitBJ(gg_snd_Arthasrecruited, 100, GetTrainedUnit())
+    call PlaySoundBJ(gg_snd_Arthasrecruited)
     call KillSoundWhenDoneBJ(GetLastPlayedSound())
     endif
 endfunction
@@ -6198,10 +11666,10 @@ function Trig_Demon_gate_Actions takes nothing returns nothing
     else
         set udg_TempGroup=GetForceOfPlayer(GetTriggerPlayer())
         if GetLocalPlayer() == GetOwningPlayer(GetTriggerUnit()) then
-        call PlaySoundBJ(gg_snd_NecromancerNoGold1)
+        call PlaySoundBJ(gg_snd_NecromancerNoLumber1)
         call KillSoundWhenDoneBJ(GetLastPlayedSound())
         endif
-        call DisplayTimedTextToForce(udg_TempGroup, 10.00, "TRIGSTR_029")
+        call DisplayTimedTextToForce(udg_TempGroup, 10.00, "TRIGSTR_014")
         call IssueImmediateOrderBJ(GetTriggerUnit(), "stop")
         call DestroyForce(udg_TempGroup)
     endif
@@ -7164,7 +12632,7 @@ function Trig_Melee_Initialization_Func001A takes nothing returns nothing
     call SetPlayerTechMaxAllowedSwap('H00A', 1, GetEnumPlayer())
     call SetPlayerTechMaxAllowedSwap('H00B', 1, GetEnumPlayer())
     call SetPlayerTechMaxAllowedSwap('H00I', 1, GetEnumPlayer())
-    call SetPlayerTechMaxAllowedSwap('U005', 1, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('H00L', 1, GetEnumPlayer())
     call SetPlayerTechMaxAllowedSwap('E001', 1, GetEnumPlayer())
     call SetPlayerTechMaxAllowedSwap('E002', 1, GetEnumPlayer())
     call SetPlayerTechMaxAllowedSwap('E003', 1, GetEnumPlayer())
@@ -7315,7 +12783,7 @@ function Trig_Speed_Aura_Actions takes nothing returns nothing
     set udg_SparkyUnit=GetSpellTargetUnit()
     if ( Trig_Speed_Aura_Func002C() ) then
         if ( Trig_Speed_Aura_Func002Func002C() ) then
-            call CreateTextTagUnitBJ("TRIGSTR_030", udg_SparkyUnit, 0, 10, 0.00, 0.00, 75.00, 0)
+            call CreateTextTagUnitBJ("TRIGSTR_015", udg_SparkyUnit, 0, 10, 0.00, 0.00, 75.00, 0)
             call SetTextTagPermanentBJ(GetLastCreatedTextTag(), false)
             call SetTextTagVelocityBJ(GetLastCreatedTextTag(), 64, 90)
             call SetTextTagFadepointBJ(GetLastCreatedTextTag(), 3.00)
@@ -7329,7 +12797,7 @@ function Trig_Speed_Aura_Actions takes nothing returns nothing
         endif
         set udg_SparkyUnit=GetSpellTargetUnit()
         if ( Trig_Speed_Aura_Func002Func004C() ) then
-            call CreateTextTagUnitBJ("TRIGSTR_031", udg_SparkyUnit, 0, 10, 0.00, 0.00, 75.00, 0)
+            call CreateTextTagUnitBJ("TRIGSTR_016", udg_SparkyUnit, 0, 10, 0.00, 0.00, 75.00, 0)
             call SetTextTagPermanentBJ(GetLastCreatedTextTag(), false)
             call SetTextTagVelocityBJ(GetLastCreatedTextTag(), 64, 90)
             call SetTextTagFadepointBJ(GetLastCreatedTextTag(), 3.00)
@@ -7342,7 +12810,7 @@ function Trig_Speed_Aura_Actions takes nothing returns nothing
         endif
         set udg_SparkyUnit=GetSpellTargetUnit()
         if ( Trig_Speed_Aura_Func002Func006C() ) then
-            call CreateTextTagUnitBJ("TRIGSTR_032", udg_SparkyUnit, 0, 10, 0.00, 0.00, 75.00, 0)
+            call CreateTextTagUnitBJ("TRIGSTR_017", udg_SparkyUnit, 0, 10, 0.00, 0.00, 75.00, 0)
             call SetTextTagPermanentBJ(GetLastCreatedTextTag(), false)
             call SetTextTagVelocityBJ(GetLastCreatedTextTag(), 64, 90)
             call SetTextTagFadepointBJ(GetLastCreatedTextTag(), 3.00)
@@ -7357,7 +12825,7 @@ function Trig_Speed_Aura_Actions takes nothing returns nothing
     endif
     if ( Trig_Speed_Aura_Func003C() ) then
         if ( Trig_Speed_Aura_Func003Func002C() ) then
-            call CreateTextTagUnitBJ("TRIGSTR_033", udg_SparkyUnit, 0, 10, 0.00, 0.00, 75.00, 0)
+            call CreateTextTagUnitBJ("TRIGSTR_018", udg_SparkyUnit, 0, 10, 0.00, 0.00, 75.00, 0)
             call SetTextTagPermanentBJ(GetLastCreatedTextTag(), false)
             call SetTextTagVelocityBJ(GetLastCreatedTextTag(), 64, 90)
             call SetTextTagFadepointBJ(GetLastCreatedTextTag(), 3.00)
@@ -7370,7 +12838,7 @@ function Trig_Speed_Aura_Actions takes nothing returns nothing
         endif
         set udg_SparkyUnit=GetSpellTargetUnit()
         if ( Trig_Speed_Aura_Func003Func004C() ) then
-            call CreateTextTagUnitBJ("TRIGSTR_034", udg_SparkyUnit, 0, 10, 0.00, 0.00, 75.00, 0)
+            call CreateTextTagUnitBJ("TRIGSTR_019", udg_SparkyUnit, 0, 10, 0.00, 0.00, 75.00, 0)
             call SetTextTagPermanentBJ(GetLastCreatedTextTag(), false)
             call SetTextTagVelocityBJ(GetLastCreatedTextTag(), 64, 90)
             call SetTextTagFadepointBJ(GetLastCreatedTextTag(), 3.00)
@@ -7383,7 +12851,7 @@ function Trig_Speed_Aura_Actions takes nothing returns nothing
         endif
         set udg_SparkyUnit=GetSpellTargetUnit()
         if ( Trig_Speed_Aura_Func003Func006C() ) then
-            call CreateTextTagUnitBJ("TRIGSTR_035", udg_SparkyUnit, 0, 10, 0.00, 0.00, 75.00, 0)
+            call CreateTextTagUnitBJ("TRIGSTR_020", udg_SparkyUnit, 0, 10, 0.00, 0.00, 75.00, 0)
             call SetTextTagPermanentBJ(GetLastCreatedTextTag(), false)
             call SetTextTagVelocityBJ(GetLastCreatedTextTag(), 64, 90)
             call SetTextTagFadepointBJ(GetLastCreatedTextTag(), 3.00)
@@ -7398,7 +12866,7 @@ function Trig_Speed_Aura_Actions takes nothing returns nothing
     endif
     if ( Trig_Speed_Aura_Func004C() ) then
         if ( Trig_Speed_Aura_Func004Func002C() ) then
-            call CreateTextTagUnitBJ("TRIGSTR_036", udg_SparkyUnit, 0, 10, 0.00, 0.00, 75.00, 0)
+            call CreateTextTagUnitBJ("TRIGSTR_021", udg_SparkyUnit, 0, 10, 0.00, 0.00, 75.00, 0)
             call SetTextTagPermanentBJ(GetLastCreatedTextTag(), false)
             call SetTextTagVelocityBJ(GetLastCreatedTextTag(), 64, 90)
             call SetTextTagFadepointBJ(GetLastCreatedTextTag(), 3.00)
@@ -7411,7 +12879,7 @@ function Trig_Speed_Aura_Actions takes nothing returns nothing
         endif
         set udg_SparkyUnit=GetSpellTargetUnit()
         if ( Trig_Speed_Aura_Func004Func004C() ) then
-            call CreateTextTagUnitBJ("TRIGSTR_037", udg_SparkyUnit, 0, 10, 0.00, 0.00, 75.00, 0)
+            call CreateTextTagUnitBJ("TRIGSTR_022", udg_SparkyUnit, 0, 10, 0.00, 0.00, 75.00, 0)
             call SetTextTagPermanentBJ(GetLastCreatedTextTag(), false)
             call SetTextTagVelocityBJ(GetLastCreatedTextTag(), 64, 90)
             call SetTextTagFadepointBJ(GetLastCreatedTextTag(), 3.00)
@@ -7424,7 +12892,7 @@ function Trig_Speed_Aura_Actions takes nothing returns nothing
         endif
         set udg_SparkyUnit=GetSpellTargetUnit()
         if ( Trig_Speed_Aura_Func004Func006C() ) then
-            call CreateTextTagUnitBJ("TRIGSTR_038", udg_SparkyUnit, 0, 10, 0.00, 0.00, 75.00, 0)
+            call CreateTextTagUnitBJ("TRIGSTR_023", udg_SparkyUnit, 0, 10, 0.00, 0.00, 75.00, 0)
             call SetTextTagPermanentBJ(GetLastCreatedTextTag(), false)
             call SetTextTagVelocityBJ(GetLastCreatedTextTag(), 64, 90)
             call SetTextTagFadepointBJ(GetLastCreatedTextTag(), 3.00)
@@ -8707,8 +14175,8 @@ function Trig_Maelstrom_Config_Actions takes nothing returns nothing
     set udg_M_SpeedBase=400.00
     set udg_M_Speed=( udg_M_SpeedBase * udg_M_Loops )
     set udg_M_AnglePlus=67.50
-    set udg_M_SuckSFX="Abilities\\Weapons\\AncientProtectorMissile\\AncientProtectorMissile.mdl"
-    set udg_M_Duration[1]=5.00
+    set udg_M_SuckSFX="Abilities\\Weapons\\SeaElementalMissile\\SeaElementalMissile.mdl"
+    set udg_M_Duration[1]=6.00
     set udg_M_Duration[2]=6.00
     set udg_M_Duration[3]=7.00
     set udg_M_TornadoSFX="Abilities\\Spells\\Other\\Tornado\\TornadoElemental"
@@ -8896,7 +14364,7 @@ endfunction
 // Trigger: Безымянный триггер 004
 //===========================================================================
 function Trig_____________________________________004_Actions takes nothing returns nothing
-    call CreateTimerDialogBJ(udg_Timer, "TRIGSTR_039")
+    call CreateTimerDialogBJ(udg_Timer, "TRIGSTR_024")
     set udg_TimeWindow=GetLastCreatedTimerDialogBJ()
 endfunction
 
@@ -8924,7 +14392,90 @@ function InitTrig_____________________________________005 takes nothing returns 
 endfunction
 
 //===========================================================================
+// Trigger: AIBuff
+//===========================================================================
+function Trig_AIBuff_Func002A takes nothing returns nothing
+    call SetPlayerHandicapBJ(GetEnumPlayer(), 200.00)
+endfunction
+
+function Trig_AIBuff_Actions takes nothing returns nothing
+    set udg_AIplayers=GetPlayersByMapControl(MAP_CONTROL_COMPUTER)
+    call ForForce(udg_AIplayers, function Trig_AIBuff_Func002A)
+endfunction
+
+//===========================================================================
+function InitTrig_AIBuff takes nothing returns nothing
+    set gg_trg_AIBuff=CreateTrigger()
+    call TriggerRegisterPlayerChatEvent(gg_trg_AIBuff, Player(0), "-hardmode", true)
+    call TriggerAddAction(gg_trg_AIBuff, function Trig_AIBuff_Actions)
+endfunction
+
+//===========================================================================
 function InitCustomTriggers takes nothing returns nothing
+    call InitTrig_____________________________________003()
+    call InitTrig_UDQuestItem()
+    call InitTrig_UDQuestItemCondition_____________________u()
+    call InitTrig_UDQuestItemCondition()
+    call InitTrig_UDQuestitem()
+    call InitTrig_Tip()
+    call InitTrig_UDQuestLeaderboardUpdate()
+    call InitTrig_UDQuestLeaderboard_Player_1()
+    call InitTrig_UDQuestLeaderboard_Player_2()
+    call InitTrig_UDQuestLeaderboard_Player_3()
+    call InitTrig_UDQuestLeaderboard_Player_4()
+    call InitTrig_UDQuestLeaderboard_Player_5()
+    call InitTrig_UDQuestLeaderboard_Player_6()
+    call InitTrig_UDQuestStart()
+    call InitTrig_UDQuest()
+    call InitTrig_UDCircle()
+    call InitTrig_UDCircle_Player_2()
+    call InitTrig_UDCircle_Player_3()
+    call InitTrig_UDCircle_Player_4()
+    call InitTrig_UDCircle_Player_5()
+    call InitTrig_UDCircle_Player_6()
+    call InitTrig_UDQuestAchievement()
+    call InitTrig_OrcQuestItem()
+    call InitTrig_OrcQuest()
+    call InitTrig_OrcQuestStart()
+    call InitTrig_OrcQuestLeaderboard_Player_1()
+    call InitTrig_OrcQuestLeaderboard_Player_2()
+    call InitTrig_OrcQuestLeaderboard_Player_3()
+    call InitTrig_OrcQuestLeaderboard_Player_4()
+    call InitTrig_OrcQuestLeaderboard_Player_5()
+    call InitTrig_OrcQuestLeaderboard_Player_6()
+    call InitTrig_OrcQuestLeaderboardUpdate()
+    call InitTrig_Penatly()
+    call InitTrig_Bonus()
+    call InitTrig_Penalty_2()
+    call InitTrig_Bonus_2()
+    call InitTrig_Penatly_3()
+    call InitTrig_Bonus_3()
+    call InitTrig_Penatly_4()
+    call InitTrig_Bonus_4()
+    call InitTrig_OrcQuestDone_Player_1()
+    call InitTrig_Quest_5k_player_1()
+    call InitTrig_Quest15000_player_1()
+    call InitTrig_QuestComplete_Player_1()
+    call InitTrig_OrcQuestDone_Player_2()
+    call InitTrig_Quest_5k_player_2()
+    call InitTrig_Quest15000_player_2()
+    call InitTrig_QuestComplete_Player_2()
+    call InitTrig_OrcQuestDone_Player_2_____________________u()
+    call InitTrig_Quest_5k_player_2_____________________u()
+    call InitTrig_Quest15000_player_2_____________________u()
+    call InitTrig_QuestComplete_Player_2_____________________u()
+    call InitTrig_OrcQuestDone_Player_2__________________________________________u()
+    call InitTrig_Quest_5k_player_2__________________________________________u()
+    call InitTrig_Quest15000_player_2__________________________________________u()
+    call InitTrig_QuestComplete_Player_2__________________________________________u()
+    call InitTrig_OrcQuestDone_Player_2_______________________________________________________________u()
+    call InitTrig_Quest_5k_player_2_______________________________________________________________u()
+    call InitTrig_Quest15000_player_2_______________________________________________________________u()
+    call InitTrig_QuestComplete_Player_2_______________________________________________________________u()
+    call InitTrig_OrcQuestDone_Player_2_____________________________________________________________________u()
+    call InitTrig_Quest_5k_player_2_________________________________________________________________________u()
+    call InitTrig_Quest15000_player_2_______________________________________________________________________u()
+    call InitTrig_QuestComplete_Player_2____________________________________________________________________u()
     call InitTrig_Settings()
     call InitTrig_Random_Weather()
     call InitTrig_____________________________________002_____________________u()
@@ -9042,10 +14593,14 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_Maelstrom_Loop()
     call InitTrig_____________________________________004()
     call InitTrig_____________________________________005()
+    call InitTrig_AIBuff()
 endfunction
 
 //===========================================================================
 function RunInitializationTriggers takes nothing returns nothing
+    call ConditionalTriggerExecute(gg_trg_UDQuest)
+    call ConditionalTriggerExecute(gg_trg_OrcQuest)
+    call ConditionalTriggerExecute(gg_trg_OrcQuestStart)
     call ConditionalTriggerExecute(gg_trg_Settings)
     call ConditionalTriggerExecute(gg_trg_False_Promise_Config)
     call ConditionalTriggerExecute(gg_trg_Unit_Indexer)
@@ -9063,26 +14618,38 @@ endfunction
 
 function InitUpgrades_Player0 takes nothing returns nothing
     call SetPlayerTechMaxAllowed(Player(0), 'R008', 0)
+    call SetPlayerTechMaxAllowed(Player(0), 'R009', 0)
+    call SetPlayerTechMaxAllowed(Player(0), 'R00A', 0)
 endfunction
 
 function InitUpgrades_Player1 takes nothing returns nothing
     call SetPlayerTechMaxAllowed(Player(1), 'R008', 0)
+    call SetPlayerTechMaxAllowed(Player(1), 'R009', 0)
+    call SetPlayerTechMaxAllowed(Player(1), 'R00A', 0)
 endfunction
 
 function InitUpgrades_Player2 takes nothing returns nothing
     call SetPlayerTechMaxAllowed(Player(2), 'R008', 0)
+    call SetPlayerTechMaxAllowed(Player(2), 'R009', 0)
+    call SetPlayerTechMaxAllowed(Player(2), 'R00A', 0)
 endfunction
 
 function InitUpgrades_Player3 takes nothing returns nothing
     call SetPlayerTechMaxAllowed(Player(3), 'R008', 0)
+    call SetPlayerTechMaxAllowed(Player(3), 'R009', 0)
+    call SetPlayerTechMaxAllowed(Player(3), 'R00A', 0)
 endfunction
 
 function InitUpgrades_Player4 takes nothing returns nothing
     call SetPlayerTechMaxAllowed(Player(4), 'R008', 0)
+    call SetPlayerTechMaxAllowed(Player(4), 'R009', 0)
+    call SetPlayerTechMaxAllowed(Player(4), 'R00A', 0)
 endfunction
 
 function InitUpgrades_Player5 takes nothing returns nothing
     call SetPlayerTechMaxAllowed(Player(5), 'R008', 0)
+    call SetPlayerTechMaxAllowed(Player(5), 'R009', 0)
+    call SetPlayerTechMaxAllowed(Player(5), 'R00A', 0)
 endfunction
 
 function InitUpgrades takes nothing returns nothing
@@ -9101,116 +14668,122 @@ endfunction
 //***************************************************************************
 
 function InitTechTree_Player0 takes nothing returns nothing
+    call SetPlayerAbilityAvailable(Player(0), 'A00X', false)
     call SetPlayerTechMaxAllowed(Player(0), 'h00G', 0)
-    call SetPlayerTechMaxAllowed(Player(0), 'nbt1', 0)
-    call SetPlayerTechMaxAllowed(Player(0), 'ndt1', 0)
-    call SetPlayerTechMaxAllowed(Player(0), 'net1', 0)
-    call SetPlayerTechMaxAllowed(Player(0), 'nft1', 0)
     call SetPlayerTechMaxAllowed(Player(0), 'nbt2', 0)
     call SetPlayerTechMaxAllowed(Player(0), 'ndt2', 0)
     call SetPlayerTechMaxAllowed(Player(0), 'net2', 0)
     call SetPlayerTechMaxAllowed(Player(0), 'nft2', 0)
     call SetPlayerTechMaxAllowed(Player(0), 'ntx2', 0)
+    call SetPlayerTechMaxAllowed(Player(0), 'nft1', 0)
+    call SetPlayerTechMaxAllowed(Player(0), 'net1', 0)
+    call SetPlayerTechMaxAllowed(Player(0), 'ndt1', 0)
+    call SetPlayerTechMaxAllowed(Player(0), 'nbt1', 0)
     call SetPlayerTechMaxAllowed(Player(0), 'nchw', 0)
-    call SetPlayerTechMaxAllowed(Player(0), 'nchg', 0)
     call SetPlayerTechMaxAllowed(Player(0), 'nchr', 0)
-    call SetPlayerTechMaxAllowed(Player(0), 'nckb', 0)
+    call SetPlayerTechMaxAllowed(Player(0), 'nchg', 0)
     call SetPlayerTechMaxAllowed(Player(0), 'ncpn', 0)
+    call SetPlayerTechMaxAllowed(Player(0), 'nckb', 0)
     call SetPlayerTechMaxAllowed(Player(0), 'o007', 0)
 endfunction
 
 function InitTechTree_Player1 takes nothing returns nothing
+    call SetPlayerAbilityAvailable(Player(1), 'A00X', false)
     call SetPlayerTechMaxAllowed(Player(1), 'h00G', 0)
-    call SetPlayerTechMaxAllowed(Player(1), 'nbt1', 0)
-    call SetPlayerTechMaxAllowed(Player(1), 'ndt1', 0)
-    call SetPlayerTechMaxAllowed(Player(1), 'net1', 0)
-    call SetPlayerTechMaxAllowed(Player(1), 'nft1', 0)
     call SetPlayerTechMaxAllowed(Player(1), 'nbt2', 0)
     call SetPlayerTechMaxAllowed(Player(1), 'ndt2', 0)
     call SetPlayerTechMaxAllowed(Player(1), 'net2', 0)
     call SetPlayerTechMaxAllowed(Player(1), 'nft2', 0)
     call SetPlayerTechMaxAllowed(Player(1), 'ntx2', 0)
+    call SetPlayerTechMaxAllowed(Player(1), 'nft1', 0)
+    call SetPlayerTechMaxAllowed(Player(1), 'net1', 0)
+    call SetPlayerTechMaxAllowed(Player(1), 'ndt1', 0)
+    call SetPlayerTechMaxAllowed(Player(1), 'nbt1', 0)
     call SetPlayerTechMaxAllowed(Player(1), 'nchw', 0)
-    call SetPlayerTechMaxAllowed(Player(1), 'nchg', 0)
     call SetPlayerTechMaxAllowed(Player(1), 'nchr', 0)
-    call SetPlayerTechMaxAllowed(Player(1), 'nckb', 0)
+    call SetPlayerTechMaxAllowed(Player(1), 'nchg', 0)
     call SetPlayerTechMaxAllowed(Player(1), 'ncpn', 0)
+    call SetPlayerTechMaxAllowed(Player(1), 'nckb', 0)
     call SetPlayerTechMaxAllowed(Player(1), 'o007', 0)
 endfunction
 
 function InitTechTree_Player2 takes nothing returns nothing
+    call SetPlayerAbilityAvailable(Player(2), 'A00X', false)
     call SetPlayerTechMaxAllowed(Player(2), 'h00G', 0)
-    call SetPlayerTechMaxAllowed(Player(2), 'nbt1', 0)
-    call SetPlayerTechMaxAllowed(Player(2), 'ndt1', 0)
-    call SetPlayerTechMaxAllowed(Player(2), 'net1', 0)
-    call SetPlayerTechMaxAllowed(Player(2), 'nft1', 0)
     call SetPlayerTechMaxAllowed(Player(2), 'nbt2', 0)
     call SetPlayerTechMaxAllowed(Player(2), 'ndt2', 0)
     call SetPlayerTechMaxAllowed(Player(2), 'net2', 0)
     call SetPlayerTechMaxAllowed(Player(2), 'nft2', 0)
     call SetPlayerTechMaxAllowed(Player(2), 'ntx2', 0)
+    call SetPlayerTechMaxAllowed(Player(2), 'nft1', 0)
+    call SetPlayerTechMaxAllowed(Player(2), 'net1', 0)
+    call SetPlayerTechMaxAllowed(Player(2), 'ndt1', 0)
+    call SetPlayerTechMaxAllowed(Player(2), 'nbt1', 0)
     call SetPlayerTechMaxAllowed(Player(2), 'nchw', 0)
-    call SetPlayerTechMaxAllowed(Player(2), 'nchg', 0)
     call SetPlayerTechMaxAllowed(Player(2), 'nchr', 0)
-    call SetPlayerTechMaxAllowed(Player(2), 'nckb', 0)
+    call SetPlayerTechMaxAllowed(Player(2), 'nchg', 0)
     call SetPlayerTechMaxAllowed(Player(2), 'ncpn', 0)
+    call SetPlayerTechMaxAllowed(Player(2), 'nckb', 0)
     call SetPlayerTechMaxAllowed(Player(2), 'o007', 0)
 endfunction
 
 function InitTechTree_Player3 takes nothing returns nothing
+    call SetPlayerAbilityAvailable(Player(3), 'A00X', false)
     call SetPlayerTechMaxAllowed(Player(3), 'h00G', 0)
-    call SetPlayerTechMaxAllowed(Player(3), 'nbt1', 0)
-    call SetPlayerTechMaxAllowed(Player(3), 'ndt1', 0)
-    call SetPlayerTechMaxAllowed(Player(3), 'net1', 0)
-    call SetPlayerTechMaxAllowed(Player(3), 'nft1', 0)
     call SetPlayerTechMaxAllowed(Player(3), 'nbt2', 0)
     call SetPlayerTechMaxAllowed(Player(3), 'ndt2', 0)
     call SetPlayerTechMaxAllowed(Player(3), 'net2', 0)
     call SetPlayerTechMaxAllowed(Player(3), 'nft2', 0)
     call SetPlayerTechMaxAllowed(Player(3), 'ntx2', 0)
+    call SetPlayerTechMaxAllowed(Player(3), 'nft1', 0)
+    call SetPlayerTechMaxAllowed(Player(3), 'net1', 0)
+    call SetPlayerTechMaxAllowed(Player(3), 'ndt1', 0)
+    call SetPlayerTechMaxAllowed(Player(3), 'nbt1', 0)
     call SetPlayerTechMaxAllowed(Player(3), 'nchw', 0)
-    call SetPlayerTechMaxAllowed(Player(3), 'nchg', 0)
     call SetPlayerTechMaxAllowed(Player(3), 'nchr', 0)
-    call SetPlayerTechMaxAllowed(Player(3), 'nckb', 0)
+    call SetPlayerTechMaxAllowed(Player(3), 'nchg', 0)
     call SetPlayerTechMaxAllowed(Player(3), 'ncpn', 0)
+    call SetPlayerTechMaxAllowed(Player(3), 'nckb', 0)
     call SetPlayerTechMaxAllowed(Player(3), 'o007', 0)
 endfunction
 
 function InitTechTree_Player4 takes nothing returns nothing
+    call SetPlayerAbilityAvailable(Player(4), 'A00X', false)
     call SetPlayerTechMaxAllowed(Player(4), 'h00G', 0)
-    call SetPlayerTechMaxAllowed(Player(4), 'nbt1', 0)
-    call SetPlayerTechMaxAllowed(Player(4), 'ndt1', 0)
-    call SetPlayerTechMaxAllowed(Player(4), 'net1', 0)
-    call SetPlayerTechMaxAllowed(Player(4), 'nft1', 0)
     call SetPlayerTechMaxAllowed(Player(4), 'nbt2', 0)
     call SetPlayerTechMaxAllowed(Player(4), 'ndt2', 0)
     call SetPlayerTechMaxAllowed(Player(4), 'net2', 0)
     call SetPlayerTechMaxAllowed(Player(4), 'nft2', 0)
     call SetPlayerTechMaxAllowed(Player(4), 'ntx2', 0)
+    call SetPlayerTechMaxAllowed(Player(4), 'nft1', 0)
+    call SetPlayerTechMaxAllowed(Player(4), 'net1', 0)
+    call SetPlayerTechMaxAllowed(Player(4), 'ndt1', 0)
+    call SetPlayerTechMaxAllowed(Player(4), 'nbt1', 0)
     call SetPlayerTechMaxAllowed(Player(4), 'nchw', 0)
-    call SetPlayerTechMaxAllowed(Player(4), 'nchg', 0)
     call SetPlayerTechMaxAllowed(Player(4), 'nchr', 0)
-    call SetPlayerTechMaxAllowed(Player(4), 'nckb', 0)
+    call SetPlayerTechMaxAllowed(Player(4), 'nchg', 0)
     call SetPlayerTechMaxAllowed(Player(4), 'ncpn', 0)
+    call SetPlayerTechMaxAllowed(Player(4), 'nckb', 0)
     call SetPlayerTechMaxAllowed(Player(4), 'o007', 0)
 endfunction
 
 function InitTechTree_Player5 takes nothing returns nothing
+    call SetPlayerAbilityAvailable(Player(5), 'A00X', false)
     call SetPlayerTechMaxAllowed(Player(5), 'h00G', 0)
-    call SetPlayerTechMaxAllowed(Player(5), 'nbt1', 0)
-    call SetPlayerTechMaxAllowed(Player(5), 'ndt1', 0)
-    call SetPlayerTechMaxAllowed(Player(5), 'net1', 0)
-    call SetPlayerTechMaxAllowed(Player(5), 'nft1', 0)
     call SetPlayerTechMaxAllowed(Player(5), 'nbt2', 0)
     call SetPlayerTechMaxAllowed(Player(5), 'ndt2', 0)
     call SetPlayerTechMaxAllowed(Player(5), 'net2', 0)
     call SetPlayerTechMaxAllowed(Player(5), 'nft2', 0)
     call SetPlayerTechMaxAllowed(Player(5), 'ntx2', 0)
+    call SetPlayerTechMaxAllowed(Player(5), 'nft1', 0)
+    call SetPlayerTechMaxAllowed(Player(5), 'net1', 0)
+    call SetPlayerTechMaxAllowed(Player(5), 'ndt1', 0)
+    call SetPlayerTechMaxAllowed(Player(5), 'nbt1', 0)
     call SetPlayerTechMaxAllowed(Player(5), 'nchw', 0)
-    call SetPlayerTechMaxAllowed(Player(5), 'nchg', 0)
     call SetPlayerTechMaxAllowed(Player(5), 'nchr', 0)
-    call SetPlayerTechMaxAllowed(Player(5), 'nckb', 0)
+    call SetPlayerTechMaxAllowed(Player(5), 'nchg', 0)
     call SetPlayerTechMaxAllowed(Player(5), 'ncpn', 0)
+    call SetPlayerTechMaxAllowed(Player(5), 'nckb', 0)
     call SetPlayerTechMaxAllowed(Player(5), 'o007', 0)
 endfunction
 
@@ -9276,7 +14849,7 @@ function InitCustomPlayerSlots takes nothing returns nothing
 endfunction
 
 function InitCustomTeams takes nothing returns nothing
-    // Force: TRIGSTR_011
+    // Force: TRIGSTR_006
     call SetPlayerTeam(Player(0), 0)
     call SetPlayerTeam(Player(1), 0)
     call SetPlayerTeam(Player(2), 0)
@@ -9288,25 +14861,29 @@ endfunction
 
 function InitAllyPriorities takes nothing returns nothing
 
-    call SetStartLocPrioCount(0, 1)
-    call SetStartLocPrio(0, 0, 2, MAP_LOC_PRIO_HIGH)
+    call SetStartLocPrioCount(0, 2)
+    call SetStartLocPrio(0, 0, 1, MAP_LOC_PRIO_HIGH)
+    call SetStartLocPrio(0, 1, 5, MAP_LOC_PRIO_HIGH)
 
     call SetStartLocPrioCount(1, 2)
     call SetStartLocPrio(1, 0, 0, MAP_LOC_PRIO_HIGH)
     call SetStartLocPrio(1, 1, 2, MAP_LOC_PRIO_HIGH)
 
-    call SetStartLocPrioCount(2, 1)
-    call SetStartLocPrio(2, 0, 0, MAP_LOC_PRIO_HIGH)
+    call SetStartLocPrioCount(2, 2)
+    call SetStartLocPrio(2, 0, 1, MAP_LOC_PRIO_HIGH)
+    call SetStartLocPrio(2, 1, 3, MAP_LOC_PRIO_HIGH)
 
-    call SetStartLocPrioCount(3, 1)
-    call SetStartLocPrio(3, 0, 5, MAP_LOC_PRIO_HIGH)
+    call SetStartLocPrioCount(3, 2)
+    call SetStartLocPrio(3, 0, 2, MAP_LOC_PRIO_HIGH)
+    call SetStartLocPrio(3, 1, 4, MAP_LOC_PRIO_HIGH)
 
     call SetStartLocPrioCount(4, 2)
     call SetStartLocPrio(4, 0, 3, MAP_LOC_PRIO_HIGH)
     call SetStartLocPrio(4, 1, 5, MAP_LOC_PRIO_HIGH)
 
-    call SetStartLocPrioCount(5, 1)
-    call SetStartLocPrio(5, 0, 3, MAP_LOC_PRIO_HIGH)
+    call SetStartLocPrioCount(5, 2)
+    call SetStartLocPrio(5, 0, 0, MAP_LOC_PRIO_HIGH)
+    call SetStartLocPrio(5, 1, 4, MAP_LOC_PRIO_HIGH)
 endfunction
 
 //***************************************************************************
@@ -9317,13 +14894,11 @@ endfunction
 
 //===========================================================================
 function main takes nothing returns nothing
-    call SetCameraBounds(- 8704.0 + GetCameraMargin(CAMERA_MARGIN_LEFT), - 7680.0 + GetCameraMargin(CAMERA_MARGIN_BOTTOM), 8960.0 - GetCameraMargin(CAMERA_MARGIN_RIGHT), 7168.0 - GetCameraMargin(CAMERA_MARGIN_TOP), - 8704.0 + GetCameraMargin(CAMERA_MARGIN_LEFT), 7168.0 - GetCameraMargin(CAMERA_MARGIN_TOP), 8960.0 - GetCameraMargin(CAMERA_MARGIN_RIGHT), - 7680.0 + GetCameraMargin(CAMERA_MARGIN_BOTTOM))
+    call SetCameraBounds(- 9472.0 + GetCameraMargin(CAMERA_MARGIN_LEFT), - 9728.0 + GetCameraMargin(CAMERA_MARGIN_BOTTOM), 9472.0 - GetCameraMargin(CAMERA_MARGIN_RIGHT), 9216.0 - GetCameraMargin(CAMERA_MARGIN_TOP), - 9472.0 + GetCameraMargin(CAMERA_MARGIN_LEFT), 9216.0 - GetCameraMargin(CAMERA_MARGIN_TOP), 9472.0 - GetCameraMargin(CAMERA_MARGIN_RIGHT), - 9728.0 + GetCameraMargin(CAMERA_MARGIN_BOTTOM))
     call SetDayNightModels("Environment\\DNC\\DNCLordaeron\\DNCLordaeronTerrain\\DNCLordaeronTerrain.mdl", "Environment\\DNC\\DNCLordaeron\\DNCLordaeronUnit\\DNCLordaeronUnit.mdl")
-    call SetTerrainFogEx(0, 2500.0, 5000.0, 0.500, 0.502, 1.000, 0.502)
-    call SetWaterBaseColor(128, 255, 128, 255)
-    call NewSoundEnvironment("lake")
-    call SetAmbientDaySound("SunkenRuinsDay")
-    call SetAmbientNightSound("SunkenRuinsNight")
+    call NewSoundEnvironment("Default")
+    call SetAmbientDaySound("CityScapeDay")
+    call SetAmbientNightSound("CityScapeNight")
     call SetMapMusic("Music", true, 0)
     call InitSounds()
     call InitUpgrades()
@@ -9345,18 +14920,18 @@ endfunction
 //***************************************************************************
 
 function config takes nothing returns nothing
-    call SetMapName("TRIGSTR_001")
-    call SetMapDescription("TRIGSTR_003")
+    call SetMapName("TRIGSTR_007")
+    call SetMapDescription("TRIGSTR_009")
     call SetPlayers(6)
     call SetTeams(6)
     call SetGamePlacement(MAP_PLACEMENT_TEAMS_TOGETHER)
 
-    call DefineStartLocation(0, - 5760.0, 4736.0)
-    call DefineStartLocation(1, - 5888.0, - 512.0)
-    call DefineStartLocation(2, - 5632.0, - 5312.0)
-    call DefineStartLocation(3, 5376.0, 5056.0)
-    call DefineStartLocation(4, 6080.0, - 832.0)
-    call DefineStartLocation(5, 5696.0, - 5440.0)
+    call DefineStartLocation(0, - 6016.0, 7936.0)
+    call DefineStartLocation(1, 6400.0, 7936.0)
+    call DefineStartLocation(2, 8000.0, - 1088.0)
+    call DefineStartLocation(3, 4608.0, - 8448.0)
+    call DefineStartLocation(4, - 7616.0, - 8128.0)
+    call DefineStartLocation(5, - 8128.0, 448.0)
 
     // Player setup
     call InitCustomPlayerSlots()

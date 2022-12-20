@@ -70,15 +70,15 @@ war3mapImported\BTNWarglaive_of_Azzinoth.blp
 war3mapImported\BTNWindsBow.BLP
 war3mapImported\Cairnerecruited.mp3
 ReplaceableTextures\CommandButtonsDisabled\DISATCANA_StaffOfLightning.BLP
-war3mapImported\DISATCEnchantedChains.blp
-war3mapImported\DISATCEye of the Storm 1.blp
+ReplaceableTextures\CommandButtonsDisabled\DISATCEnchantedChains.blp
+ReplaceableTextures\CommandButtonsDisabled\DISATCEye of the Storm 1.blp
 war3mapImported\DISATCEyeOfVertex.blp
 war3mapImported\DISATCGreenDeath.blp
 war3mapImported\DISATCHolyBow.BLP
 war3mapImported\DISATCHorribleOrgan.blp
 war3mapImported\DISATCMoonflies.blp
 war3mapImported\DISATCMoonLight.blp
-war3mapImported\DISATCPhantomArrow.blp
+ReplaceableTextures\CommandButtonsDisabled\DISATCPhantomArrow.blp
 war3mapImported\DISATCRaven_Crown.blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNAdmiral........blp
 ReplaceableTextures\CommandButtonsDisabled\DISBTNANA_StaffOfLightning.BLP
@@ -126,7 +126,6 @@ ReplaceableTextures\CommandButtonsDisabled\DISPASRaven_Crown.blp
 ReplaceableTextures\CommandButtonsDisabled\DISPASShieldHumanLionMark.BLP
 ReplaceableTextures\CommandButtonsDisabled\DISPASStarShine.blp
 ReplaceableTextures\CommandButtonsDisabled\DISPASWarglaive_of_Azzinoth.blp
-war3mapImported\Doom.mp3
 war3mapImported\FelOrcLancer.mdx
 war3mapImported\FelOrcLancer_Portrait.mdx
 war3mapImported\FurionRecruited.mp3
@@ -136,9 +135,7 @@ war3mapImported\HeroRanger.mdx
 war3mapImported\HeroRanger_Portrait.mdx
 war3mapImported\Icon_HeroRanger.txt
 war3mapImported\Jainarecruited.mp3
-war3mapImported\KelThuzadrecruited.mp3
 war3mapImported\Muradinrecruited.mp3
-war3mapImported\Orc1.mp3
 war3mapImported\PASAdmiral........blp
 war3mapImported\PasBTNSmash.blp
 war3mapImported\PASDarkAura.BLP
@@ -158,7 +155,6 @@ war3mapImported\PASShieldHumanLionMark.BLP
 war3mapImported\PASStarShine.blp
 war3mapImported\PASWarglaive_of_Azzinoth.blp
 war3mapImported\Providence Aura Blue.mdx
-war3mapImported\readme.html
 war3mapImported\scorescreen-hero-ranger.blp
 war3mapImported\SpiralAura.mdx
 war3mapImported\Sylvanasrecruited.mp3
@@ -172,3 +168,22 @@ war3mapImported\UPGUPGMoonLight.blp
 war3mapImported\UPGUPGPhantomArrow.blp
 war3mapImported\Utherrecruited.mp3
 war3mapImported\Bondage Blue SD.mdx
+war3mapImported\BlackHoleSkin04-64.blp
+war3mapImported\readme.html
+war3mapImported\Admiral Proudmoore_HD_TC_Gun.mdx
+war3mapImported\ATCGale Winds SD.blp
+war3mapImported\ATTGale Winds SD.blp
+war3mapImported\BTNGale Winds SD.blp
+war3mapImported\DISATCGale Winds SD.blp
+ReplaceableTextures\CommandButtonsDisabled\DISBTNGale Winds SD.blp
+war3mapImported\DISPASGale Winds SD.blp
+war3mapImported\Gale Winds SD.png
+war3mapImported\PASGale Winds SD.blp
+war3mapImported\SSCGale Winds SD.blp
+war3mapImported\UPGGale Winds SD.blp
+war3mapImported\KelthuzadRecruited.mp3
+war3mapImported\BTNCombinedStaff.blp
+ReplaceableTextures\CommandButtonsDisabled\DISBTNCombinedStaff.blp
+war3mapImported\NightElfGraveyardv1.mdx
+war3mapImported\BTNNightElfGraveyard.blp
+ReplaceableTextures\CommandButtonsDisabled\DISBTNNightElfGraveyard.blp
